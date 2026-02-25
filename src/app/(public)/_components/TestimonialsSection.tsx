@@ -28,13 +28,13 @@ const COMMITMENTS: Commitment[] = [
     icon: "/images/icons/icon-shield.webp",
     title: "Satisfait ou on corrige",
     description:
-      "Des rounds de r\u00e9visions inclus pour affiner le r\u00e9sultat. On ne livre pas tant que vous n\u2019\u00eates pas satisfait.",
+      "Des rounds de r\u00e9visions inclus pour affiner le r\u00e9sultat jusqu\u2019\u00e0 ce que \u00e7a vous convienne.",
   },
   {
     icon: "/images/icons/icon-handshake.webp",
     title: "Accompagnement inclus",
     description:
-      "Formation prise en main, support post-lancement. On ne dispara\u00eet pas apr\u00e8s la livraison.",
+      "Formation, 30\u00a0jours de support post-lancement. On ne dispara\u00eet pas apr\u00e8s la livraison.",
   },
 ];
 

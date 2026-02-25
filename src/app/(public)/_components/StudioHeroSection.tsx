@@ -184,7 +184,7 @@ export function StudioHeroSection() {
           {[
             { value: "2 sem.", label: "D\u00e9lai moyen" },
             { value: "790\u00a0\u20ac", label: "\u00c0 partir de" },
-            { value: "100%", label: "Satisfait ou refait" },
+            { value: "100%", label: "Satisfait ou on corrige" },
           ].map((badge, i) => (
             <div key={badge.label} className="flex items-stretch">
               {i > 0 && (

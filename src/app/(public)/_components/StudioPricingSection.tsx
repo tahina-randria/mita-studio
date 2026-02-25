@@ -96,26 +96,41 @@ const PRICING_TIERS: PricingTier[] = [
 const SUBSCRIPTION_TIERS: SubscriptionTier[] = [
   {
     name: "Maintenance",
-    price: "49\u00a0\u20ac/mois",
+    price: "89\u00a0\u20ac/mois",
     description: "Votre site toujours \u00e0 jour et fonctionnel.",
     features: [
+      "1h de travail effectif / mois",
       "Mises \u00e0 jour techniques",
       "Modifications mineures (textes, images)",
-      "Support prioritaire par email",
+      "Support par email (48h ouvr\u00e9es)",
       "Sauvegarde mensuelle",
     ],
     ctaHref: "/contact",
   },
   {
-    name: "Visibilit\u00e9 SEO",
-    price: "149\u00a0\u20ac/mois",
+    name: "Croissance",
+    price: "249\u00a0\u20ac/mois",
     description: "Faites vivre votre site et grimpez sur Google.",
     features: [
+      "3h de travail effectif / mois",
       "Tout ce qui est dans Maintenance",
-      "Optimisation SEO mensuelle",
-      "R\u00e9daction d\u20191 article de blog/mois",
+      "1 article SEO optimis\u00e9 / mois",
+      "Optimisation SEO continue",
       "Rapport de positionnement mensuel",
-      "Gestion fiche Google Business",
+    ],
+    ctaHref: "/contact",
+  },
+  {
+    name: "Acc\u00e9l\u00e9ration",
+    price: "449\u00a0\u20ac/mois",
+    description: "Croissance maximale, visibilit\u00e9 acc\u00e9l\u00e9r\u00e9e.",
+    features: [
+      "6h de travail effectif / mois",
+      "Tout ce qui est dans Croissance",
+      "2 articles SEO / mois",
+      "Gestion Google Business Profile",
+      "Audit trimestriel de performance",
+      "Support prioritaire (24h ouvr\u00e9es)",
     ],
     ctaHref: "/contact",
   },
@@ -468,7 +483,7 @@ export function StudioPricingSection() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {SUBSCRIPTION_TIERS.map((sub) => (
               <div
                 key={sub.name}
@@ -512,7 +527,7 @@ export function StudioPricingSection() {
           </div>
 
           <p className="mt-5 text-center text-xs text-white">
-            Sans engagement. R&eacute;siliable &agrave; tout moment.
+            Sans engagement. R&eacute;siliable avec 15&nbsp;jours de pr&eacute;avis. Quotas mensuels non reportables.
           </p>
         </div>
 

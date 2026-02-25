@@ -12,11 +12,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     // Homepage
     { url: BASE_URL, lastModified: LAST_DEPLOY, changeFrequency: "weekly", priority: 1 },
-    // Services
-    { url: `${BASE_URL}/web`, lastModified: LAST_DEPLOY, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/seo`, lastModified: LAST_DEPLOY, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/audit`, lastModified: LAST_DEPLOY, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/ugc-ads`, lastModified: LAST_DEPLOY, changeFrequency: "monthly", priority: 0.8 },
     // Pages
     { url: `${BASE_URL}/contact`, lastModified: LAST_DEPLOY, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE_URL}/fondateur`, lastModified: LAST_DEPLOY, changeFrequency: "monthly", priority: 0.6 },

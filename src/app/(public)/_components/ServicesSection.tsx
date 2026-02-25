@@ -2,16 +2,13 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { setReducedMotionState } from "@/lib/motion";
 
 interface Service {
   title: string;
   description: string;
-  href: string;
   icon: string;
-  external?: boolean;
 }
 
 const SERVICES: Service[] = [
@@ -19,21 +16,18 @@ const SERVICES: Service[] = [
     title: "Sites web",
     description:
       "Sites vitrines, e-commerce et applications web sur mesure. Design soigné, rapide, optimisé pour convertir.",
-    href: "/web",
     icon: "/images/services/icon-web.webp",
   },
   {
     title: "Référencement Google",
     description:
       "Stratégie SEO complète et multilingue. Contenu optimisé, suivi de positions pour une visibilité durable.",
-    href: "/seo",
     icon: "/images/services/icon-seo.webp",
   },
   {
     title: "Outils digitaux",
     description:
       "Outils sur mesure pour automatiser vos tâches répétitives. Devis, relances, rapports : ce qui prenait des heures se fait en minutes.",
-    href: "/contact",
     icon: "/images/services/icon-tools.webp",
   },
 ];
@@ -112,69 +106,46 @@ export function ServicesSection() {
           ref={gridRef}
           className="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-5"
         >
-          {SERVICES.map((service) => {
-            const cardContent = (
-              <div className="group relative overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.02] h-full transition-all duration-300 hover:border-white/[0.12] hover:bg-white/[0.05]">
-                {/* Icon in top-right corner with gradient fade + perspective bend */}
+          {SERVICES.map((service) => (
+            <div key={service.title} className="group relative overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.02] h-full transition-all duration-300 hover:border-white/[0.12] hover:bg-white/[0.05]">
+              {/* Icon in top-right corner with gradient fade + perspective bend */}
+              <div
+                className="absolute -top-6 -right-6 w-48 h-48 sm:w-56 sm:h-56 pointer-events-none transition-opacity duration-500 opacity-40 group-hover:opacity-55 md:mix-blend-screen"
+                style={{
+                  maskImage: "radial-gradient(ellipse at 85% 15%, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 40%, transparent 65%)",
+                  WebkitMaskImage: "radial-gradient(ellipse at 85% 15%, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 40%, transparent 65%)",
+                }}
+              >
                 <div
-                  className="absolute -top-6 -right-6 w-48 h-48 sm:w-56 sm:h-56 pointer-events-none transition-opacity duration-500 opacity-40 group-hover:opacity-55 md:mix-blend-screen"
+                  className="absolute inset-0"
                   style={{
-                    maskImage: "radial-gradient(ellipse at 85% 15%, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 40%, transparent 65%)",
-                    WebkitMaskImage: "radial-gradient(ellipse at 85% 15%, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 40%, transparent 65%)",
+                    transform: "perspective(600px) rotateY(-8deg) rotateX(5deg)",
+                    transformOrigin: "top right",
                   }}
                 >
-                  <div
-                    className="absolute inset-0"
-                    style={{
-                      transform: "perspective(600px) rotateY(-8deg) rotateX(5deg)",
-                      transformOrigin: "top right",
-                    }}
-                  >
-                    <Image
-                      src={service.icon}
-                      alt=""
-                      fill
-                      className="object-contain"
-                      sizes="160px"
-                      aria-hidden="true"
-                    />
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="relative z-10 p-7 sm:p-8 flex flex-col h-full min-h-[180px]">
-                  <h3 className="mb-3 text-lg font-medium text-white">
-                    {service.title}
-                  </h3>
-
-                  <p className="mb-6 text-[15px] sm:text-base leading-relaxed text-white/90 flex-1 max-w-[75%]">
-                    {service.description}
-                  </p>
-
-                  <span className="text-sm font-medium text-white transition-colors group-hover:text-white">
-                    En savoir plus{" "}
-                    <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
-                      &rarr;
-                    </span>
-                  </span>
+                  <Image
+                    src={service.icon}
+                    alt=""
+                    fill
+                    className="object-contain"
+                    sizes="160px"
+                    aria-hidden="true"
+                  />
                 </div>
               </div>
-            );
 
-            if (service.external) {
-              return (
-                <a key={service.title} href={service.href}>
-                  {cardContent}
-                </a>
-              );
-            }
+              {/* Content */}
+              <div className="relative z-10 p-7 sm:p-8 flex flex-col h-full min-h-[180px]">
+                <h3 className="mb-3 text-lg font-medium text-white">
+                  {service.title}
+                </h3>
 
-            return (
-              <Link key={service.title} href={service.href}>
-                {cardContent}
-              </Link>
-            );
-          })}
+                <p className="text-[15px] sm:text-base leading-relaxed text-white/90 flex-1 max-w-[75%]">
+                  {service.description}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

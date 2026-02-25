@@ -34,7 +34,7 @@ const FAQS: FAQ[] = [
   {
     question: "Que se passe-t-il apr\u00e8s la livraison\u00a0?",
     answer:
-      "Vous b\u00e9n\u00e9ficiez d\u2019un support post-lancement inclus. On reste disponible pour les ajustements, la formation et les questions. L\u2019h\u00e9bergement et la maintenance peuvent \u00eatre g\u00e9r\u00e9s par nos soins si souhait\u00e9.",
+      "Vous b\u00e9n\u00e9ficiez de 30\u00a0jours de support post-lancement inclus (corrections et ajustements mineurs). Ensuite, nos abonnements mensuels prennent le relais\u00a0: maintenance technique, r\u00e9daction d\u2019articles SEO et suivi de visibilit\u00e9. Sans engagement, avec un quota d\u2019heures transparent.",
   },
   {
     question: "Travaillez-vous avec des clients hors de France\u00a0?",
