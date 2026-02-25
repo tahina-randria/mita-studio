@@ -2994,8 +2994,15 @@ export function getArticleBySlug(slug: string): BlogArticle | undefined {
   return BLOG_ARTICLES.find((a) => a.slug === slug);
 }
 
+/** Slugs that have their own standalone routes (not served via /blog/[slug]) */
+const LEGAL_SLUGS = new Set([
+  "mentions-legales",
+  "conditions-generales-de-vente",
+  "politique-de-confidentialite",
+]);
+
 export function getAllSlugs(): string[] {
-  return BLOG_ARTICLES.map((a) => a.slug);
+  return BLOG_ARTICLES.filter((a) => !LEGAL_SLUGS.has(a.slug)).map((a) => a.slug);
 }
 
 export function getRelatedArticles(slug: string): BlogArticle[] {

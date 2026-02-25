@@ -47,9 +47,12 @@ const BREADCRUMB_JSON_LD = {
 };
 
 export default function BlogPage() {
+  // Filter out legal pages (they have their own standalone routes)
+  const publicArticles = BLOG_ARTICLES.filter((a) => a.category !== "Légal");
+
   // Extract unique categories
   const categories = Array.from(
-    new Set(BLOG_ARTICLES.map((a) => a.category))
+    new Set(publicArticles.map((a) => a.category))
   );
 
   return (
@@ -66,7 +69,7 @@ export default function BlogPage() {
       />
       <StudioHeader />
 
-      <BlogPageClient articles={BLOG_ARTICLES} categories={categories} />
+      <BlogPageClient articles={publicArticles} categories={categories} />
 
       <StudioFooter />
     </div>
