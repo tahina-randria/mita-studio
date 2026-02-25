@@ -1,0 +1,480 @@
+/* ─── Custom Fonts ─── */
+@font-face {
+  font-family: 'PP Telegraf';
+  src: url('/fonts/PPTelegraf-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Telegraf';
+  src: url('/fonts/PPTelegraf-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Telegraf';
+  src: url('/fonts/PPTelegraf-UltraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('/fonts/PPNeueMontreal-Book.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('/fonts/PPNeueMontreal-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('/fonts/PPNeueMontreal-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('/fonts/PPNeueMontreal-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── Tailwind & Plugins ─── */
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-heading: 'PP Telegraf', var(--font-inter);
+  --font-body: 'PP Neue Montreal', var(--font-inter);
+  --font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, monospace;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+}
+
+:root {
+  --radius: 0.375rem;
+  /* Mita Studio — Electric blue accent */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.65 0.25 265);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.965 0 0);
+  --secondary-foreground: oklch(0.145 0 0);
+  --muted: oklch(0.965 0 0);
+  --muted-foreground: oklch(0.45 0 0);
+  --accent: oklch(0.965 0 0);
+  --accent-foreground: oklch(0.145 0 0);
+  --destructive: oklch(0.5 0.22 27);
+  --border: oklch(0.91 0 0);
+  --input: oklch(0.91 0 0);
+  --ring: oklch(0.55 0.2 265);
+  --chart-1: oklch(0.65 0.25 265);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.55 0.2 265);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.96 0.002 0);
+  --sidebar-accent-foreground: oklch(0.145 0 0);
+  --sidebar-border: oklch(0.92 0 0);
+  --sidebar-ring: oklch(0.55 0.2 265);
+
+  /* ─── Studio Premium Spectrum Tokens ─── */
+  /* Primary: electric blue */
+  --studio-blue: oklch(0.65 0.25 265);
+  --studio-blue-glow: oklch(0.55 0.25 265 / 12%);
+  /* Secondary: soft violet */
+  --studio-violet: oklch(0.55 0.22 290);
+  --studio-violet-glow: oklch(0.50 0.22 290 / 10%);
+  /* Tertiary: warm sunset orange */
+  --studio-warm: oklch(0.68 0.18 45);
+  --studio-warm-glow: oklch(0.65 0.18 45 / 8%);
+  /* Combined gradient */
+  --studio-gradient: linear-gradient(135deg, var(--studio-blue), var(--studio-violet), var(--studio-warm));
+  --studio-gradient-subtle: linear-gradient(135deg, oklch(0.65 0.25 265 / 60%), oklch(0.55 0.22 290 / 40%), oklch(0.68 0.18 45 / 30%));
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+    letter-spacing: -0.02em;
+  }
+
+  /* Text selection — solid black bg, white text */
+  .studio-page ::selection {
+    background-color: oklch(0.145 0 0);
+    color: oklch(1 0 0);
+  }
+  .studio-page ::-moz-selection {
+    background-color: oklch(0.145 0 0);
+    color: oklch(1 0 0);
+  }
+  ::selection {
+    background-color: oklch(0.145 0 0);
+    color: oklch(1 0 0);
+  }
+  ::-moz-selection {
+    background-color: oklch(0.145 0 0);
+    color: oklch(1 0 0);
+  }
+}
+
+/* ─── Studio Pages (Mita Studio holding + blog) ─── */
+.studio-page {
+  font-family: 'PP Neue Montreal', var(--font-inter), sans-serif;
+  font-weight: 300;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ─── Keyboard focus ring for accessibility ─── */
+.studio-page a:focus-visible,
+.studio-page button:focus-visible,
+.studio-page [role="button"]:focus-visible,
+.studio-page input:focus-visible,
+.studio-page textarea:focus-visible,
+.studio-page select:focus-visible {
+  outline: 2px solid oklch(0.65 0.25 265 / 70%);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ─── Skip-to-content for screen readers ─── */
+.studio-page .skip-link {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  padding: 0.75rem 1.5rem;
+  background: white;
+  color: #050a1e;
+  font-weight: 600;
+  border-radius: 0 0 8px 8px;
+  transition: top 0.2s ease;
+}
+.studio-page .skip-link:focus {
+  top: 0;
+}
+
+/* ─── Mobile viewport fix: use dvh where supported ─── */
+@supports (min-height: 100dvh) {
+  .min-h-screen {
+    min-height: 100dvh;
+  }
+}
+.studio-page h1,
+.studio-page h2,
+.studio-page h3,
+.studio-page h4 {
+  font-family: 'PP Telegraf', var(--font-inter), sans-serif;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+}
+
+/* ─── Grain / noise texture overlay ─── */
+/* Disabled on mobile: fixed + mix-blend-mode = constant GPU repaint on scroll */
+@media (min-width: 768px) {
+  .studio-page::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0.035;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 256px 256px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   LIQUID GLASS — iOS 26 / Artlist-style glass cards
+   ═══════════════════════════════════════════════════ */
+
+/* Base liquid glass — for cards, nav, modals */
+/* Mobile: no backdrop-filter (expensive), use solid bg fallback */
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.05),
+    inset 0 -1px 0 0 rgba(255, 255, 255, 0.02),
+    0 8px 32px rgba(0, 0, 0, 0.12);
+}
+@media (min-width: 768px) {
+  .liquid-glass {
+    backdrop-filter: blur(16px) saturate(180%) brightness(110%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%) brightness(110%);
+  }
+}
+
+/* Stronger glass — for featured cards, nav bar */
+.liquid-glass-strong {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+    inset 0 -1px 0 0 rgba(255, 255, 255, 0.03),
+    0 12px 48px rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 768px) {
+  .liquid-glass-strong {
+    backdrop-filter: blur(24px) saturate(200%) brightness(115%);
+    -webkit-backdrop-filter: blur(24px) saturate(200%) brightness(115%);
+  }
+}
+
+/* Subtle glass — for section backgrounds */
+.liquid-glass-subtle {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+@media (min-width: 768px) {
+  .liquid-glass-subtle {
+    backdrop-filter: blur(8px) saturate(150%);
+    -webkit-backdrop-filter: blur(8px) saturate(150%);
+  }
+}
+
+/* Glass hover enhancement */
+.liquid-glass-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.liquid-glass-hover:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+    0 16px 48px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/* ── LiquidGlass React (WebGL) card — NO backdrop-filter ── */
+.lg-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.04),
+    0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.lg-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.06),
+    0 16px 48px rgba(0, 0, 0, 0.14);
+}
+.lg-card-featured {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+.lg-pill {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Specular highlight — top edge light refraction */
+.liquid-glass-specular::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.15) 30%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.15) 70%,
+    transparent
+  );
+  border-radius: 100%;
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════════════
+   PREMIUM GRADIENT ANIMATIONS — Blue → Violet → Orange
+   ═══════════════════════════════════════════════════ */
+
+/* Accent text — subtle tinted white, NOT gradient */
+.accent-text {
+  color: oklch(0.78 0.08 265);
+}
+
+/* Gradient border — for featured elements */
+.gradient-border {
+  position: relative;
+  border: none !important;
+}
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    oklch(0.65 0.25 265 / 30%),
+    oklch(0.55 0.22 290 / 20%),
+    oklch(0.68 0.18 45 / 15%),
+    oklch(0.65 0.25 265 / 10%)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Accent gradient line — for decorative separators */
+.accent-line {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    oklch(0.65 0.25 265 / 30%) 20%,
+    oklch(0.55 0.22 290 / 25%) 50%,
+    oklch(0.68 0.18 45 / 20%) 80%,
+    transparent
+  );
+}
+
+/* CTA button — clean white, high contrast */
+.btn-accent {
+  background: white;
+  color: #0a0a0a;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-accent:hover {
+  background: rgba(255, 255, 255, 0.88);
+  transform: translateY(-1px);
+}
+
+/* ═══════════════════════════════════════════════════
+   LENIS SMOOTH SCROLL
+   ═══════════════════════════════════════════════════ */
+
+/* Scroll offset for fixed header on hash navigation */
+html {
+  scroll-padding-top: 5rem;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
