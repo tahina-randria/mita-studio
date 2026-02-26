@@ -9,12 +9,12 @@ import { ContactForm } from "../_components/ContactForm";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Discutons de votre projet. Premier \u00e9change gratuit, sans engagement. R\u00e9ponse sous 24h.",
+    "Discutons de votre projet. D\u00e9crivez-nous votre besoin, on revient vers vous rapidement.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact | Mita Studio",
     description:
-      "Discutons de votre projet. Premier \u00e9change gratuit, sans engagement. R\u00e9ponse sous 24h.",
+      "Discutons de votre projet. D\u00e9crivez-nous votre besoin, on revient vers vous rapidement.",
     url: "https://mita-studio.com/contact",
     type: "website",
     locale: "fr_FR",
@@ -79,21 +79,12 @@ export default function ContactPage() {
               </h1>
 
               <p className="text-base sm:text-lg text-white/70 leading-relaxed mb-8">
-                Premier &eacute;change gratuit, sans engagement.
-                On vous r&eacute;pond sous 24h.
+                D&eacute;crivez-nous votre besoin, on revient vers vous rapidement.
               </p>
 
               {/* Guarantees */}
               <div className="space-y-5 mb-10">
                 {[
-                  {
-                    label: "R\u00e9ponse sous 24h",
-                    desc: "Jours ouvr\u00e9s, par email ou t\u00e9l\u00e9phone.",
-                  },
-                  {
-                    label: "Premier \u00e9change gratuit",
-                    desc: "20 min pour comprendre votre projet, vos objectifs.",
-                  },
                   {
                     label: "Devis clair, sans surprise",
                     desc: "Prix fix\u00e9 d\u00e8s le d\u00e9part. Z\u00e9ro frais cach\u00e9.",

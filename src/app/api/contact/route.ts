@@ -41,7 +41,7 @@ export async function POST(req: NextRequest) {
         await resend.emails.send({
           from: process.env.RESEND_FROM_EMAIL ?? "Mita Studio <contact@mita-studio.com>",
           to: process.env.ADMIN_EMAILS?.split(",").map((e) => e.trim()) ?? [
-            "contact@mita-studio.com",
+            "tahina@mita-studio.com",
           ],
           subject: `Nouveau contact — ${data.name} ${data.service ? `(${data.service})` : ""}`,
           html: `
