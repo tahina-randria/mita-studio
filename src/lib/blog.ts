@@ -2685,7 +2685,7 @@ Le pricing n'est pas un exercice ponctuel. C'est une strat\u00e9gie continue qui
 - **Nom** : Tahina Randrianandraina (entreprise individuelle)
 - **Nom commercial** : Mita Studio
 - **Directeur de la publication** : Tahina Randrianandraina
-- **Email** : contact@mita-studio.com
+- **Email** : tahina@mita-studio.com
 - **Site web** : [mita-studio.com](https://mita-studio.com)
 
 ## 2. Hébergeur
@@ -2714,7 +2714,7 @@ Les sites web et outils digitaux créés par Mita Studio pour ses clients sont l
 
 ## 7. Contact
 
-Pour toute question, contactez-nous à l'adresse **contact@mita-studio.com**.`,
+Pour toute question, contactez-nous à l'adresse **tahina@mita-studio.com**.`,
   },
 
   // ── CONDITIONS GÉNÉRALES DE VENTE ────────────────────────────────────────
@@ -2722,67 +2722,71 @@ Pour toute question, contactez-nous à l'adresse **contact@mita-studio.com**.`,
     slug: "conditions-generales-de-vente",
     title: "Conditions Générales de Vente",
     description:
-      "Conditions générales de vente des prestations de Mita Studio : création de sites web, référencement Google, outils digitaux et abonnements mensuels.",
+      "Conditions générales de vente des prestations de Mita Studio, titulaire d'un CAPE avec la structure d'appui pce : création de sites web, référencement Google et outils digitaux.",
     category: "Légal",
-    tags: ["cgv", "legal", "conditions-generales"],
-    date: "2026-02-25",
-    readingTime: "12 min",
+    tags: ["cgv", "legal", "conditions-generales", "pce", "cape"],
+    date: "2026-03-09",
+    readingTime: "14 min",
     image: "/blog/votre-site-vous-coute-des-clients.webp",
     tldr: [
-      "Devis définitif validé par email avant tout début de prestation. Le devis prime sur les CGV.",
-      "Acompte de 50 % à la commande, solde à la livraison. Réserve de propriété jusqu'au paiement intégral.",
-      "1 à 2 rounds de révision inclus selon la formule. Un round = retours groupés en une seule transmission.",
-      "Abonnements mensuels avec quotas horaires (1h, 3h ou 6h). Quotas non reportables, dépassement validé par email.",
-      "Délais indicatifs, démarrage après réception de l'acompte et des contenus client.",
-      "Obligation de moyens. Aucune garantie de positionnement Google ou de résultats commerciaux.",
+      "Prestations réalisées dans le cadre d'un CAPE avec la structure d'appui pce (SCOP AS).",
+      "TVA à 20 % applicable sur toutes les prestations.",
+      "Acompte de 50 % à la commande, solde à la livraison.",
+      "Assurance RCP multiactivité AXA incluse.",
+      "Médiation consommateur CM2C et protection des données RGPD.",
+      "Signature électronique valable comme signature manuscrite.",
     ],
     relatedSlugs: ["mentions-legales", "politique-de-confidentialite"],
-    content: `Dernière mise à jour : 25 février 2026
+    content: `Dernière mise à jour : 9 mars 2026
 
 Les présentes Conditions Générales de Vente (ci-après « CGV ») régissent l'ensemble des prestations de services proposées par Mita Studio à ses clients. Toute commande implique l'acceptation sans réserve des présentes CGV.
 
 ## 1. Identification du prestataire
 
-- **Nom** : Tahina Randrianandraina (entreprise individuelle)
-- **Nom commercial** : Mita Studio
-- **Email** : contact@mita-studio.com
+- **Prestataire** : Tahina Randrianandraina, exerçant sous le nom commercial Mita Studio
+- **Statut** : Titulaire d'un Contrat d'Appui au Projet d'Entreprise (CAPE)
+- **Structure d'appui** : pce — Société Coopérative Ouvrière de Production par Actions Simplifiée (SCOP AS) à Capital Variable
+- **Adresse** : 6 Rue d'Amboise — 75002 Paris
+- **SIRET** : 423 194 307 00090
+- **SIREN/RCS** : 423 194 307
+- **Code APE/NAF** : 9499Z
+- **N° TVA intracommunautaire** : FR82423194307
+- **Assurance RCP** : Contrat multiactivité professionnelle AXA — N° client 0693499104 — N° contrat 1353589504
+- **Email** : tahina@mita-studio.com
 - **Site web** : [mita-studio.com](https://mita-studio.com)
 
-## 2. Définitions
+## 2. Documents contractuels
 
-- **Client** : toute personne physique ou morale commandant une prestation auprès du Prestataire.
-- **Prestataire** : Mita Studio, tel qu'identifié à l'article 1.
-- **Livrable** : tout fichier, site web, page, contenu ou outil livré au Client dans le cadre de la prestation.
-- **Contenus client** : textes, images, logos, vidéos et tout élément fourni par le Client pour la réalisation de la prestation.
-- **Round de révision** : ensemble de retours et demandes de modifications transmis par le Client en une seule fois (email, document ou outil collaboratif), portant sur le périmètre défini au devis. Un round n'est pas une série de retours au fil de l'eau.
-- **Intervention** : toute tâche demandée par le Client dans le cadre d'un abonnement, mesurée en temps effectif passé. Le minimum facturable est de 15 minutes par intervention.
-- **Quota** : volume horaire mensuel de travail effectif inclus dans un abonnement.
-- **Avenant** : document écrit modifiant le périmètre, le prix ou les délais du devis initial, validé par les deux parties avant exécution.
+Les documents contractuels régissant la relation entre Mita Studio et le client sont, par ordre de priorité décroissant :
 
-## 3. Objet et périmètre des prestations
+1. Le devis signé (ou bon de commande validé)
+2. Les présentes Conditions Générales de Vente
+3. Tout document annexe expressément mentionné au devis
 
-Mita Studio propose des prestations de services digitaux organisées en formules de création et en abonnements mensuels.
+En cas de contradiction entre ces documents, le document de rang supérieur prévaut.
 
-### Formule Essentiel — à partir de 790 € TTC (offre de lancement)
+## 3. Objet et détail des prestations
+
+Mita Studio propose des prestations de services digitaux organisées en trois formules :
+
+### Formule Essentiel — à partir de 948 € TTC (790 € HT)
 
 - Site one-page responsive (design personnalisé)
 - Formulaire de contact intégré
 - Référencement Google de base (balises, structure, performance)
-- Hébergement inclus la première année (plateforme Vercel)
-- 1 round de révision inclus
-- Livraison indicative en 2 semaines (sous réserve de réception de l'acompte et des contenus)
+- Hébergement inclus la première année
+- 1 round de révisions inclus
+- Livraison en 2 semaines (sous réserve de réception des contenus)
 
-L'offre de lancement (790 € TTC au lieu de 990 € TTC) est susceptible d'être modifiée ou retirée à tout moment sans préavis.
-
-### Formule Croissance — à partir de 2 490 € TTC
+### Formule Croissance — à partir de 2 988 € TTC (2 490 € HT)
 
 - Site multi-pages (jusqu'à 7 pages)
 - Référencement Google complet (balises, contenu optimisé, maillage interne)
 - Blog intégré avec analytics
-- 2 mois de maintenance inclus après livraison (même périmètre que l'abonnement Maintenance, soit 1h de travail effectif par mois)
-- Formation prise en main (1 heure, en visioconférence, à planifier sous 30 jours après livraison)
+- 2 mois de maintenance inclus après livraison
+- Formation prise en main (1 heure, en visio)
 - 2 rounds de révisions inclus
-- Livraison indicative en 4 semaines (sous réserve de réception de l'acompte et des contenus)
+- Livraison en 4 semaines (sous réserve de réception des contenus)
 
 ### Formule Premium — sur devis
 
@@ -2792,259 +2796,159 @@ L'offre de lancement (790 € TTC au lieu de 990 € TTC) est susceptible d'êtr
 - Accompagnement personnalisé tout au long du projet
 - Planning, livrables et nombre de révisions définis dans le devis
 
-### Abonnements mensuels
+### Abonnements mensuels (optionnels, sans engagement)
 
-**Maintenance — 89 €/mois TTC**
-- Quota : 1h de travail effectif par mois
-- Mises à jour techniques, corrections de bugs
+**Maintenance — 58,80 €/mois TTC (49 € HT)**
+- Mises à jour techniques
 - Modifications mineures (textes, images)
-- Support par email (réponse sous 48h ouvrées)
+- Support prioritaire par email
 - Sauvegarde mensuelle
-- Heure supplémentaire : 70 € HT/h
 
-**Croissance — 249 €/mois TTC**
-- Quota : 3h de travail effectif par mois
+**Visibilité SEO — 178,80 €/mois TTC (149 € HT)**
 - Tout ce qui est inclus dans Maintenance
-- 1 article SEO optimisé par mois (800 à 1 500 mots, 1 round de relecture inclus)
-- Optimisation SEO continue (1 page existante par mois)
-- Rapport de positionnement mensuel (positions clés, trafic organique)
-- Heure supplémentaire : 60 € HT/h
+- Optimisation SEO mensuelle
+- Rédaction d'1 article de blog par mois
+- Rapport de positionnement mensuel
+- Gestion fiche Google Business
 
-**Accélération — 449 €/mois TTC**
-- Quota : 6h de travail effectif par mois
-- Tout ce qui est inclus dans Croissance
-- 2 articles SEO par mois
-- Gestion Google Business Profile
-- Audit trimestriel de performance (Core Web Vitals, UX)
-- Support prioritaire (réponse sous 24h ouvrées)
-- Heure supplémentaire : 50 € HT/h
+Les abonnements mensuels sont résiliables à tout moment, sans frais.
 
-**Clause clé** : toute prestation non expressément incluse dans le devis ou dans la description de la formule choisie est exclue du périmètre et fera l'objet d'un devis complémentaire (avenant).
+Les tarifs indiqués sont en euros (EUR). Conformément à la législation en vigueur, la TVA au taux de 20 % est applicable à l'ensemble des prestations. Le détail exact de chaque prestation est formalisé dans le devis, qui prévaut sur les descriptions générales ci-dessus.
 
-## 4. Devis, commande et acceptation
+## 4. Devis, commande et signature électronique
 
-Chaque prestation fait l'objet d'un devis personnalisé, détaillant la nature et le périmètre de la prestation, le prix définitif, le délai de livraison estimé et le nombre de révisions incluses.
+Chaque prestation fait l'objet d'un devis personnalisé, détaillant :
 
-- **Validité** : le devis est valable 30 jours à compter de sa date d'émission.
-- **Commande** : la commande est validée par l'acceptation écrite du devis (email ou signature électronique) et le versement de l'acompte.
-- **Hiérarchie** : l'acceptation du devis vaut acceptation sans réserve des présentes CGV. En cas de contradiction entre le devis et les CGV, le devis prévaut.
+- La nature et le périmètre de la prestation
+- Le prix en euros (EUR), hors taxes et toutes taxes comprises
+- Le délai de livraison estimé
+- Le nombre de révisions incluses
 
-## 5. Tarifs
+Le devis est **définitif** : aucun frais caché ne sera ajouté. La commande est validée par l'acceptation écrite du devis (email ou signature électronique) et le versement de l'acompte.
 
-Les prix affichés sur le site et dans les présentes CGV sont exprimés en euros (EUR), toutes taxes comprises (TTC). Mita Studio n'est pas assujetti à la TVA (article 293 B du Code général des impôts).
+Conformément aux articles 1366 et 1367 du Code civil, la signature électronique du devis (ou l'acceptation par email avec mention explicite d'accord) a la même valeur juridique qu'une signature manuscrite. Le client reconnaît que la validation électronique du devis constitue une preuve de son consentement aux présentes CGV et au contenu du devis.
 
-- Les mentions « à partir de » indiquent un tarif minimal. Le prix final est celui figurant dans le devis signé.
-- Le Prestataire se réserve le droit de réviser ses tarifs une fois par an, avec un préavis de 30 jours. Les prestations en cours restent au tarif initial du devis.
-- Les tarifs horaires hors-forfait sont précisés dans la description de chaque abonnement (article 3).
+## 5. Tarifs et paiement
 
-## 6. Conditions de paiement
-
-### Projets de création (formules Essentiel, Croissance, Premium)
-
-- **Acompte** : 50 % du montant total à la commande
-- **Solde** : 50 % restant à la livraison, avant mise en ligne définitive
-- Pour les projets supérieurs à 5 000 € TTC, un échéancier en trois fois peut être proposé (40 % acompte, 30 % au jalon intermédiaire, 30 % à la livraison)
-
-### Abonnements mensuels
-
-- Facturation le 1er de chaque mois, pour le mois en cours
-- Paiement par virement bancaire ou prélèvement carte
-- Première facturation au prorata si démarrage en cours de mois
-- Les dépassements de quota sont facturés en fin de mois sur une facture séparée, payable sous 14 jours
-
-### Dispositions communes
-
-- **Moyens de paiement** : virement bancaire ou paiement en ligne (carte bancaire)
+- **Acompte** : 50 % du montant total TTC à la commande
+- **Solde** : 50 % restant à la livraison, avant mise en ligne
+- **Moyens de paiement** : virement bancaire ou chèque à l'ordre de « Mita Studio pce »
 - **Délai de paiement** : 14 jours à compter de la date de facturation
-- **Pénalités de retard** : en cas de retard, des pénalités au taux légal en vigueur seront appliquées de plein droit, ainsi qu'une indemnité forfaitaire de 40 € pour frais de recouvrement (art. L441-10 du Code de commerce)
-- **Réserve de propriété** : les livrables restent la propriété exclusive du Prestataire jusqu'au paiement intégral de toutes les sommes dues
+
+Les factures sont émises via le logiciel de facturation de la structure d'appui pce, conformément à la réglementation en vigueur.
+
+En cas de retard de paiement, des pénalités de retard au taux légal en vigueur seront appliquées, ainsi qu'une indemnité forfaitaire de 40 € pour frais de recouvrement (art. L441-10 du Code de commerce).
+
+## 6. TVA
+
+La structure d'appui pce est assujettie à la TVA. L'ensemble des prestations réalisées par Mita Studio font l'objet d'une facturation comprenant la TVA au taux normal en vigueur de 20 %. La TVA est collectée sur les ventes et reversée à l'État par pce conformément à la législation en vigueur. La TVA est déductible sur les achats.
+
+Les prestations aux particuliers sont également facturées avec TVA.
 
 ## 7. Délais de livraison
 
-Les délais indiqués sur le site et dans le devis sont **indicatifs** et ne constituent pas un engagement ferme.
+Les délais indicatifs sont les suivants :
 
 - **Site vitrine simple** : 2 à 3 semaines
 - **Site multi-pages avec référencement** : 3 à 4 semaines
 - **Projet sur mesure** : délai défini dans le devis
 
-Le délai court à compter de la réception cumulative de : (1) l'acompte, (2) l'ensemble des contenus client (textes, images, logos, accès), et (3) la validation du cahier des charges le cas échéant.
-
-**Report automatique** : tout retard dans la fourniture des contenus ou des validations par le Client décale le délai de livraison d'autant, de plein droit et sans notification préalable.
-
-**Suspension du projet** : si aucun contenu n'est reçu dans les 30 jours suivant le versement de l'acompte, le Prestataire se réserve le droit de suspendre le projet. La reprise est conditionnée à la réception des contenus. Si aucun contenu n'est reçu dans les 60 jours, le Prestataire peut résilier le contrat dans les conditions prévues à l'article 19.
-
-**Force majeure** : en cas de force majeure (pandémie, catastrophe naturelle, panne d'infrastructure majeure, décision gouvernementale), les délais sont suspendus sans pénalité pour aucune des parties.
+Le délai court à compter de la réception de l'acompte et de l'ensemble des contenus nécessaires (textes, images, accès). Tout retard dans la fourniture des éléments par le client repousse d'autant le délai de livraison.
 
 ## 8. Révisions et validation
 
-### Projets de création
+Le nombre de rounds de révision dépend de la formule choisie : **1 round pour Essentiel**, **2 rounds pour Croissance**, et un nombre défini au devis pour Premium. Chaque round porte sur des ajustements dans le périmètre défini au devis (modifications de textes, ajustements visuels, corrections).
 
-Le nombre de rounds de révision dépend de la formule choisie :
-- **Essentiel** : 1 round de révision inclus
-- **Croissance** : 2 rounds de révision inclus
-- **Premium** : nombre défini dans le devis
+Les demandes hors périmètre (ajout de pages, nouvelles fonctionnalités, refonte du design) feront l'objet d'un devis complémentaire.
 
-**Définition d'un round** : le Client transmet l'ensemble de ses retours en une seule fois, dans un document unique ou un email récapitulatif. Les retours au fil de l'eau (messages multiples, corrections éparses) ne constituent pas un round et peuvent être facturés en supplément.
+La validation finale est effectuée par le client par email. L'absence de retour sous 7 jours ouvrés après livraison vaut acceptation tacite.
 
-**Périmètre** : chaque round porte sur des ajustements dans le périmètre défini au devis (modifications de textes, ajustements visuels, corrections). Les demandes hors périmètre (ajout de pages, nouvelles fonctionnalités, refonte du design, changement de structure) feront l'objet d'un avenant avec devis complémentaire validé avant exécution.
+## 9. Propriété intellectuelle
 
-**Délai de retour** : le Client dispose de 7 jours ouvrés après présentation du livrable pour transmettre ses retours. À défaut de retour dans ce délai, le livrable est réputé accepté (acceptation tacite).
+- **Avant paiement complet** : les créations restent la propriété de Mita Studio
+- **Après paiement complet** : le client devient propriétaire du site web et de ses contenus originaux. Les droits d'utilisation des licences tierces (typographies, images stock, plugins) sont transférés selon leurs conditions propres
+- **Portfolio** : Mita Studio se réserve le droit de mentionner la réalisation dans son portfolio, sauf opposition écrite du client
 
-**Au-delà des rounds inclus** : toute modification supplémentaire est facturée au tarif horaire applicable (70 € HT/h pour Essentiel et Croissance, tarif défini au devis pour Premium).
+## 10. Responsabilité et garanties
 
-### Articles SEO (abonnements)
+Mita Studio s'engage à exécuter ses prestations avec diligence et professionnalisme (obligation de moyens). Mita Studio est couvert par une assurance Responsabilité Civile Professionnelle multiactivité auprès d'AXA (N° contrat 1353589504). La responsabilité de Mita Studio est limitée au montant de la prestation facturée.
 
-Chaque article inclus dans un abonnement (Croissance, Accélération) comprend 1 round de relecture. Le sujet est validé conjointement. Les articles non rédigés dans le mois ne sont pas reportables au mois suivant.
+Mita Studio ne saurait être tenu responsable :
 
-## 9. Abonnements mensuels — fonctionnement détaillé
+- Des contenus fournis par le client (textes, images, données)
+- Des performances de référencement, qui dépendent de facteurs externes (algorithmes Google, concurrence, domaine)
+- Des interruptions de service liées à l'hébergeur ou à des tiers
+- De l'usage fait du site par le client après livraison
 
-### Quotas et suivi
+## 11. Hébergement et maintenance
 
-- Le quota mensuel est exprimé en heures de travail effectif. Il n'est pas reportable d'un mois à l'autre et n'est pas remboursable en cas de non-utilisation.
-- Le Client reçoit un récapitulatif mensuel par email détaillant les heures consommées et les tâches réalisées.
-- Le Prestataire notifie le Client lorsque le quota atteint 80 % de consommation.
+L'hébergement et la maintenance ne sont pas inclus dans la prestation de création, sauf mention contraire dans le devis. Mita Studio peut proposer un service d'hébergement et de maintenance en option, facturé séparément.
 
-### Dépassement
+## 12. Droit de rétractation
 
-Au-delà du quota mensuel, le Client est informé par email avant toute intervention supplémentaire. Le dépassement n'est exécuté qu'après validation écrite (email) du Client. Les heures supplémentaires sont facturées au tarif du tier concerné (article 3) en fin de mois.
+Conformément à l'article L221-28 du Code de la consommation, le droit de rétractation ne peut être exercé pour les prestations de services pleinement exécutées avant la fin du délai de rétractation, avec l'accord exprès du client.
 
-### Résiliation
+Pour les prestations non encore commencées, le client dispose d'un délai de 14 jours pour exercer son droit de rétractation. L'acompte versé sera alors intégralement remboursé.
 
-Les abonnements sont sans engagement de durée minimale. La résiliation s'effectue par email à contact@mita-studio.com, avec un préavis de 15 jours avant la fin du mois en cours. Le mois commencé est dû intégralement. Aucun remboursement au prorata ne sera effectué.
+## 13. Résiliation
 
-### Suspension pour impayé
+En cas de manquement grave de l'une des parties à ses obligations, l'autre partie pourra résilier le contrat par lettre recommandée avec accusé de réception, après mise en demeure restée infructueuse pendant 15 jours.
 
-En cas de non-paiement de deux échéances mensuelles consécutives, le Prestataire se réserve le droit de suspendre les prestations avec 7 jours de préavis par email. La reprise est conditionnée au règlement de l'intégralité des sommes dues.
+En cas de résiliation par le client en cours de prestation, les sommes déjà versées restent acquises à Mita Studio au prorata du travail effectué.
 
-## 10. Obligations du client
+## 14. Force majeure
 
-Le Client s'engage à :
-- Fournir les contenus nécessaires (textes, images, logos, accès) dans les délais convenus
-- Désigner un interlocuteur unique pour les validations et les échanges
-- Répondre aux demandes de validation sous 7 jours ouvrés
-- Garantir qu'il dispose des droits de propriété intellectuelle sur les contenus fournis
-- Ne pas reproduire, copier ou faire reproduire les livrables par un tiers avant paiement intégral
-- Informer le Prestataire de toute contrainte technique ou réglementaire spécifique à son activité
+Aucune des parties ne pourra être tenue responsable de l'inexécution ou du retard dans l'exécution de ses obligations contractuelles si cette inexécution ou ce retard résulte d'un cas de force majeure au sens de l'article 1218 du Code civil.
 
-## 11. Propriété intellectuelle
+Sont notamment considérés comme cas de force majeure : les catastrophes naturelles, les pandémies, les actes de guerre ou de terrorisme, les grèves générales, les pannes majeures d'infrastructure Internet ou de réseaux de télécommunications, les décisions gouvernementales ou administratives empêchant l'exécution du contrat.
 
-### Avant paiement intégral
+La partie affectée informera l'autre partie dans les meilleurs délais. Si le cas de force majeure se prolonge au-delà de 60 jours, chacune des parties pourra résilier le contrat sans indemnité, le client étant remboursé des sommes versées pour les prestations non encore exécutées.
 
-Tous les livrables (maquettes, code source, contenus créés, design) restent la propriété exclusive du Prestataire.
+## 15. Preuve de la transaction
 
-### Après paiement intégral
+Les registres informatisés, conservés dans les systèmes d'information de Mita Studio et de la structure d'appui pce dans des conditions raisonnables de sécurité, sont considérés comme preuves des communications, des commandes et des paiements intervenus entre les parties.
 
-Le Client devient propriétaire des livrables spécifiques réalisés pour son projet : design du site, code source déployé, contenus originaux créés par le Prestataire.
+L'archivage des devis, factures et échanges est effectué sur un support fiable et durable, conformément à l'article 1366 du Code civil.
 
-### Exclusions du transfert
+## 16. Protection des données personnelles
 
-Le Prestataire conserve la propriété de ses outils internes, templates réutilisables, bibliothèques de code, méthodologies et savoir-faire.
+Dans le cadre de l'exécution de ses prestations, Mita Studio est susceptible de collecter et traiter des données personnelles du client (nom, prénom, adresse email, téléphone, adresse postale).
 
-### Licences tierces
+Ces données sont collectées et traitées conformément au Règlement Général sur la Protection des Données (RGPD — Règlement UE 2016/679) et à la loi Informatique et Libertés du 6 janvier 1978 modifiée. Elles sont utilisées aux seules fins d'exécution du contrat et de gestion de la relation commerciale.
 
-Les polices de caractères, images stock, icônes et plugins tiers intégrés au projet sont soumis à leurs licences respectives. Le Prestataire transfère l'accès et les droits d'utilisation au Client, mais ne transfère pas la propriété de ces éléments tiers.
+Les données du client ne sont jamais revendues ni transmises à des tiers à des fins commerciales. Le client dispose d'un droit d'accès, de rectification, d'effacement, de limitation, de portabilité et d'opposition sur ses données personnelles.
 
-### Portfolio et référence
+Pour exercer ces droits ou pour toute question relative à la protection de vos données, contactez-nous à : **tahina@mita-studio.com**.
 
-Le Prestataire se réserve le droit de mentionner la réalisation dans son portfolio, ses supports commerciaux et son site web, sauf opposition écrite du Client notifiée dans les 30 jours suivant la livraison.
+Pour plus de détails, consultez notre [Politique de Confidentialité](/blog/politique-de-confidentialite).
 
-## 12. Hébergement
+## 17. Non-validation partielle
 
-### Hébergement inclus (Formule Essentiel)
+Si l'une quelconque des dispositions des présentes CGV était déclarée nulle ou inapplicable par une juridiction compétente, les autres dispositions resteraient en vigueur et de plein effet. La clause invalidée serait remplacée par une clause valide se rapprochant le plus possible de l'intention originale des parties.
 
-L'hébergement inclus dans la formule Essentiel est fourni via la plateforme Vercel, pour une durée d'un an à compter de la mise en ligne.
+## 18. Non-renonciation
 
-Le Prestataire informe le Client 30 jours avant la date d'échéance du renouvellement. Le tarif de renouvellement annuel est communiqué à cette occasion.
+Le fait pour l'une des parties de ne pas se prévaloir d'un manquement de l'autre partie à l'une quelconque des obligations visées dans les présentes CGV ne saurait être interprété comme une renonciation à l'obligation en cause, ni comme une renonciation à se prévaloir ultérieurement de ce manquement ou de tout autre manquement.
 
-### Migration
-
-Le Client peut à tout moment demander la migration de son site vers un hébergement de son choix. Le Prestataire fournit la documentation technique nécessaire. Les éventuels frais de migration font l'objet d'un devis séparé.
-
-### Nom de domaine
-
-La gestion, le renouvellement et la propriété du nom de domaine restent à la charge du Client, sauf mention contraire dans le devis. Le Prestataire peut assister le Client dans la configuration DNS sans garantie de résultat.
-
-## 13. Formation et accompagnement post-lancement
-
-### Formation (Formule Croissance et Premium)
-
-La formation prise en main (1h pour Croissance, durée définie au devis pour Premium) est réalisée en visioconférence (Google Meet ou équivalent), à planifier dans les 30 jours suivant la livraison. Toute heure de formation supplémentaire est facturée au tarif horaire.
-
-### Support post-lancement
-
-Après livraison, le Client bénéficie de 30 jours de support, limité aux corrections de bugs et ajustements mineurs directement liés à la prestation livrée, dans la limite d'1 heure cumulée. Au-delà, le Client est orienté vers les abonnements mensuels ou une facturation au tarif horaire.
-
-## 14. Responsabilité et garanties
-
-Le Prestataire s'engage à exécuter ses prestations avec diligence et professionnalisme, dans le cadre d'une **obligation de moyens** (et non de résultat).
-
-### Limitation de responsabilité
-
-La responsabilité du Prestataire est limitée au montant total facturé pour la prestation concernée. Le Prestataire décline toute responsabilité pour les dommages indirects, notamment la perte de chiffre d'affaires, la perte de clientèle, la perte de données ou le manque à gagner.
-
-### Exclusions
-
-Le Prestataire ne saurait être tenu responsable :
-- Des contenus fournis par le Client (exactitude, légalité, droits)
-- Des performances de référencement (SEO), qui dépendent de facteurs externes (algorithmes Google, concurrence, historique du domaine). Aucun positionnement, volume de trafic ou taux de conversion ne peut être garanti.
-- Des interruptions de service liées à l'hébergeur, aux fournisseurs tiers ou à des événements de force majeure
-- Des modifications apportées au site par le Client ou un tiers après la livraison
-- De la perte de données résultant d'une absence de sauvegarde par le Client
-
-## 15. Confidentialité
-
-Chaque partie s'engage à ne pas divulguer les informations confidentielles de l'autre partie auxquelles elle aurait eu accès dans le cadre de la prestation. Cette obligation s'applique pendant toute la durée du contrat et pendant une période de 2 ans après son terme.
-
-Sont exclues de cette obligation : les informations déjà publiques, celles obtenues indépendamment de la relation contractuelle, et celles dont la divulgation est requise par la loi ou une décision judiciaire.
-
-## 16. Sous-traitance
-
-Le Prestataire se réserve le droit de faire appel à des sous-traitants pour certaines tâches spécifiques (développement, rédaction de contenu, design graphique). Le Prestataire reste l'interlocuteur unique du Client et demeure responsable de la qualité des livrables vis-à-vis du Client.
-
-## 17. Protection des données personnelles (RGPD)
-
-Le Prestataire s'engage à respecter le Règlement Général sur la Protection des Données (RGPD) et la loi Informatique et Libertés. Le détail du traitement des données est décrit dans la [Politique de Confidentialité](/confidentialite).
-
-- Le Prestataire ne collecte que les données strictement nécessaires à l'exécution de la prestation.
-- Les données client (contenus, visuels, informations de contact) ne sont utilisées que dans le cadre du projet.
-- Le Client peut demander la suppression de ses données personnelles dans un délai de 30 jours après la fin de la prestation, par email à contact@mita-studio.com.
-
-## 18. Droit de rétractation
-
-Conformément à l'article L221-28 du Code de la consommation, le droit de rétractation ne peut être exercé pour les prestations de services pleinement exécutées avant la fin du délai de rétractation, avec l'accord exprès du consommateur.
-
-- **Prestations non commencées** : le Client dispose d'un délai de 14 jours à compter de l'acceptation du devis pour exercer son droit de rétractation. L'acompte versé sera alors intégralement remboursé sous 14 jours.
-- **Prestations commencées** : le Client renonce expressément à son droit de rétractation en validant le démarrage de la prestation. Les sommes versées restent acquises au Prestataire au prorata du travail réalisé.
-
-## 19. Résiliation
-
-### Par le Client
-
-Le Client peut résilier le contrat à tout moment par email à contact@mita-studio.com. Les sommes versées restent acquises au Prestataire au prorata du travail effectué. Les livrables en cours sont transmis au Client en l'état.
-
-### Par le Prestataire
-
-Le Prestataire peut résilier le contrat en cas de manquement grave du Client, notamment : non-fourniture des contenus pendant plus de 60 jours après l'acompte, ou non-paiement après mise en demeure restée sans effet pendant 15 jours.
-
-### Survie des clauses
-
-Les clauses relatives à la propriété intellectuelle (article 11), à la confidentialité (article 15), à la responsabilité (article 14) et à la protection des données (article 17) survivent à la résiliation du contrat.
-
-## 20. Droit applicable et résolution des litiges
+## 19. Médiation et règlement des litiges
 
 Les présentes CGV sont régies par le droit français.
 
-### Médiation
+Conformément aux articles L611-1 et suivants du Code de la consommation, le client consommateur a le droit de recourir gratuitement à un médiateur de la consommation en vue de la résolution amiable de tout litige. Le médiateur compétent est :
 
-Conformément à l'article L612-1 du Code de la consommation, le Client peut recourir gratuitement à un médiateur de la consommation en cas de litige non résolu. Les coordonnées du médiateur sont disponibles sur demande à contact@mita-studio.com et seront communiquées dès l'adhésion du Prestataire à un organisme de médiation.
+- **Centre de la Médiation de la Consommation de Conciliateurs de Justice (CM2C)**
+- Site web : [cm2c.net](https://www.cm2c.net)
+- Adresse : 14 rue Saint-Jean-de-Beauregard — 91400 Orsay
 
-### Compétence juridictionnelle
+Le client peut également soumettre sa réclamation sur la plateforme européenne de règlement en ligne des litiges : [ec.europa.eu/consumers/odr](https://ec.europa.eu/consumers/odr).
+
+Avant de recourir à la médiation, le client doit avoir préalablement contacté Mita Studio par écrit à l'adresse **tahina@mita-studio.com** pour tenter de résoudre le litige à l'amiable.
 
 À défaut de résolution amiable ou de médiation aboutie, les tribunaux compétents de Paris (France) seront seuls compétents.
 
-## Contact
+## 20. Contact
 
-Pour toute question relative aux présentes CGV : **contact@mita-studio.com**.`,
+Pour toute question relative aux présentes CGV, contactez-nous à l'adresse **tahina@mita-studio.com**.`,
   },
 
   // ── POLITIQUE DE CONFIDENTIALITÉ ─────────────────────────────────────────
@@ -3074,7 +2978,7 @@ Le responsable du traitement des données est :
 
 - **Nom** : Tahina Randrianandraina (entreprise individuelle)
 - **Nom commercial** : Mita Studio
-- **Email de contact** : contact@mita-studio.com
+- **Email de contact** : tahina@mita-studio.com
 
 ## 2. Données collectées
 
@@ -3145,7 +3049,7 @@ Conformément au RGPD, vous disposez des droits suivants :
 - **Droit d'opposition** : vous opposer au traitement de vos données
 - **Droit à la limitation** : demander la limitation du traitement
 
-Pour exercer vos droits, contactez-nous à **contact@mita-studio.com**. Nous répondrons dans un délai de 30 jours maximum.
+Pour exercer vos droits, contactez-nous à **tahina@mita-studio.com**. Nous répondrons dans un délai de 30 jours maximum.
 
 ## 9. Réclamation
 

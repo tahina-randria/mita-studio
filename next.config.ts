@@ -10,6 +10,8 @@ const nextConfig: NextConfig = {
       { source: "/ugc-ads", destination: "/contact", permanent: true },
       // Ancien CGU → CGV
       { source: "/cgu", destination: "/cgv", permanent: true },
+      // Ancien slug blog → page dédiée
+      { source: "/blog/conditions-generales-de-vente", destination: "/cgv", permanent: true },
     ];
   },
 };
