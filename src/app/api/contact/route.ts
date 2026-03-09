@@ -39,7 +39,7 @@ export async function POST(req: NextRequest) {
         const resend = new Resend(process.env.RESEND_API_KEY);
 
         await resend.emails.send({
-          from: process.env.RESEND_FROM_EMAIL ?? "Mita Studio <contact@mita-studio.com>",
+          from: process.env.RESEND_FROM_EMAIL ?? "Mita Studio <tahina@mita-studio.com>",
           to: process.env.ADMIN_EMAILS?.split(",").map((e) => e.trim()) ?? [
             "tahina@mita-studio.com",
           ],

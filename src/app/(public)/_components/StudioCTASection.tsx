@@ -138,10 +138,10 @@ export function StudioCTASection() {
 
         <a
           ref={emailRef}
-          href="mailto:contact@mita-studio.com"
+          href="mailto:tahina@mita-studio.com"
           className="block mt-4 text-sm text-white hover:text-white transition-colors"
         >
-          contact@mita-studio.com
+          tahina@mita-studio.com
         </a>
       </div>
     </section>

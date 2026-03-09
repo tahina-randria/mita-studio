@@ -31,7 +31,7 @@ const JSON_LD = {
   mainEntity: {
     "@type": "Organization",
     name: "Mita Studio",
-    email: "contact@mita-studio.com",
+    email: "tahina@mita-studio.com",
     url: "https://mita-studio.com",
   },
 };
@@ -108,10 +108,10 @@ export default function ContactPage() {
                   Vous pr&eacute;f&eacute;rez &eacute;crire directement&nbsp;?
                 </p>
                 <a
-                  href="mailto:contact@mita-studio.com"
+                  href="mailto:tahina@mita-studio.com"
                   className="text-sm text-white hover:text-white transition-colors"
                 >
-                  contact@mita-studio.com
+                  tahina@mita-studio.com
                 </a>
               </div>
             </div>

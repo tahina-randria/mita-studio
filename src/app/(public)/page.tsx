@@ -45,7 +45,7 @@ const JSON_LD_ORGANIZATION = {
   },
   contactPoint: {
     "@type": "ContactPoint",
-    email: "contact@mita-studio.com",
+    email: "tahina@mita-studio.com",
     contactType: "customer service",
     availableLanguage: "French",
   },

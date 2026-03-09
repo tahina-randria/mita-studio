@@ -113,10 +113,10 @@ export function StudioFooter() {
             &copy; {new Date().getFullYear()} Mita Studio. Tous droits r&eacute;serv&eacute;s.
           </p>
           <a
-            href="mailto:contact@mita-studio.com"
+            href="mailto:tahina@mita-studio.com"
             className="text-xs text-white hover:text-white transition-colors"
           >
-            contact@mita-studio.com
+            tahina@mita-studio.com
           </a>
         </div>
       </div>
