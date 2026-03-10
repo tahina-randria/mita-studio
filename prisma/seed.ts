@@ -10,6 +10,24 @@ async function main() {
   console.log("🌱 Seeding database...\n");
 
   // ============================================================================
+  // CLEAN UP — Delete all existing data (order matters for FK constraints)
+  // ============================================================================
+  console.log("→ Cleaning existing data...");
+  await prisma.pricingFeature.deleteMany();
+  await prisma.pricingTier.deleteMany();
+  await prisma.faqItem.deleteMany();
+  await prisma.testimonial.deleteMany();
+  await prisma.teaserQuote.deleteMany();
+  await prisma.commitment.deleteMany();
+  await prisma.problem.deleteMany();
+  await prisma.service.deleteMany();
+  await prisma.founderMilestone.deleteMany();
+  await prisma.founderSkill.deleteMany();
+  await prisma.navItem.deleteMany();
+  await prisma.siteContent.deleteMany();
+  await prisma.siteSetting.deleteMany();
+
+  // ============================================================================
   // SITE SETTINGS
   // ============================================================================
   console.log("→ SiteSettings...");
