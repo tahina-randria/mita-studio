@@ -293,7 +293,7 @@ export function StudioPricingSection({
                 <div>
                   <PriceDisplay tier={tier} priceRef={setPriceRef(i)} />
                   {tier.priceNumeric !== null && (
-                    <span className="text-xs text-white/50 ml-1">TTC</span>
+                    <span className="text-xs text-white/50 ml-1">HT</span>
                   )}
                 </div>
               </div>
@@ -361,7 +361,7 @@ export function StudioPricingSection({
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {subscriptionTiers.map((sub) => (
               <div
                 key={sub.id}
@@ -420,7 +420,7 @@ export function StudioPricingSection({
           </div>
 
           <p className="mt-5 text-center text-xs text-white">
-            Sans engagement. R&eacute;siliable avec 15&nbsp;jours de pr&eacute;avis. Quotas mensuels non reportables.
+            Engagement minimum 3&nbsp;mois. R&eacute;siliable avec 30&nbsp;jours de pr&eacute;avis. Quotas mensuels non reportables.
           </p>
         </div>
 
@@ -456,7 +456,7 @@ export function StudioPricingSection({
 
         {/* Compliance */}
         <p className="mt-8 text-center text-xs text-white leading-relaxed max-w-lg mx-auto">
-          Tarifs TTC. Le tarif final est &eacute;tabli sur devis apr&egrave;s &eacute;change.
+          TVA non applicable, article 293&nbsp;B du CGI. Le tarif final est &eacute;tabli sur devis apr&egrave;s &eacute;change.
           D&eacute;lais indicatifs, variables selon la complexit&eacute; du projet.
         </p>
       </div>
