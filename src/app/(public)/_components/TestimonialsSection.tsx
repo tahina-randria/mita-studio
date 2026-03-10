@@ -5,40 +5,7 @@ import { gsap, ScrollTrigger } from "@/lib/gsap";
 import Image from "next/image";
 import { setReducedMotionState } from "@/lib/motion";
 
-interface Commitment {
-  icon: string;
-  title: string;
-  description: string;
-}
-
-const COMMITMENTS: Commitment[] = [
-  {
-    icon: "/images/icons/icon-timer.webp",
-    title: "Livraison rapide",
-    description:
-      "Votre site est en ligne en 2 \u00e0 4\u00a0semaines. On s\u2019engage sur un planning pr\u00e9cis d\u00e8s le d\u00e9part.",
-  },
-  {
-    icon: "/images/icons/icon-contract.webp",
-    title: "Prix fix\u00e9, z\u00e9ro surprise",
-    description:
-      "Le devis est d\u00e9finitif. Pas de frais cach\u00e9s, pas de rallonge budget. Ce qui est sign\u00e9 est respect\u00e9.",
-  },
-  {
-    icon: "/images/icons/icon-shield.webp",
-    title: "Satisfait ou on corrige",
-    description:
-      "Des rounds de r\u00e9visions inclus pour affiner le r\u00e9sultat jusqu\u2019\u00e0 ce que \u00e7a vous convienne.",
-  },
-  {
-    icon: "/images/icons/icon-handshake.webp",
-    title: "Accompagnement inclus",
-    description:
-      "Formation, 30\u00a0jours de support post-lancement. On ne dispara\u00eet pas apr\u00e8s la livraison.",
-  },
-];
-
-export function CommitmentsSection() {
+export function CommitmentsSection({ commitments }: { commitments: { id: string; title: string; description: string; iconUrl: string | null }[] }) {
   const sectionRef = useRef<HTMLElement>(null);
   const headingRef = useRef<HTMLDivElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
@@ -121,9 +88,9 @@ export function CommitmentsSection() {
           ref={gridRef}
           className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6"
         >
-          {COMMITMENTS.map((c) => (
+          {commitments.map((c) => (
             <div
-              key={c.title}
+              key={c.id}
               className="group relative overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 sm:p-8 transition-all duration-300 hover:border-white/[0.12] hover:bg-white/[0.05]"
             >
               {/* Icon — large, top-right corner with gradient mask + bend */}
@@ -142,7 +109,7 @@ export function CommitmentsSection() {
                   }}
                 >
                   <Image
-                    src={c.icon}
+                    src={c.iconUrl ?? ""}
                     alt=""
                     fill
                     className="object-contain"

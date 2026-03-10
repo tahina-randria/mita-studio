@@ -5,45 +5,7 @@ import { gsap } from "@/lib/gsap";
 import { setReducedMotionState } from "@/lib/motion";
 import { CaretDown } from "@phosphor-icons/react";
 
-interface FAQ {
-  question: string;
-  answer: string;
-}
-
-const FAQS: FAQ[] = [
-  {
-    question: "Combien de temps faut-il pour cr\u00e9er un site\u00a0?",
-    answer:
-      "En moyenne 2 \u00e0 4\u00a0semaines, selon la complexit\u00e9 du projet. Un site vitrine simple peut \u00eatre livr\u00e9 en 10\u00a0jours. Nous d\u00e9finissons un planning pr\u00e9cis d\u00e8s le d\u00e9marrage.",
-  },
-  {
-    question: "Quels sont vos tarifs\u00a0?",
-    answer:
-      "\u00c0 partir de 790\u00a0\u20ac TTC pour un site vitrine (offre de lancement). Le tarif d\u00e9pend du nombre de pages, des fonctionnalit\u00e9s et du niveau de personnalisation. Chaque devis est d\u00e9finitif, pas de frais cach\u00e9s.",
-  },
-  {
-    question: "Est-ce que le r\u00e9f\u00e9rencement Google est inclus\u00a0?",
-    answer:
-      "Le r\u00e9f\u00e9rencement (ou SEO) d\u00e9signe l\u2019ensemble des techniques pour que votre site apparaisse dans les premiers r\u00e9sultats Google. Oui, chaque site inclut une optimisation de base\u00a0: balises, performance, structure. Pour aller plus loin (contenu, liens, suivi de positions), on propose un accompagnement d\u00e9di\u00e9.",
-  },
-  {
-    question: "Je ne suis pas technique, c\u2019est un probl\u00e8me\u00a0?",
-    answer:
-      "Pas du tout. On g\u00e8re toute la partie technique. Vous n\u2019avez qu\u2019\u00e0 fournir vos textes et images (on peut aussi s\u2019en charger). Apr\u00e8s livraison, on vous forme pour g\u00e9rer votre site en autonomie.",
-  },
-  {
-    question: "Que se passe-t-il apr\u00e8s la livraison\u00a0?",
-    answer:
-      "Vous b\u00e9n\u00e9ficiez de 30\u00a0jours de support post-lancement inclus (corrections et ajustements mineurs). Ensuite, nos abonnements mensuels prennent le relais\u00a0: maintenance technique, r\u00e9daction d\u2019articles SEO et suivi de visibilit\u00e9. Sans engagement, avec un quota d\u2019heures transparent.",
-  },
-  {
-    question: "Travaillez-vous avec des clients hors de France\u00a0?",
-    answer:
-      "Oui, on travaille \u00e0 distance avec des clients partout dans le monde. Nos \u00e9changes se font par visio, email et messagerie. Le fuseau horaire n\u2019est jamais un frein.",
-  },
-];
-
-export function HomeFAQSection() {
+export function HomeFAQSection({ faqs }: { faqs: { id: string; question: string; answer: string }[] }) {
   const sectionRef = useRef<HTMLElement>(null);
   const headingRef = useRef<HTMLDivElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
@@ -167,9 +129,9 @@ export function HomeFAQSection() {
         </div>
 
         <div ref={listRef} className="space-y-3">
-          {FAQS.map((faq) => (
+          {faqs.map((faq) => (
             <details
-              key={faq.question}
+              key={faq.id}
               className="group rounded-xl border border-white/[0.06] bg-white/[0.02] transition-colors hover:border-white/[0.10] open:bg-white/[0.03]"
             >
               <summary className="flex items-center justify-between cursor-pointer px-5 sm:px-6 py-4 sm:py-5 text-[15px] sm:text-base font-medium text-white select-none list-none [&::-webkit-details-marker]:hidden">

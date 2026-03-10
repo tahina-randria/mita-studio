@@ -3,138 +3,23 @@
 import { useEffect, useRef, useMemo, useCallback } from "react";
 import Link from "next/link";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
-import { Check } from "@phosphor-icons/react";
+import { Check, X } from "@phosphor-icons/react";
 import { setReducedMotionState } from "@/lib/motion";
 
-
-interface PricingTier {
+interface PricingTierProp {
+  id: string;
   name: string;
   price: string;
   priceNumeric: number | null;
   priceLabel: string;
   priceSuffix: string;
   description: string;
+  type: string;
   featured: boolean;
-  cta: string;
-  ctaHref: string;
-  features: string[];
+  ctaLabel: string;
+  ctaUrl: string;
+  features: { id: string; text: string; included: boolean }[];
 }
-
-interface SubscriptionTier {
-  name: string;
-  price: string;
-  description: string;
-  features: string[];
-  ctaHref: string;
-}
-
-const PRICING_TIERS: PricingTier[] = [
-  {
-    name: "Essentiel",
-    price: "790\u00a0\u20ac",
-    priceNumeric: 790,
-    priceLabel: "\u00c0 partir de",
-    priceSuffix: "\u00a0\u20ac",
-    description:
-      "Une page, sobre et efficace. Votre activit\u00e9 en ligne en 2\u00a0semaines.",
-    featured: false,
-    cta: "D\u00e9marrer un projet",
-    ctaHref: "/contact",
-    features: [
-      "Site one-page responsive",
-      "Design personnalis\u00e9",
-      "H\u00e9bergement 1\u00a0an inclus",
-      "Formulaire de contact",
-      "R\u00e9f\u00e9rencement Google de base",
-      "1 round de r\u00e9visions inclus",
-      "Livraison en 2\u00a0semaines*",
-    ],
-  },
-  {
-    name: "Croissance",
-    price: "2\u00a0490\u00a0\u20ac",
-    priceNumeric: 2490,
-    priceLabel: "\u00c0 partir de",
-    priceSuffix: "\u00a0\u20ac",
-    description:
-      "Multi-pages, r\u00e9f\u00e9rencement Google, blog. Le site complet pour \u00eatre trouv\u00e9 en ligne.",
-    featured: true,
-    cta: "Choisir Croissance",
-    ctaHref: "/contact",
-    features: [
-      "Jusqu\u2019\u00e0 7 pages",
-      "R\u00e9f\u00e9rencement Google complet",
-      "Blog int\u00e9gr\u00e9 + analytics",
-      "2 mois de maintenance inclus",
-      "Formation prise en main (1h)",
-      "2 rounds de r\u00e9visions inclus",
-      "Livraison en 4\u00a0semaines*",
-    ],
-  },
-  {
-    name: "Premium",
-    price: "Sur devis",
-    priceNumeric: null,
-    priceLabel: "",
-    priceSuffix: "",
-    description:
-      "E-commerce, app web, int\u00e9grations. Projet sur mesure, de A \u00e0 Z.",
-    featured: false,
-    cta: "Discuter de mon projet",
-    ctaHref: "/contact",
-    features: [
-      "Pages illimit\u00e9es",
-      "E-commerce / App web",
-      "R\u00e9f\u00e9rencement avanc\u00e9 + suivi mensuel",
-      "Int\u00e9grations sur mesure (CRM, API)",
-      "Accompagnement sur mesure",
-      "Planning personnalis\u00e9",
-    ],
-  },
-];
-
-const SUBSCRIPTION_TIERS: SubscriptionTier[] = [
-  {
-    name: "Maintenance",
-    price: "89\u00a0\u20ac/mois",
-    description: "Votre site toujours \u00e0 jour et fonctionnel.",
-    features: [
-      "1h de travail effectif / mois",
-      "Mises \u00e0 jour techniques",
-      "Modifications mineures (textes, images)",
-      "Support par email (48h ouvr\u00e9es)",
-      "Sauvegarde mensuelle",
-    ],
-    ctaHref: "/contact",
-  },
-  {
-    name: "Croissance",
-    price: "249\u00a0\u20ac/mois",
-    description: "Faites vivre votre site et grimpez sur Google.",
-    features: [
-      "3h de travail effectif / mois",
-      "Tout ce qui est dans Maintenance",
-      "1 article SEO optimis\u00e9 / mois",
-      "Optimisation SEO continue",
-      "Rapport de positionnement mensuel",
-    ],
-    ctaHref: "/contact",
-  },
-  {
-    name: "Acc\u00e9l\u00e9ration",
-    price: "449\u00a0\u20ac/mois",
-    description: "Croissance maximale, visibilit\u00e9 acc\u00e9l\u00e9r\u00e9e.",
-    features: [
-      "6h de travail effectif / mois",
-      "Tout ce qui est dans Croissance",
-      "2 articles SEO / mois",
-      "Gestion Google Business Profile",
-      "Audit trimestriel de performance",
-      "Support prioritaire (24h ouvr\u00e9es)",
-    ],
-    ctaHref: "/contact",
-  },
-];
 
 
 /* ── Word split component for heading ── */
@@ -177,7 +62,7 @@ function PriceDisplay({
   tier,
   priceRef,
 }: {
-  tier: PricingTier;
+  tier: PricingTierProp;
   priceRef: (el: HTMLSpanElement | null) => void;
 }) {
   if (tier.priceNumeric !== null) {
@@ -214,7 +99,13 @@ function PriceDisplay({
   );
 }
 
-export function StudioPricingSection() {
+export function StudioPricingSection({
+  pricingTiers,
+  subscriptionTiers,
+}: {
+  pricingTiers: PricingTierProp[];
+  subscriptionTiers: PricingTierProp[];
+}) {
   const sectionRef = useRef<HTMLElement>(null);
   const headingWordsRef = useRef<HTMLSpanElement[]>([]);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
@@ -251,7 +142,7 @@ export function StudioPricingSection() {
       }
       /* ── Price counter ── */
       if (!hasCountedRef.current) {
-        PRICING_TIERS.forEach((tier, i) => {
+        pricingTiers.forEach((tier, i) => {
           const el = priceRefs.current[i];
           if (!el || tier.priceNumeric === null) return;
           const target = tier.priceNumeric;
@@ -285,7 +176,7 @@ export function StudioPricingSection() {
       }
       if (gridRef.current) {
         const cards = Array.from(gridRef.current.children) as HTMLElement[];
-        const featuredIndex = PRICING_TIERS.findIndex((t) => t.featured);
+        const featuredIndex = pricingTiers.findIndex((t) => t.featured);
         cards.forEach((card, i) => {
           const isFeatured = i === featuredIndex;
           gsap.fromTo(card,
@@ -303,7 +194,7 @@ export function StudioPricingSection() {
       }
       /* ── Price counter ── */
       if (!hasCountedRef.current) {
-        PRICING_TIERS.forEach((tier, i) => {
+        pricingTiers.forEach((tier, i) => {
           const el = priceRefs.current[i];
           if (!el || tier.priceNumeric === null) return;
           const target = tier.priceNumeric;
@@ -337,7 +228,7 @@ export function StudioPricingSection() {
     });
 
     return () => mm.revert();
-  }, []);
+  }, [pricingTiers]);
 
   return (
     <section
@@ -367,9 +258,9 @@ export function StudioPricingSection() {
           ref={gridRef}
           className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-0 md:items-stretch"
         >
-          {PRICING_TIERS.map((tier, i) => (
+          {pricingTiers.map((tier, i) => (
             <div
-              key={tier.name}
+              key={tier.id}
               className={`relative flex flex-col transition-all duration-300 ${
                 tier.featured
                   ? "liquid-glass-strong gradient-border z-10 rounded-2xl p-6 sm:p-8 lg:p-7 xl:p-9 md:scale-[1.04] md:-my-4 overflow-visible"
@@ -399,35 +290,12 @@ export function StudioPricingSection() {
                 </p>
 
                 {/* Price */}
-                {tier.name === "Essentiel" ? (
-                  <div>
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-xs text-white uppercase tracking-wide">
-                        Offre de lancement
-                      </span>
-                    </div>
-                    <div className="flex items-baseline gap-2 mt-1">
-                      <span className="text-lg text-white/40 line-through">
-                        990&nbsp;&euro;
-                      </span>
-                      <span
-                        ref={setPriceRef(i)}
-                        data-target={790}
-                        className="text-3xl sm:text-4xl font-medium tracking-tight text-white"
-                      >
-                        790&nbsp;&euro;
-                      </span>
-                      <span className="text-xs text-white/50">TTC</span>
-                    </div>
-                  </div>
-                ) : (
-                  <div>
-                    <PriceDisplay tier={tier} priceRef={setPriceRef(i)} />
-                    {tier.priceNumeric !== null && (
-                      <span className="text-xs text-white/50 ml-1">TTC</span>
-                    )}
-                  </div>
-                )}
+                <div>
+                  <PriceDisplay tier={tier} priceRef={setPriceRef(i)} />
+                  {tier.priceNumeric !== null && (
+                    <span className="text-xs text-white/50 ml-1">TTC</span>
+                  )}
+                </div>
               </div>
 
               {/* Separator — accent gradient for featured */}
@@ -441,17 +309,27 @@ export function StudioPricingSection() {
 
               {/* Features */}
               <ul className={`flex-1 space-y-2.5 ${tier.featured ? "mb-6" : "mb-5"}`}>
-                {tier.features.map((feature) => (
-                  <li key={feature} data-feature className="flex items-start gap-2.5">
-                    <Check
-                      size={14}
-                      weight="regular"
-                      className="mt-0.5 shrink-0 text-white"
-                    />
+                {tier.features.map((f) => (
+                  <li key={f.id} data-feature className="flex items-start gap-2.5">
+                    {f.included ? (
+                      <Check
+                        size={14}
+                        weight="regular"
+                        className="mt-0.5 shrink-0 text-white"
+                      />
+                    ) : (
+                      <X
+                        size={14}
+                        weight="regular"
+                        className="mt-0.5 shrink-0 text-white/30"
+                      />
+                    )}
                     <span
-                      className="text-sm leading-relaxed text-white"
+                      className={`text-sm leading-relaxed ${
+                        f.included ? "text-white" : "text-white/30 line-through"
+                      }`}
                     >
-                      {feature}
+                      {f.text}
                     </span>
                   </li>
                 ))}
@@ -459,14 +337,14 @@ export function StudioPricingSection() {
 
               {/* CTA */}
               <a
-                href={tier.ctaHref}
+                href={tier.ctaUrl}
                 className={`mt-auto block w-full rounded-xl py-3 text-center text-sm font-semibold transition-all duration-200 active:scale-[0.98] ${
                   tier.featured
                     ? "btn-accent"
                     : "border border-white/[0.1] hover:border-white/20 hover:bg-white/[0.04] text-white"
                 }`}
               >
-                <span className="relative z-10">{tier.cta}</span>
+                <span className="relative z-10">{tier.ctaLabel}</span>
               </a>
             </div>
           ))}
@@ -484,9 +362,9 @@ export function StudioPricingSection() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {SUBSCRIPTION_TIERS.map((sub) => (
+            {subscriptionTiers.map((sub) => (
               <div
-                key={sub.name}
+                key={sub.id}
                 className="liquid-glass rounded-2xl p-6 sm:p-7 flex flex-col"
               >
                 <h4 className="text-lg font-medium text-white mb-1">
@@ -498,29 +376,44 @@ export function StudioPricingSection() {
                 <div className="flex items-baseline gap-1 mb-5">
                   <span className="text-2xl sm:text-3xl font-medium text-white">
                     {sub.price}
+                    {sub.priceSuffix && (
+                      <span className="text-base font-normal text-white/60">{sub.priceSuffix}</span>
+                    )}
                   </span>
                   <span className="text-xs text-white/50">TTC</span>
                 </div>
                 <div className="border-t border-white/[0.06] mb-5" />
                 <ul className="flex-1 space-y-2.5 mb-5">
-                  {sub.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2.5">
-                      <Check
-                        size={14}
-                        weight="regular"
-                        className="mt-0.5 shrink-0 text-white"
-                      />
-                      <span className="text-sm leading-relaxed text-white">
-                        {feature}
+                  {sub.features.map((f) => (
+                    <li key={f.id} className="flex items-start gap-2.5">
+                      {f.included ? (
+                        <Check
+                          size={14}
+                          weight="regular"
+                          className="mt-0.5 shrink-0 text-white"
+                        />
+                      ) : (
+                        <X
+                          size={14}
+                          weight="regular"
+                          className="mt-0.5 shrink-0 text-white/30"
+                        />
+                      )}
+                      <span
+                        className={`text-sm leading-relaxed ${
+                          f.included ? "text-white" : "text-white/30 line-through"
+                        }`}
+                      >
+                        {f.text}
                       </span>
                     </li>
                   ))}
                 </ul>
                 <a
-                  href={sub.ctaHref}
+                  href={sub.ctaUrl}
                   className="mt-auto block w-full rounded-xl py-3 text-center text-sm font-semibold border border-white/[0.1] hover:border-white/20 hover:bg-white/[0.04] text-white transition-all active:scale-[0.98]"
                 >
-                  En savoir plus
+                  {sub.ctaLabel}
                 </a>
               </div>
             ))}

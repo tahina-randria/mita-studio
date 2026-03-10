@@ -6,7 +6,13 @@ import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { setReducedMotionState } from "@/lib/motion";
 
 
-export function StudioCTASection() {
+export function StudioCTASection({
+  content,
+  settings,
+}: {
+  content: Record<string, string>;
+  settings: Record<string, string>;
+}) {
   const sectionRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const descRef = useRef<HTMLParagraphElement>(null);
@@ -117,15 +123,14 @@ export function StudioCTASection() {
           ref={titleRef}
           className="text-4xl sm:text-5xl lg:text-6xl text-white mb-6 tracking-tight"
         >
-          Un projet en t&ecirc;te&nbsp;?
+          {content.cta_title || "Un projet en tête\u00a0?"}
         </h2>
 
         <p
           ref={descRef}
           className="text-lg sm:text-xl text-white mb-12"
         >
-          Premier &eacute;change gratuit, sans engagement.
-          On vous r&eacute;pond sous 24h.
+          {content.cta_subtitle || "Premier échange gratuit, sans engagement. On vous répond sous 24h."}
         </p>
 
         <Link
@@ -133,15 +138,15 @@ export function StudioCTASection() {
           href="/contact"
           className="inline-flex items-center justify-center bg-white text-[#0a0a0a] px-10 py-4 rounded-xl text-[15px] font-semibold hover:bg-white/90 hover:scale-[1.03] active:scale-[0.98] transition-all"
         >
-          Recevoir un devis gratuit
+          {content.cta_button || "Recevoir un devis gratuit"}
         </Link>
 
         <a
           ref={emailRef}
-          href="mailto:tahina@mita-studio.com"
+          href={"mailto:" + (settings.email || "tahina@mita-studio.com")}
           className="block mt-4 text-sm text-white hover:text-white transition-colors"
         >
-          tahina@mita-studio.com
+          {settings.email || "tahina@mita-studio.com"}
         </a>
       </div>
     </section>

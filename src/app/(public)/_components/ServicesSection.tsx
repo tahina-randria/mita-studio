@@ -5,34 +5,7 @@ import Image from "next/image";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { setReducedMotionState } from "@/lib/motion";
 
-interface Service {
-  title: string;
-  description: string;
-  icon: string;
-}
-
-const SERVICES: Service[] = [
-  {
-    title: "Sites web",
-    description:
-      "Sites vitrines, e-commerce et applications web sur mesure. Design soigné, rapide, optimisé pour convertir.",
-    icon: "/images/services/icon-web.webp",
-  },
-  {
-    title: "Référencement Google",
-    description:
-      "Stratégie SEO complète et multilingue. Contenu optimisé, suivi de positions pour une visibilité durable.",
-    icon: "/images/services/icon-seo.webp",
-  },
-  {
-    title: "Outils digitaux",
-    description:
-      "Outils sur mesure pour automatiser vos tâches répétitives. Devis, relances, rapports : ce qui prenait des heures se fait en minutes.",
-    icon: "/images/services/icon-tools.webp",
-  },
-];
-
-export function ServicesSection() {
+export function ServicesSection({ services }: { services: { id: string; title: string; description: string; iconUrl: string | null }[] }) {
   const headingRef = useRef<HTMLDivElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
 
@@ -106,8 +79,8 @@ export function ServicesSection() {
           ref={gridRef}
           className="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-5"
         >
-          {SERVICES.map((service) => (
-            <div key={service.title} className="group relative overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.02] h-full transition-all duration-300 hover:border-white/[0.12] hover:bg-white/[0.05]">
+          {services.map((service) => (
+            <div key={service.id} className="group relative overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.02] h-full transition-all duration-300 hover:border-white/[0.12] hover:bg-white/[0.05]">
               {/* Icon in top-right corner with gradient fade + perspective bend */}
               <div
                 className="absolute -top-6 -right-6 w-48 h-48 sm:w-56 sm:h-56 pointer-events-none transition-opacity duration-500 opacity-40 group-hover:opacity-55 md:mix-blend-screen"
@@ -124,7 +97,7 @@ export function ServicesSection() {
                   }}
                 >
                   <Image
-                    src={service.icon}
+                    src={service.iconUrl ?? ""}
                     alt=""
                     fill
                     className="object-contain"

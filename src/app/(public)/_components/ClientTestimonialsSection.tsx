@@ -6,53 +6,21 @@ import { setReducedMotionState } from "@/lib/motion";
 import { Star, ArrowRight, ChatCircleDots } from "@phosphor-icons/react";
 import Link from "next/link";
 
-interface Testimonial {
-  quote: string;
-  name: string;
-  role: string;
-  company: string;
-  initials: string;
-  accentColor: string;
-}
-
-const TESTIMONIALS: Testimonial[] = [
-  {
-    quote:
-      "J\u2019avais contact\u00e9 trois agences avant et \u00e0 chaque fois c\u2019\u00e9tait flou sur les d\u00e9lais. L\u00e0, en deux semaines j\u2019avais mon site en ligne. Simple, efficace, z\u00e9ro prise de t\u00eate.",
-    name: "Karim Hadj-Sa\u00efd",
-    role: "G\u00e9rant",
-    company: "KHS Import",
-    initials: "KH",
-    accentColor: "oklch(0.65 0.25 265)",
-  },
-  {
-    quote:
-      "Ce que j\u2019ai appr\u00e9ci\u00e9 c\u2019est qu\u2019on m\u2019a pas vendu du r\u00eave. Le devis \u00e9tait clair, le r\u00e9sultat correspond exactement \u00e0 ce qu\u2019on avait valid\u00e9 ensemble. Pas de surprise.",
-    name: "Claire Dumont",
-    role: "Fondatrice",
-    company: "Atelier Bonne Maille",
-    initials: "CD",
-    accentColor: "oklch(0.55 0.22 290)",
-  },
-  {
-    quote:
-      "On est une petite \u00e9quipe et on n\u2019y connaissait rien en web. Ils nous ont tout expliqu\u00e9, form\u00e9s apr\u00e8s la livraison, et m\u00eame 3\u00a0mois apr\u00e8s ils r\u00e9pondent encore \u00e0 nos questions.",
-    name: "Yuki Tanaka-Morel",
-    role: "Cofondatrice",
-    company: "Hanami Th\u00e9rapies",
-    initials: "YT",
-    accentColor: "oklch(0.68 0.18 45)",
-  },
-];
-
-/** Teaser snippets shown on the CTA card */
-const TEASER_QUOTES = [
-  "\u00ab Un vrai gain de temps au quotidien \u00bb",
-  "\u00ab Je recommande les yeux ferm\u00e9s \u00bb",
-  "\u00ab Enfin un prestataire qui \u00e9coute \u00bb",
-];
-
-export function ClientTestimonialsSection() {
+export function ClientTestimonialsSection({
+  testimonials,
+  teaserQuotes,
+}: {
+  testimonials: {
+    id: string;
+    quote: string;
+    name: string;
+    role: string;
+    company: string;
+    initials: string | null;
+    accentColor: string | null;
+  }[];
+  teaserQuotes: { id: string; text: string }[];
+}) {
   const sectionRef = useRef<HTMLElement>(null);
   const headingRef = useRef<HTMLDivElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
@@ -180,9 +148,9 @@ export function ClientTestimonialsSection() {
           ref={gridRef}
           className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6"
         >
-          {TESTIMONIALS.map((t) => (
+          {testimonials.map((t) => (
             <div
-              key={t.name}
+              key={t.id}
               className="group relative rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 sm:p-8 transition-all duration-300 hover:border-white/[0.12] hover:bg-white/[0.04]"
             >
               {/* Stars */}
@@ -207,7 +175,7 @@ export function ClientTestimonialsSection() {
                 {/* Avatar with initials */}
                 <div
                   className="flex items-center justify-center w-10 h-10 rounded-full text-xs font-bold text-white shrink-0"
-                  style={{ backgroundColor: t.accentColor }}
+                  style={{ backgroundColor: t.accentColor ?? undefined }}
                 >
                   {t.initials}
                 </div>
@@ -232,12 +200,12 @@ export function ClientTestimonialsSection() {
               </h3>
               {/* Teaser quotes */}
               <div className="space-y-2 mb-6">
-                {TEASER_QUOTES.map((q) => (
+                {teaserQuotes.map((q) => (
                   <p
-                    key={q}
+                    key={q.id}
                     className="text-sm text-white/40 italic"
                   >
-                    {q}
+                    {q.text}
                   </p>
                 ))}
               </div>

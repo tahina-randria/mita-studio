@@ -5,12 +5,4 @@ export default defineConfig({
   datasource: {
     url: env("DATABASE_URL"),
   },
-  migrate: {
-    adapter: async () => {
-      const pg = await import("pg");
-      return new pg.default.Pool({
-        connectionString: env("DATABASE_URL"),
-      });
-    },
-  },
 });

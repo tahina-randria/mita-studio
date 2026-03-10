@@ -8,19 +8,27 @@ import { setReducedMotionState } from "@/lib/motion";
 import { LinkedinLogo } from "@phosphor-icons/react";
 
 
-const FOOTER_LINKS = {
-  Studio: [
-    { label: "Fondateur", href: "/fondateur" },
-    { label: "Blog", href: "/blog" },
-  ],
-  "L\u00e9gal": [
-    { label: "Mentions l\u00e9gales", href: "/mentions-legales" },
-    { label: "CGV", href: "/cgv" },
-    { label: "Confidentialit\u00e9", href: "/confidentialite" },
-  ],
+const DEFAULT_STUDIO_LINKS = [
+  { id: "fs-services", label: "Services", href: "#services", external: false },
+  { id: "fs-pricing", label: "Tarifs", href: "#pricing", external: false },
+  { id: "fs-about", label: "\u00c0 propos", href: "#about", external: false },
+  { id: "fs-contact", label: "Contact", href: "/contact", external: false },
+  { id: "fs-blog", label: "Blog", href: "/blog", external: false },
+];
+
+const DEFAULT_LEGAL_LINKS = [
+  { id: "fl-mentions", label: "Mentions l\u00e9gales", href: "/mentions-legales", external: false },
+  { id: "fl-cgv", label: "CGV", href: "/cgv", external: false },
+  { id: "fl-confidentialite", label: "Confidentialit\u00e9", href: "/confidentialite", external: false },
+];
+
+const DEFAULT_SETTINGS: Record<string, string> = {
+  company_name: "Mita Studio",
+  contact_email: "tahina@mita-studio.com",
+  linkedin_url: "https://www.linkedin.com/company/mita-studio",
 };
 
-export function StudioFooter() {
+export function StudioFooter({ studioLinks = DEFAULT_STUDIO_LINKS, legalLinks = DEFAULT_LEGAL_LINKS, settings = DEFAULT_SETTINGS }: { studioLinks?: { id: string; label: string; href: string; external: boolean }[]; legalLinks?: { id: string; label: string; href: string; external: boolean }[]; settings?: Record<string, string> }) {
   const footerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -75,7 +83,7 @@ export function StudioFooter() {
               propuls&eacute;s par l&rsquo;IA.
             </p>
             <a
-              href="https://www.linkedin.com/company/mita-studio"
+              href={settings.linkedin_url || "https://www.linkedin.com/company/mita-studio"}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Mita Studio sur LinkedIn"
@@ -85,38 +93,77 @@ export function StudioFooter() {
             </a>
           </div>
 
-          {/* Link columns */}
-          {Object.entries(FOOTER_LINKS).map(([title, links]) => (
-            <nav key={title} aria-label={title}>
-              <p className="text-xs font-semibold uppercase tracking-wider text-white mb-3">
-                {title}
-              </p>
-              <ul className="space-y-2">
-                {links.map((link) => (
-                  <li key={link.href + link.label}>
+          {/* Studio links */}
+          <nav aria-label="Studio">
+            <p className="text-xs font-semibold uppercase tracking-wider text-white mb-3">
+              Studio
+            </p>
+            <ul className="space-y-2">
+              {studioLinks.map((link) => (
+                <li key={link.id}>
+                  {link.external ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-white hover:text-white transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
                     <Link
                       href={link.href}
                       className="text-sm text-white hover:text-white transition-colors"
                     >
                       {link.label}
                     </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          ))}
+                  )}
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* Legal links */}
+          <nav aria-label="Légal">
+            <p className="text-xs font-semibold uppercase tracking-wider text-white mb-3">
+              Légal
+            </p>
+            <ul className="space-y-2">
+              {legalLinks.map((link) => (
+                <li key={link.id}>
+                  {link.external ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-white hover:text-white transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="text-sm text-white hover:text-white transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
 
         {/* Bottom bar */}
         <div className="mt-8 pt-6 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-white">
-            &copy; {new Date().getFullYear()} Mita Studio. Tous droits r&eacute;serv&eacute;s.
+            &copy; {new Date().getFullYear()} {settings.company_name || "Mita Studio"}. Tous droits r&eacute;serv&eacute;s.
           </p>
           <a
-            href="mailto:tahina@mita-studio.com"
+            href={`mailto:${settings.contact_email || "tahina@mita-studio.com"}`}
             className="text-xs text-white hover:text-white transition-colors"
           >
-            tahina@mita-studio.com
+            {settings.contact_email || "tahina@mita-studio.com"}
           </a>
         </div>
       </div>

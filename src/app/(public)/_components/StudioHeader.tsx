@@ -8,20 +8,15 @@ import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { List, X } from "@phosphor-icons/react";
 
 
-interface NavLink {
-  label: string;
-  href: string;
-  isRoute: boolean;
-}
-
-const NAV_LINKS: NavLink[] = [
-  { label: "Services", href: "#services", isRoute: false },
-  { label: "Notre approche", href: "#process", isRoute: false },
-  { label: "Tarifs", href: "#pricing", isRoute: false },
-  { label: "Blog", href: "/blog", isRoute: true },
+const DEFAULT_NAV_LINKS = [
+  { id: "nav-services", label: "Services", href: "#services", external: false },
+  { id: "nav-pricing", label: "Tarifs", href: "#pricing", external: false },
+  { id: "nav-testimonials", label: "T\u00e9moignages", href: "#testimonials", external: false },
+  { id: "nav-about", label: "\u00c0 propos", href: "#about", external: false },
+  { id: "nav-blog", label: "Blog", href: "/blog", external: false },
 ];
 
-export function StudioHeader() {
+export function StudioHeader({ navLinks = DEFAULT_NAV_LINKS }: { navLinks?: { id: string; label: string; href: string; external: boolean }[] }) {
   const headerRef = useRef<HTMLElement>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const overlayRef = useRef<HTMLDivElement>(null);
@@ -170,10 +165,10 @@ export function StudioHeader() {
 
           {/* Desktop nav links */}
           <div className="hidden md:flex items-center gap-1">
-            {NAV_LINKS.map((link) =>
-              link.isRoute ? (
+            {navLinks.map((link) =>
+              !link.href.startsWith('#') ? (
                 <Link
-                  key={link.href}
+                  key={link.id}
                   href={link.href}
                   className="px-3.5 py-1.5 text-sm text-white hover:text-white rounded-lg hover:bg-white/[0.04] transition-colors"
                 >
@@ -181,7 +176,7 @@ export function StudioHeader() {
                 </Link>
               ) : (
                 <a
-                  key={link.href}
+                  key={link.id}
                   href={link.href}
                   onClick={(e) => handleAnchorClick(e, link.href)}
                   className="px-3.5 py-1.5 text-sm text-white hover:text-white rounded-lg hover:bg-white/[0.04] transition-colors"
@@ -241,10 +236,10 @@ export function StudioHeader() {
               className="h-10 w-auto mb-6"
             />
 
-            {NAV_LINKS.map((link) =>
-              link.isRoute ? (
+            {navLinks.map((link) =>
+              !link.href.startsWith('#') ? (
                 <Link
-                  key={link.href}
+                  key={link.id}
                   href={link.href}
                   data-mobile-link
                   onClick={() => setMobileOpen(false)}
@@ -254,7 +249,7 @@ export function StudioHeader() {
                 </Link>
               ) : (
                 <a
-                  key={link.href}
+                  key={link.id}
                   href={link.href}
                   data-mobile-link
                   onClick={(e) => handleAnchorClick(e, link.href)}

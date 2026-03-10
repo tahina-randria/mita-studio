@@ -8,31 +8,6 @@ import Avatar from "boring-avatars";
 import { setReducedMotionState } from "@/lib/motion";
 
 
-interface Value {
-  label: string;
-  description: string;
-}
-
-const VALUES: Value[] = [
-  {
-    label: "Votre projet, vos r\u00e8gles",
-    description:
-      "On s\u2019adapte \u00e0 votre budget, vos d\u00e9lais et vos objectifs. Pas l\u2019inverse.",
-  },
-  {
-    label: "R\u00e9sultats mesurables",
-    description:
-      "Chaque euro investi doit rapporter. Tracking, analytics, ROI \u2014 on ne travaille pas \u00e0 l\u2019aveugle.",
-  },
-  {
-    label: "Z\u00e9ro surprise",
-    description:
-      "Prix fix\u00e9s d\u00e8s le d\u00e9part, livrables clairs, suivi en temps r\u00e9el. Vous savez toujours o\u00f9 on en est.",
-  },
-];
-
-const QUOTE_TEXT =
-  "On rend accessible ce qui \u00e9tait r\u00e9serv\u00e9 aux gros budgets.";
 
 /* ── Scrub quote with word-by-word spotlight ── */
 function ScrubQuote({
@@ -67,7 +42,7 @@ function ScrubQuote({
   );
 }
 
-export function StudioAboutSection() {
+export function StudioAboutSection({ content }: { content: Record<string, string> }) {
   const sectionRef = useRef<HTMLElement>(null);
   const quoteRef = useRef<HTMLDivElement>(null);
   const quoteWordsRef = useRef<HTMLSpanElement[]>([]);
@@ -206,7 +181,7 @@ export function StudioAboutSection() {
 
         {/* Hero quote — full width, scrub-driven */}
         <div ref={quoteRef} className="mb-10 sm:mb-16 text-center">
-          <ScrubQuote text={QUOTE_TEXT} wordsRef={quoteWordsRef} />
+          <ScrubQuote text={content.about_quote || "On rend accessible ce qui \u00e9tait r\u00e9serv\u00e9 aux gros budgets."} wordsRef={quoteWordsRef} />
         </div>
 
         {/* Two column layout */}
@@ -233,24 +208,19 @@ export function StudioAboutSection() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-white">
-                    Tahina Randrianandraina
+                    {content.founder_name || "Tahina Randrianandraina"}
                   </h3>
                   <p className="text-sm text-white">
-                    Fondateur, Mita Studio
+                    {content.founder_title || "Fondateur, Mita Studio"}
                   </p>
                 </div>
               </div>
 
               <p className="text-base sm:text-lg text-white leading-relaxed mb-4">
-                J&rsquo;ai cr&eacute;&eacute; Mita Studio apr&egrave;s un constat simple&nbsp;:
-                trop de petites entreprises payent 5&nbsp;000&nbsp;&euro; pour un site
-                qui ne leur rapporte rien. L&rsquo;IA change la donne. On
-                peut faire mieux, plus vite, pour beaucoup moins.
+                {content.founder_bio_1 || "J\u2019ai cr\u00e9\u00e9 Mita Studio apr\u00e8s un constat simple\u00a0: trop de petites entreprises payent 5\u00a0000\u00a0\u20ac pour un site qui ne leur rapporte rien. L\u2019IA change la donne. On peut faire mieux, plus vite, pour beaucoup moins."}
               </p>
               <p className="text-base sm:text-lg text-white leading-relaxed mb-6">
-                Mon obsession&nbsp;: que chaque euro investi par nos clients
-                se transforme en r&eacute;sultat concret. Pas de jargon,
-                pas de promesses vides. Juste du travail bien fait.
+                {content.founder_bio_2 || "Mon obsession\u00a0: que chaque euro investi par nos clients se transforme en r\u00e9sultat concret. Pas de jargon, pas de promesses vides. Juste du travail bien fait."}
               </p>
 
               <Link
@@ -265,8 +235,12 @@ export function StudioAboutSection() {
 
           {/* Right — values */}
           <div ref={valuesRef} className="space-y-0">
-            {VALUES.map((value, i) => (
-              <div key={value.label} className="py-7 relative">
+            {[
+              { label: content.value_1_label || "Votre projet, vos r\u00e8gles", description: content.value_1_description || "On s\u2019adapte \u00e0 votre budget, vos d\u00e9lais et vos objectifs. Pas l\u2019inverse." },
+              { label: content.value_2_label || "R\u00e9sultats mesurables", description: content.value_2_description || "Chaque euro investi doit rapporter. Tracking, analytics, ROI \u2014 on ne travaille pas \u00e0 l\u2019aveugle." },
+              { label: content.value_3_label || "Z\u00e9ro surprise", description: content.value_3_description || "Prix fix\u00e9s d\u00e8s le d\u00e9part, livrables clairs, suivi en temps r\u00e9el. Vous savez toujours o\u00f9 on en est." },
+            ].map((value, i, arr) => (
+              <div key={i} className="py-7 relative">
                 <div className="flex items-start gap-4">
                   <span className="text-sm font-mono mt-0.5 shrink-0 accent-text opacity-40">
                     0{i + 1}
@@ -281,7 +255,7 @@ export function StudioAboutSection() {
                   </div>
                 </div>
                 {/* Animated border */}
-                {i < VALUES.length - 1 && (
+                {i < arr.length - 1 && (
                   <div
                     data-border
                     className="absolute bottom-0 left-0 right-0 h-px bg-white/[0.06] origin-left"

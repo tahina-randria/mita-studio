@@ -29,7 +29,11 @@ function SplitTitle({ text, wordsRef }: { text: string; wordsRef: React.MutableR
   );
 }
 
-export function StudioHeroSection() {
+export function StudioHeroSection({
+  content,
+}: {
+  content: Record<string, string>;
+}) {
   const sectionRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const titleWordsRef = useRef<HTMLSpanElement[]>([]);
@@ -144,10 +148,10 @@ export function StudioHeroSection() {
         <h1
           ref={titleRef}
           className="text-[2rem] leading-[1.05] tracking-tight text-white sm:text-[2.75rem] lg:text-[3.5rem] xl:text-[4rem]"
-          aria-label="Le digital pro, enfin accessible"
+          aria-label={content.hero_title || "Le digital pro, enfin accessible"}
         >
           <SplitTitle
-            text="Le digital pro, enfin accessible"
+            text={content.hero_title || "Le digital pro, enfin accessible"}
             wordsRef={titleWordsRef}
           />
         </h1>
@@ -156,9 +160,7 @@ export function StudioHeroSection() {
           ref={descRef}
           className="mx-auto mt-4 sm:mt-5 max-w-2xl text-base sm:text-lg lg:text-xl leading-relaxed text-white"
         >
-          Site web, r&eacute;f&eacute;rencement Google et outils digitaux sur mesure.
-          <br />
-          Livr&eacute;s en 2&nbsp;semaines.
+          {content.hero_subtitle || "Site web, référencement Google et outils digitaux sur mesure.\nLivrés en 2\u00a0semaines."}
         </p>
 
         <div
@@ -169,24 +171,24 @@ export function StudioHeroSection() {
             href="/contact"
             className="btn-accent cursor-pointer rounded-xl px-7 py-3 text-[13px] sm:px-8 sm:py-3.5 sm:text-[14px] inline-block active:scale-[0.97]"
           >
-            D&eacute;marrer mon projet
+            {content.hero_cta || "Démarrer mon projet"}
           </Link>
           <button
             onClick={handleScrollTo("#process")}
             className="text-center rounded-xl border border-white/[0.15] px-7 py-3 text-[13px] sm:px-8 sm:py-3.5 sm:text-[14px] font-medium text-white cursor-pointer hover:border-white/30 hover:bg-white/[0.04] active:scale-[0.97] transition-all"
           >
-            Voir comment &ccedil;a marche
+            {content.hero_cta_secondary || "Voir comment ça marche"}
           </button>
         </div>
 
         {/* Social proof badges */}
         <div className="mt-10 sm:mt-14 flex items-stretch justify-center gap-0">
           {[
-            { value: "2 sem.", label: "D\u00e9lai moyen" },
-            { value: "790\u00a0\u20ac", label: "\u00c0 partir de" },
-            { value: "100%", label: "Satisfait ou on corrige" },
+            { value: content.badge_1_value || "2 sem.", label: content.badge_1_label || "D\u00e9lai moyen" },
+            { value: content.badge_2_value || "790\u00a0\u20ac", label: content.badge_2_label || "\u00c0 partir de" },
+            { value: content.badge_3_value || "100%", label: content.badge_3_label || "Satisfait ou on corrige" },
           ].map((badge, i) => (
-            <div key={badge.label} className="flex items-stretch">
+            <div key={i} className="flex items-stretch">
               {i > 0 && (
                 <div className="w-px bg-white/[0.12] self-stretch mx-5 sm:mx-8" />
               )}

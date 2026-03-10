@@ -2,6 +2,32 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 import { LazySpectralBackground } from "./_components/LazySpectralBackground";
+import { StudioHeader } from "./_components/StudioHeader";
+import { StudioHeroSection } from "./_components/StudioHeroSection";
+import { ProblemSection } from "./_components/ProblemSection";
+import { ServicesSection } from "./_components/ServicesSection";
+import { ProcessSection } from "./_components/ProcessSection";
+import { StudioPricingSection } from "./_components/StudioPricingSection";
+import { ClientTestimonialsSection } from "./_components/ClientTestimonialsSection";
+import { CommitmentsSection } from "./_components/TestimonialsSection";
+import { HomeFAQSection } from "./_components/HomeFAQSection";
+import { StudioAboutSection } from "./_components/StudioAboutSection";
+import { StudioCTASection } from "./_components/StudioCTASection";
+import { StudioFooter } from "./_components/StudioFooter";
+import { StickyMobileCTA } from "./_components/StickyMobileCTA";
+
+import {
+  getServices,
+  getPricingTiers,
+  getTestimonials,
+  getTeaserQuotes,
+  getCommitments,
+  getProblems,
+  getFaqItems,
+  getSiteContent,
+  getNavItems,
+  getSiteSettings,
+} from "@/lib/queries";
 
 export const metadata: Metadata = {
   title: "Mita Studio \u2014 Le digital pro, enfin accessible",
@@ -19,129 +45,99 @@ export const metadata: Metadata = {
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Mita Studio" }],
   },
 };
-import { StudioHeader } from "./_components/StudioHeader";
-import { StudioHeroSection } from "./_components/StudioHeroSection";
-import { ProblemSection } from "./_components/ProblemSection";
-import { ServicesSection } from "./_components/ServicesSection";
-import { ProcessSection } from "./_components/ProcessSection";
-import { StudioPricingSection } from "./_components/StudioPricingSection";
-import { ClientTestimonialsSection } from "./_components/ClientTestimonialsSection";
-import { CommitmentsSection } from "./_components/TestimonialsSection";
-import { HomeFAQSection } from "./_components/HomeFAQSection";
-import { StudioAboutSection } from "./_components/StudioAboutSection";
-import { StudioCTASection } from "./_components/StudioCTASection";
-import { StudioFooter } from "./_components/StudioFooter";
-import { StickyMobileCTA } from "./_components/StickyMobileCTA";
 
-const JSON_LD_ORGANIZATION = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Mita Studio",
-  url: "https://mita-studio.com",
-  logo: "https://mita-studio.com/logo.webp",
-  founder: {
-    "@type": "Person",
-    name: "Tahina Randrianandraina",
-  },
-  contactPoint: {
-    "@type": "ContactPoint",
-    email: "tahina@mita-studio.com",
-    contactType: "customer service",
-    availableLanguage: "French",
-  },
-};
+export default async function HomePage() {
+  const [
+    services,
+    pricingTiers,
+    subscriptionTiers,
+    testimonials,
+    teaserQuotes,
+    commitments,
+    problems,
+    faqItems,
+    heroContent,
+    aboutContent,
+    ctaContent,
+    headerNavItems,
+    footerStudioLinks,
+    footerLegalLinks,
+    contactSettings,
+    socialSettings,
+    generalSettings,
+  ] = await Promise.all([
+    getServices(),
+    getPricingTiers("oneshot"),
+    getPricingTiers("subscription"),
+    getTestimonials(),
+    getTeaserQuotes(),
+    getCommitments(),
+    getProblems(),
+    getFaqItems(),
+    getSiteContent("hero"),
+    getSiteContent("about"),
+    getSiteContent("cta"),
+    getNavItems("header"),
+    getNavItems("footer_studio"),
+    getNavItems("footer_legal"),
+    getSiteSettings("contact"),
+    getSiteSettings("social"),
+    getSiteSettings("general"),
+  ]);
 
-const JSON_LD_WEBSITE = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "Mita Studio",
-  url: "https://mita-studio.com",
-  description:
-    "Le digital pro, enfin accessible. Sites web, SEO et automatisation propuls\u00e9s par l\u2019IA pour les ind\u00e9pendants et PME.",
-  inLanguage: "fr",
-};
+  const settings = { ...generalSettings, ...contactSettings, ...socialSettings };
 
-const JSON_LD_SERVICES = {
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  itemListElement: [
-    {
+  // Build JSON-LD from DB data
+  const jsonLdOrganization = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: settings.company_name || "Mita Studio",
+    url: "https://mita-studio.com",
+    logo: "https://mita-studio.com/logo.webp",
+    founder: { "@type": "Person", name: "Tahina Randrianandraina" },
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: settings.email || "tahina@mita-studio.com",
+      contactType: "customer service",
+      availableLanguage: "French",
+    },
+  };
+
+  const jsonLdWebsite = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: settings.company_name || "Mita Studio",
+    url: "https://mita-studio.com",
+    description: settings.tagline || "Le digital pro, enfin accessible.",
+    inLanguage: "fr",
+  };
+
+  const jsonLdServices = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: services.map((s, i) => ({
       "@type": "ListItem",
-      position: 1,
+      position: i + 1,
       item: {
         "@type": "Service",
-        name: "Cr\u00e9ation de site web",
-        description: "Sites vitrines, e-commerce et applications web sur mesure. Design soign\u00e9, rapide, optimis\u00e9 pour convertir.",
-        provider: { "@type": "Organization", name: "Mita Studio" },
-        areaServed: "FR",
-        offers: { "@type": "Offer", price: "790", priceCurrency: "EUR", priceSpecification: { "@type": "UnitPriceSpecification", price: "790", priceCurrency: "EUR", unitText: "projet" } },
-      },
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
-      item: {
-        "@type": "Service",
-        name: "R\u00e9f\u00e9rencement SEO",
-        description: "Strat\u00e9gie SEO compl\u00e8te et multilingue. Contenu optimis\u00e9, suivi de positions pour une visibilit\u00e9 durable.",
-        provider: { "@type": "Organization", name: "Mita Studio" },
+        name: s.title,
+        description: s.description,
+        provider: { "@type": "Organization", name: settings.company_name || "Mita Studio" },
         areaServed: "FR",
       },
-    },
-    {
-      "@type": "ListItem",
-      position: 3,
-      item: {
-        "@type": "Service",
-        name: "Outils digitaux sur mesure",
-        description: "Outils sur mesure pour automatiser vos t\u00e2ches r\u00e9p\u00e9titives.",
-        provider: { "@type": "Organization", name: "Mita Studio" },
-        areaServed: "FR",
-      },
-    },
-  ],
-};
+    })),
+  };
 
-const JSON_LD_FAQ = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
+  const jsonLdFaq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((f) => ({
       "@type": "Question",
-      name: "Combien de temps faut-il pour cr\u00e9er un site\u00a0?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "En moyenne 2 \u00e0 4 semaines, selon la complexit\u00e9 du projet. Un site vitrine simple peut \u00eatre livr\u00e9 en 10 jours.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Quels sont vos tarifs\u00a0?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "\u00c0 partir de 790\u00a0\u20ac TTC pour un site vitrine (offre de lancement). Le tarif d\u00e9pend du nombre de pages et des fonctionnalit\u00e9s. Chaque devis est d\u00e9finitif.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Est-ce que le r\u00e9f\u00e9rencement Google est inclus\u00a0?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Le r\u00e9f\u00e9rencement (ou SEO) d\u00e9signe l\u2019ensemble des techniques pour que votre site apparaisse dans les premiers r\u00e9sultats Google. Oui, chaque site inclut une optimisation de base. Pour aller plus loin, on propose un accompagnement d\u00e9di\u00e9.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Que se passe-t-il apr\u00e8s la livraison\u00a0?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Vous b\u00e9n\u00e9ficiez d\u2019un support post-lancement inclus. On reste disponible pour les ajustements et la formation.",
-      },
-    },
-  ],
-};
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  };
 
-export default function HomePage() {
   return (
     <div className="studio-page min-h-screen bg-[#050a1e] text-white">
       <a href="#main" className="skip-link">
@@ -151,41 +147,48 @@ export default function HomePage() {
       <Script
         id="json-ld-organization"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(JSON_LD_ORGANIZATION),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdOrganization) }}
       />
       <Script
         id="json-ld-website"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD_WEBSITE) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebsite) }}
       />
-
       <Script
         id="json-ld-services"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD_SERVICES) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdServices) }}
       />
       <Script
         id="json-ld-faq"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD_FAQ) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
       />
 
-      <StudioHeader />
+      <StudioHeader navLinks={headerNavItems} />
       <main id="main" className="relative" style={{ zIndex: 1 }}>
-        <StudioHeroSection />
-        <ServicesSection />
-        <ProblemSection />
+        <StudioHeroSection content={heroContent} />
+        <ServicesSection services={services} />
+        <ProblemSection problems={problems} />
         <ProcessSection />
-        <StudioPricingSection />
-        <ClientTestimonialsSection />
-        <CommitmentsSection />
-        <HomeFAQSection />
-        <StudioAboutSection />
-        <StudioCTASection />
+        <StudioPricingSection
+          pricingTiers={pricingTiers}
+          subscriptionTiers={subscriptionTiers}
+        />
+        <ClientTestimonialsSection
+          testimonials={testimonials}
+          teaserQuotes={teaserQuotes}
+        />
+        <CommitmentsSection commitments={commitments} />
+        <HomeFAQSection faqs={faqItems} />
+        <StudioAboutSection content={aboutContent} />
+        <StudioCTASection content={ctaContent} settings={settings} />
       </main>
-      <StudioFooter />
+      <StudioFooter
+        studioLinks={footerStudioLinks}
+        legalLinks={footerLegalLinks}
+        settings={settings}
+      />
       <StickyMobileCTA />
     </div>
   );

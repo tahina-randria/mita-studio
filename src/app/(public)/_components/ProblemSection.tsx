@@ -5,38 +5,7 @@ import { gsap, ScrollTrigger } from "@/lib/gsap";
 import Image from "next/image";
 import { setReducedMotionState } from "@/lib/motion";
 
-interface Problem {
-  stat: string;
-  title: string;
-  description: string;
-  icon: string;
-}
-
-const PROBLEMS: Problem[] = [
-  {
-    stat: "5\u00a0000\u00a0\u20ac+",
-    title: "Les agences co\u00fbtent trop cher",
-    description:
-      "C\u2019est le prix moyen d\u2019un site d\u2019agence. Inaccessible pour la plupart des TPE, PME et ind\u00e9pendants.",
-    icon: "/images/icons/icon-euro.webp",
-  },
-  {
-    stat: "6 mois",
-    title: "Le DIY, c\u2019est souvent du temps perdu",
-    description:
-      "La plupart des sites faits maison finissent abandonn\u00e9s. Wix, WordPress\u2026 sans expertise, le rendu reste amateur.",
-    icon: "/images/icons/icon-paintbrush.webp",
-  },
-  {
-    stat: "50+ salari\u00e9s",
-    title: "Les outils ciblent les grands comptes",
-    description:
-      "HubSpot, Salesforce\u2026 prix et complexit\u00e9 r\u00e9serv\u00e9s aux entreprises de taille. Pas adapt\u00e9 \u00e0 votre r\u00e9alit\u00e9.",
-    icon: "/images/icons/icon-buildings.webp",
-  },
-];
-
-export function ProblemSection() {
+export function ProblemSection({ problems }: { problems: { id: string; stat: string; title: string; description: string; iconUrl: string | null }[] }) {
   const sectionRef = useRef<HTMLElement>(null);
   const headingRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
@@ -139,9 +108,9 @@ export function ProblemSection() {
           ref={cardsRef}
           className="grid grid-cols-1 sm:grid-cols-3 gap-6"
         >
-          {PROBLEMS.map((problem) => (
+          {problems.map((problem) => (
             <div
-              key={problem.title}
+              key={problem.id}
               className="group relative overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.02] p-7 sm:p-8 transition-all duration-300 hover:border-white/[0.12] hover:bg-white/[0.05]"
             >
               {/* Icon — large, top-right corner with gradient mask + bend */}
@@ -160,7 +129,7 @@ export function ProblemSection() {
                   }}
                 >
                   <Image
-                    src={problem.icon}
+                    src={problem.iconUrl ?? ""}
                     alt=""
                     fill
                     className="object-contain"

@@ -6,6 +6,328 @@ datasource db {
   provider = "postgresql"
 }
 
+// ============================================================================
+// ADMIN & AUTH
+// ============================================================================
+
+model AdminUser {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  name         String
+  role         String   @default("admin") // admin | super_admin
+  active       Boolean  @default(true)
+  lastLoginAt  DateTime?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  auditLogs     AuditLog[]
+  notifications Notification[]
+
+  @@index([email])
+}
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  adminId    String?
+  admin      AdminUser? @relation(fields: [adminId], references: [id], onDelete: SetNull)
+  action     String   // create | update | delete | login | logout | export
+  entity     String   // article | service | testimonial | setting | etc.
+  entityId   String?
+  details    Json?    // { before: {...}, after: {...} }
+  ipAddress  String?
+  userAgent  String?
+  createdAt  DateTime @default(now())
+
+  @@index([adminId])
+  @@index([entity, entityId])
+  @@index([createdAt])
+}
+
+// ============================================================================
+// CMS — SITE CONTENT & SETTINGS
+// ============================================================================
+
+model SiteSetting {
+  id        String   @id @default(cuid())
+  key       String   @unique // company_name, email, phone, address, linkedin_url, etc.
+  value     String
+  type      String   @default("text") // text | email | url | phone | json
+  label     String   // Human-readable label for admin panel
+  group     String   @default("general") // general | contact | social | seo | legal
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([group])
+  @@index([key])
+}
+
+model SiteContent {
+  id        String   @id @default(cuid())
+  key       String   @unique // hero_title, hero_subtitle, about_text, cta_title, etc.
+  value     String   @db.Text
+  type      String   @default("text") // text | richtext | markdown | html
+  section   String   // hero | about | cta | footer | contact | etc.
+  label     String   // Human-readable label for admin
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([section])
+  @@index([key])
+}
+
+// ============================================================================
+// SERVICES
+// ============================================================================
+
+model Service {
+  id          String   @id @default(cuid())
+  title       String
+  description String   @db.Text
+  iconUrl     String?
+  sortOrder   Int      @default(0)
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([sortOrder])
+}
+
+// ============================================================================
+// PRICING
+// ============================================================================
+
+model PricingTier {
+  id           String   @id @default(cuid())
+  name         String
+  price        String   // "790 €", "Sur devis", "89 €/mois"
+  priceNumeric Int?     // Numeric value for sorting/comparison (in cents)
+  priceLabel   String   @default("") // "À partir de", etc.
+  priceSuffix  String   @default("") // " €", " €/mois", etc.
+  description  String   @db.Text
+  type         String   // oneshot | subscription
+  featured     Boolean  @default(false)
+  sortOrder    Int      @default(0)
+  active       Boolean  @default(true)
+  ctaLabel     String   @default("Commencer")
+  ctaUrl       String   @default("/contact")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  features PricingFeature[]
+
+  @@index([type, sortOrder])
+}
+
+model PricingFeature {
+  id        String      @id @default(cuid())
+  tierId    String
+  tier      PricingTier @relation(fields: [tierId], references: [id], onDelete: Cascade)
+  text      String
+  included  Boolean     @default(true)
+  sortOrder Int         @default(0)
+
+  @@index([tierId, sortOrder])
+}
+
+// ============================================================================
+// TESTIMONIALS & SOCIAL PROOF
+// ============================================================================
+
+model Testimonial {
+  id          String   @id @default(cuid())
+  quote       String   @db.Text
+  name        String
+  role        String
+  company     String
+  initials    String?
+  avatarUrl   String?
+  accentColor String?
+  featured    Boolean  @default(false)
+  sortOrder   Int      @default(0)
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([sortOrder])
+}
+
+model TeaserQuote {
+  id        String   @id @default(cuid())
+  text      String
+  sortOrder Int      @default(0)
+  active    Boolean  @default(true)
+
+  @@index([sortOrder])
+}
+
+// ============================================================================
+// COMMITMENTS (ENGAGEMENTS)
+// ============================================================================
+
+model Commitment {
+  id          String   @id @default(cuid())
+  title       String
+  description String   @db.Text
+  iconUrl     String?
+  sortOrder   Int      @default(0)
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([sortOrder])
+}
+
+// ============================================================================
+// PROBLEMS SECTION
+// ============================================================================
+
+model Problem {
+  id          String   @id @default(cuid())
+  stat        String   // "5 000 €+", "6 mois", "50+ salariés"
+  title       String
+  description String   @db.Text
+  iconUrl     String?
+  sortOrder   Int      @default(0)
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([sortOrder])
+}
+
+// ============================================================================
+// FAQ
+// ============================================================================
+
+model FaqItem {
+  id        String   @id @default(cuid())
+  question  String
+  answer    String   @db.Text
+  category  String   @default("general") // general | pricing | technical | legal
+  sortOrder Int      @default(0)
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([category, sortOrder])
+}
+
+// ============================================================================
+// BLOG / ARTICLES
+// ============================================================================
+
+model Article {
+  id           String   @id @default(cuid())
+  slug         String   @unique
+  title        String
+  description  String   @db.Text
+  content      String   @db.Text // Markdown content
+  category     String
+  imageUrl     String?
+  readingTime  String?  // "5 min"
+  published    Boolean  @default(false)
+  publishedAt  DateTime?
+  featured     Boolean  @default(false)
+  sortOrder    Int      @default(0)
+  // SEO
+  metaTitle       String?
+  metaDescription String? @db.Text
+  // Type: article | legal (for CGV, privacy, mentions-legales)
+  type         String   @default("article")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  tags    ArticleTag[]
+  tldr    ArticleTldr[]
+  related ArticleRelation[] @relation("sourceArticle")
+  relatedBy ArticleRelation[] @relation("relatedArticle")
+
+  @@index([slug])
+  @@index([category])
+  @@index([published, publishedAt])
+  @@index([type])
+}
+
+model ArticleTag {
+  id        String  @id @default(cuid())
+  articleId String
+  article   Article @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  tag       String
+
+  @@unique([articleId, tag])
+  @@index([tag])
+}
+
+model ArticleTldr {
+  id        String  @id @default(cuid())
+  articleId String
+  article   Article @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  text      String
+  sortOrder Int     @default(0)
+
+  @@index([articleId, sortOrder])
+}
+
+model ArticleRelation {
+  id              String  @id @default(cuid())
+  sourceArticleId String
+  sourceArticle   Article @relation("sourceArticle", fields: [sourceArticleId], references: [id], onDelete: Cascade)
+  relatedArticleId String
+  relatedArticle  Article @relation("relatedArticle", fields: [relatedArticleId], references: [id], onDelete: Cascade)
+
+  @@unique([sourceArticleId, relatedArticleId])
+}
+
+// ============================================================================
+// FOUNDER PAGE
+// ============================================================================
+
+model FounderMilestone {
+  id          String   @id @default(cuid())
+  year        Int
+  title       String
+  description String   @db.Text
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([sortOrder])
+}
+
+model FounderSkill {
+  id          String   @id @default(cuid())
+  title       String
+  description String   @db.Text
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([sortOrder])
+}
+
+// ============================================================================
+// NAVIGATION
+// ============================================================================
+
+model NavItem {
+  id        String   @id @default(cuid())
+  label     String
+  href      String
+  location  String   // header | footer_services | footer_legal | footer_social
+  sortOrder Int      @default(0)
+  active    Boolean  @default(true)
+  external  Boolean  @default(false) // Opens in new tab
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([location, sortOrder])
+}
+
+// ============================================================================
+// CONTACT & LEADS (existing model extended)
+// ============================================================================
+
 model ContactSubmission {
   id        String   @id @default(cuid())
   name      String
@@ -16,8 +338,142 @@ model ContactSubmission {
   service   String?
   message   String
   source    String   @default("website")
+  status    String   @default("new") // new | read | replied | archived
+  notes     String?  @db.Text // Admin notes
+  assignedTo String? // Admin user id
   createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@index([createdAt])
   @@index([email])
+  @@index([status])
+}
+
+// ============================================================================
+// EMAIL SYSTEM
+// ============================================================================
+
+model EmailTemplate {
+  id        String   @id @default(cuid())
+  name      String   @unique // contact_notification, welcome, follow_up, etc.
+  subject   String
+  htmlBody  String   @db.Text
+  textBody  String?  @db.Text
+  variables Json?    // List of available template variables
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model EmailLog {
+  id          String   @id @default(cuid())
+  templateId  String?
+  to          String
+  from        String
+  subject     String
+  status      String   // sent | failed | bounced | delivered
+  resendId    String?  // Resend message ID
+  error       String?  @db.Text
+  metadata    Json?    // Extra context (contactId, etc.)
+  sentAt      DateTime @default(now())
+
+  @@index([status])
+  @@index([to])
+  @@index([sentAt])
+}
+
+// ============================================================================
+// NOTIFICATIONS (ADMIN)
+// ============================================================================
+
+model Notification {
+  id        String    @id @default(cuid())
+  adminId   String?
+  admin     AdminUser? @relation(fields: [adminId], references: [id], onDelete: Cascade)
+  type      String    // new_contact | email_failed | system | etc.
+  title     String
+  message   String    @db.Text
+  link      String?   // URL to related resource
+  read      Boolean   @default(false)
+  readAt    DateTime?
+  createdAt DateTime  @default(now())
+
+  @@index([adminId, read])
+  @@index([createdAt])
+}
+
+// ============================================================================
+// ANALYTICS & TRACKING
+// ============================================================================
+
+model AnalyticsEvent {
+  id        String   @id @default(cuid())
+  event     String   // page_view | cta_click | form_start | form_submit | etc.
+  page      String?  // /contact, /blog/slug, etc.
+  metadata  Json?    // { buttonId, section, referrer, etc. }
+  sessionId String?
+  userAgent String?
+  ipAddress String?
+  createdAt DateTime @default(now())
+
+  @@index([event, createdAt])
+  @@index([page])
+  @@index([sessionId])
+}
+
+// ============================================================================
+// FILES & MEDIA
+// ============================================================================
+
+model File {
+  id        String   @id @default(cuid())
+  name      String
+  key       String   @unique // Storage key/path
+  url       String
+  mimeType  String
+  size      Int      // Bytes
+  alt       String?  // Alt text for images
+  folder    String   @default("general") // general | blog | services | team | etc.
+  createdAt DateTime @default(now())
+
+  @@index([folder])
+  @@index([key])
+}
+
+// ============================================================================
+// WEBHOOK LOGS
+// ============================================================================
+
+model WebhookLog {
+  id        String   @id @default(cuid())
+  source    String   // stripe | resend | calendly | etc.
+  event     String   // payment.succeeded, email.delivered, etc.
+  payload   Json
+  status    String   @default("received") // received | processed | failed
+  error     String?  @db.Text
+  createdAt DateTime @default(now())
+
+  @@index([source, event])
+  @@index([status])
+  @@index([createdAt])
+}
+
+// ============================================================================
+// SCHEDULED JOBS TRACKING
+// ============================================================================
+
+model ScheduledJob {
+  id          String    @id @default(cuid())
+  name        String    @unique // reminder_emails, status_cleanup, analytics_aggregate, etc.
+  description String?
+  cronExpr    String?   // Cron expression
+  lastRunAt   DateTime?
+  nextRunAt   DateTime?
+  status      String    @default("idle") // idle | running | failed
+  lastError   String?   @db.Text
+  enabled     Boolean   @default(true)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@index([enabled, nextRunAt])
 }
