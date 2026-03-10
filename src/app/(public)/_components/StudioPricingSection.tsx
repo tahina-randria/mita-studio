@@ -380,7 +380,7 @@ export function StudioPricingSection({
                       <span className="text-base font-normal text-white/60">{sub.priceSuffix}</span>
                     )}
                   </span>
-                  <span className="text-xs text-white/50">TTC</span>
+                  <span className="text-xs text-white/50">HT</span>
                 </div>
                 <div className="border-t border-white/[0.06] mb-5" />
                 <ul className="flex-1 space-y-2.5 mb-5">
