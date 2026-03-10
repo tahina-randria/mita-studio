@@ -130,7 +130,7 @@ async function main() {
     {
       name: "Vitrine Express",
       price: "890 €",
-      priceNumeric: 89000,
+      priceNumeric: 890,
       priceLabel: "À partir de",
       priceSuffix: "\u00a0€",
       description: "Une landing page pro qui génère vos premiers contacts. Livrée en 1 semaine.",
@@ -152,7 +152,7 @@ async function main() {
     {
       name: "Présence Pro",
       price: "2 290 €",
-      priceNumeric: 229000,
+      priceNumeric: 2290,
       priceLabel: "À partir de",
       priceSuffix: "\u00a0€",
       description: "Site complet avec CMS et contenu rédigé. Pour être trouvé, crédible et convertir.",
@@ -174,7 +174,7 @@ async function main() {
     {
       name: "Croissance Digitale",
       price: "3 990 €",
-      priceNumeric: 399000,
+      priceNumeric: 3990,
       priceLabel: "À partir de",
       priceSuffix: "\u00a0€",
       description: "Site orienté résultats avec outil métier inclus et rapport de performance à 30 jours.",
@@ -213,7 +213,7 @@ async function main() {
     {
       name: "Essentiel",
       price: "49 €/mois",
-      priceNumeric: 4900,
+      priceNumeric: 49,
       priceLabel: "",
       priceSuffix: "",
       description: "Votre site toujours à jour et sécurisé.",
@@ -233,7 +233,7 @@ async function main() {
     {
       name: "Pro",
       price: "99 €/mois",
-      priceNumeric: 9900,
+      priceNumeric: 99,
       priceLabel: "",
       priceSuffix: "",
       description: "Maintenance + modifications mensuelles et suivi trimestriel.",
