@@ -160,7 +160,7 @@ export function ClientTestimonialsSection({
                     key={i}
                     size={14}
                     weight="fill"
-                    className="text-white/40"
+                    className="text-white/60"
                   />
                 ))}
               </div>
@@ -181,7 +181,7 @@ export function ClientTestimonialsSection({
                 </div>
                 <div>
                   <p className="text-sm font-medium text-white">{t.name}</p>
-                  <p className="text-xs text-white/50">
+                  <p className="text-xs text-white/60">
                     {t.role}, {t.company}
                   </p>
                 </div>
@@ -193,7 +193,7 @@ export function ClientTestimonialsSection({
           <div className="group relative rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 sm:p-8 transition-all duration-300 hover:border-white/[0.12] hover:bg-white/[0.04] flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-center w-10 h-10 rounded-full bg-white/[0.06] mb-4">
-                <ChatCircleDots size={20} weight="bold" className="text-white/50" />
+                <ChatCircleDots size={20} weight="bold" className="text-white/60" />
               </div>
               <h3 className="text-base font-medium text-white mb-3">
                 Et vous, c&rsquo;est quoi votre projet ?
@@ -203,7 +203,7 @@ export function ClientTestimonialsSection({
                 {teaserQuotes.map((q) => (
                   <p
                     key={q.id}
-                    className="text-sm text-white/40 italic"
+                    className="text-sm text-white/60 italic"
                   >
                     {q.text}
                   </p>

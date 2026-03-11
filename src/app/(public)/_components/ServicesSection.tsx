@@ -67,7 +67,7 @@ export function ServicesSection({ services }: { services: { id: string; title: s
   }, []);
 
   return (
-    <section id="services" className="min-h-[80vh] flex flex-col justify-center py-16 sm:py-24">
+    <section id="services" className="min-h-[80vh] flex flex-col justify-center py-20 sm:py-28">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 w-full">
         <div ref={headingRef} className="mb-10 sm:mb-14 text-center">
           <h2 className="text-3xl sm:text-4xl text-white tracking-tight">

@@ -190,14 +190,14 @@ export function StudioHeader({ navLinks = DEFAULT_NAV_LINKS }: { navLinks?: { id
           <div className="flex items-center gap-2">
             <Link
               href="/contact"
-              className="inline-flex items-center rounded-lg bg-white px-4 py-1.5 text-xs sm:text-sm font-semibold text-[#0a0a0a] hover:bg-white/90 active:scale-95 transition-all shrink-0"
+              className="inline-flex items-center rounded-lg bg-white px-4 py-2 text-xs sm:text-sm font-semibold text-[#0a0a0a] hover:bg-white/90 active:scale-[0.98] transition-all shrink-0"
             >
               Nous contacter
             </Link>
             {/* Mobile hamburger */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="md:hidden flex items-center justify-center w-9 h-9 rounded-full text-white hover:bg-white/[0.06] active:bg-white/[0.1] transition-colors"
+              className="md:hidden flex items-center justify-center w-11 h-11 rounded-full text-white hover:bg-white/[0.06] active:bg-white/[0.1] transition-colors"
               aria-label={mobileOpen ? "Fermer le menu" : "Ouvrir le menu"}
             >
               {mobileOpen ? (

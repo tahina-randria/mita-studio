@@ -88,7 +88,7 @@ export function ProblemSection({ problems }: { problems: { id: string; stat: str
   return (
     <section
       ref={sectionRef}
-      className="min-h-[80vh] flex flex-col justify-center py-16 sm:py-24 border-t border-white/[0.06]"
+      className="min-h-[80vh] flex flex-col justify-center py-20 sm:py-28 border-t border-white/[0.06]"
     >
       <div className="mx-auto max-w-5xl px-4 sm:px-6 w-full">
         {/* Heading */}

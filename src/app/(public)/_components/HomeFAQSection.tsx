@@ -139,7 +139,7 @@ export function HomeFAQSection({ faqs }: { faqs: { id: string; question: string;
                 <CaretDown
                   size={16}
                   weight="bold"
-                  className="shrink-0 ml-4 text-white/40 transition-transform duration-200 group-open:rotate-180"
+                  className="shrink-0 ml-4 text-white/60 transition-transform duration-200 group-open:rotate-180"
                 />
               </summary>
               <div className="px-5 sm:px-6 pb-5 sm:pb-6 text-[15px] sm:text-lg leading-relaxed text-white/90">

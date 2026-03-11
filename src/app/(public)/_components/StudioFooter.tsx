@@ -87,7 +87,7 @@ export function StudioFooter({ studioLinks = DEFAULT_STUDIO_LINKS, legalLinks = 
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Mita Studio sur LinkedIn"
-              className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-white/[0.04] border border-white/[0.06] text-white/50 hover:text-white hover:border-white/[0.12] transition-all"
+              className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-white/[0.04] border border-white/[0.06] text-white/60 hover:text-white hover:border-white/[0.12] transition-all"
             >
               <LinkedinLogo size={16} weight="bold" />
             </a>

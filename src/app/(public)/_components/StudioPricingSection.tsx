@@ -321,12 +321,12 @@ export function StudioPricingSection({
                       <X
                         size={14}
                         weight="regular"
-                        className="mt-0.5 shrink-0 text-white/30"
+                        className="mt-0.5 shrink-0 text-white/50"
                       />
                     )}
                     <span
                       className={`text-sm leading-relaxed ${
-                        f.included ? "text-white" : "text-white/30 line-through"
+                        f.included ? "text-white" : "text-white/50 line-through"
                       }`}
                     >
                       {f.text}
@@ -396,12 +396,12 @@ export function StudioPricingSection({
                         <X
                           size={14}
                           weight="regular"
-                          className="mt-0.5 shrink-0 text-white/30"
+                          className="mt-0.5 shrink-0 text-white/50"
                         />
                       )}
                       <span
                         className={`text-sm leading-relaxed ${
-                          f.included ? "text-white" : "text-white/30 line-through"
+                          f.included ? "text-white" : "text-white/50 line-through"
                         }`}
                       >
                         {f.text}
