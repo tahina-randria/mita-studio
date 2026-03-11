@@ -99,7 +99,7 @@ export function BlogPageClient({ articles, categories }: BlogPageClientProps) {
         <div className="flex items-center gap-2 mb-10 overflow-x-auto pb-2 scrollbar-hide">
           <button
             onClick={() => setActiveCategory(null)}
-            className={`shrink-0 rounded-full px-4 py-2 text-sm font-medium tracking-wide transition-all ${
+            className={`shrink-0 rounded-full px-4 py-2.5 text-sm font-medium tracking-wide transition-all ${
               activeCategory === null
                 ? "bg-white text-[#050a1e]"
                 : "bg-white/[0.06] text-white/60 hover:bg-white/[0.1] hover:text-white/80"
@@ -113,7 +113,7 @@ export function BlogPageClient({ articles, categories }: BlogPageClientProps) {
               onClick={() =>
                 setActiveCategory(activeCategory === cat ? null : cat)
               }
-              className={`shrink-0 rounded-full px-4 py-2 text-sm font-medium tracking-wide transition-all ${
+              className={`shrink-0 rounded-full px-4 py-2.5 text-sm font-medium tracking-wide transition-all ${
                 activeCategory === cat
                   ? "bg-white text-[#050a1e]"
                   : "bg-white/[0.06] text-white/60 hover:bg-white/[0.1] hover:text-white/80"

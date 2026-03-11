@@ -199,6 +199,8 @@ export function StudioHeader({ navLinks = DEFAULT_NAV_LINKS }: { navLinks?: { id
               onClick={() => setMobileOpen(!mobileOpen)}
               className="md:hidden flex items-center justify-center w-11 h-11 rounded-full text-white hover:bg-white/[0.06] active:bg-white/[0.1] transition-colors"
               aria-label={mobileOpen ? "Fermer le menu" : "Ouvrir le menu"}
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-menu"
             >
               {mobileOpen ? (
                 <X size={18} weight="bold" />
@@ -213,7 +215,10 @@ export function StudioHeader({ navLinks = DEFAULT_NAV_LINKS }: { navLinks?: { id
       {/* Mobile fullscreen overlay */}
       {mobileOpen && (
         <div
+          id="mobile-menu"
           ref={overlayRef}
+          role="dialog"
+          aria-label="Menu de navigation"
           className="fixed inset-0 z-40 bg-[#050a1e] md:hidden"
         >
           <div className="flex justify-end p-4">

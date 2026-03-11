@@ -72,11 +72,12 @@ export function CommitmentsSection({ commitments }: { commitments: { id: string;
   return (
     <section
       ref={sectionRef}
+      aria-labelledby="commitments-heading"
       className="py-20 sm:py-28 border-t border-white/[0.06]"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div ref={headingRef} className="mb-10 sm:mb-14 text-center">
-          <h2 className="text-3xl sm:text-4xl text-white tracking-tight">
+          <h2 id="commitments-heading" className="text-3xl sm:text-4xl text-white tracking-tight">
             Nos engagements
           </h2>
           <p className="mt-4 text-base sm:text-lg text-white max-w-lg mx-auto">

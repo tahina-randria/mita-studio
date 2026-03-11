@@ -88,12 +88,13 @@ export function ProblemSection({ problems }: { problems: { id: string; stat: str
   return (
     <section
       ref={sectionRef}
+      aria-labelledby="problem-heading"
       className="min-h-[80vh] flex flex-col justify-center py-20 sm:py-28 border-t border-white/[0.06]"
     >
       <div className="mx-auto max-w-5xl px-4 sm:px-6 w-full">
         {/* Heading */}
         <div ref={headingRef} className="mb-10 sm:mb-14 text-center">
-          <h2 className="text-3xl sm:text-4xl text-white tracking-tight">
+          <h2 id="problem-heading" className="text-3xl sm:text-4xl text-white tracking-tight">
             Pourquoi les solutions actuelles
             <br />
             ne marchent pas

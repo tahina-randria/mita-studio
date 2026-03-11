@@ -353,9 +353,9 @@ export function StudioPricingSection({
         {/* Abonnements mensuels */}
         <div className="mt-14 sm:mt-20">
           <div className="mb-8 text-center">
-            <h3 className="text-2xl sm:text-3xl text-white tracking-tight">
+            <h2 className="text-2xl sm:text-3xl text-white tracking-tight">
               Restez visible apr&egrave;s le lancement
-            </h3>
+            </h2>
             <p className="mt-3 text-base text-white max-w-lg mx-auto">
               Des forfaits mensuels pour faire vivre votre site et votre visibilit&eacute;.
             </p>
@@ -367,9 +367,9 @@ export function StudioPricingSection({
                 key={sub.id}
                 className="liquid-glass rounded-2xl p-6 sm:p-7 flex flex-col"
               >
-                <h4 className="text-lg font-medium text-white mb-1">
+                <h3 className="text-lg font-medium text-white mb-1">
                   {sub.name}
-                </h4>
+                </h3>
                 <p className="text-[15px] text-white leading-relaxed mb-4">
                   {sub.description}
                 </p>
@@ -436,9 +436,9 @@ export function StudioPricingSection({
                 <span className="inline-block text-xs uppercase tracking-[0.2em] font-semibold text-white mb-3">
                   Sur mesure
                 </span>
-                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
                   Besoin d&rsquo;un outil m&eacute;tier&nbsp;?
-                </h3>
+                </h2>
                 <p className="text-base text-white max-w-md leading-relaxed">
                   App web, automatisation, CRM, int&eacute;grations API.
                   On construit votre outil de z&eacute;ro, sur devis.

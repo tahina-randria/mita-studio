@@ -124,7 +124,7 @@ export function LegalPageLayout({ article, breadcrumbLabel }: LegalPageLayoutPro
           aria-label="Fil d'Ariane"
           className="flex items-center gap-2 text-xs text-white/60 mb-10"
         >
-          <Link href="/" className="inline-block py-1 hover:text-white transition-colors">
+          <Link href="/" className="inline-block py-2 hover:text-white transition-colors">
             Accueil
           </Link>
           <span aria-hidden="true">/</span>

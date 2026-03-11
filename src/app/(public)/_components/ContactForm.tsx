@@ -33,10 +33,10 @@ const BUDGETS = [
 ];
 
 const INPUT_CLASSES =
-  "w-full rounded-xl border border-white/[0.08] bg-white/[0.03] px-4 py-3 text-sm text-white placeholder:text-white/50 focus:border-white/30 focus:outline-none focus:ring-1 focus:ring-white/40 transition-colors";
+  "w-full rounded-xl border border-white/[0.08] bg-white/[0.03] px-4 py-3 text-base sm:text-sm text-white placeholder:text-white/60 focus:border-white/30 focus:outline-none focus:ring-1 focus:ring-white/40 transition-colors";
 
 const SELECT_CLASSES =
-  "w-full rounded-xl border border-white/[0.08] bg-white/[0.03] px-4 py-3 text-sm text-white focus:border-white/30 focus:outline-none focus:ring-1 focus:ring-white/40 transition-colors appearance-none cursor-pointer";
+  "w-full rounded-xl border border-white/[0.08] bg-white/[0.03] px-4 py-3 text-base sm:text-sm text-white focus:border-white/30 focus:outline-none focus:ring-1 focus:ring-white/40 transition-colors appearance-none cursor-pointer";
 
 export function ContactForm() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -108,6 +108,8 @@ export function ContactForm() {
     return (
       <div
         ref={successRef}
+        role="status"
+        aria-live="polite"
         className="flex flex-col items-center justify-center text-center py-12 sm:py-16"
       >
         <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/[0.06] mb-6">

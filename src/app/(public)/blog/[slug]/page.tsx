@@ -282,11 +282,11 @@ export default async function BlogArticlePage({ params }: PageProps) {
             aria-label="Fil d'Ariane"
             className="flex items-center gap-2 text-xs text-white/60 mb-10"
           >
-            <Link href="/" className="hover:text-white transition-colors">
+            <Link href="/" className="inline-block py-2 hover:text-white transition-colors">
               Accueil
             </Link>
             <span aria-hidden="true">/</span>
-            <Link href="/blog" className="hover:text-white transition-colors">
+            <Link href="/blog" className="inline-block py-2 hover:text-white transition-colors">
               Blog
             </Link>
             <span aria-hidden="true">/</span>

@@ -65,7 +65,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           {/* Breadcrumb */}
           <nav aria-label="Fil d'Ariane" className="flex items-center gap-2 text-xs text-white/60 mb-10">
-            <Link href="/" className="hover:text-white transition-colors">Accueil</Link>
+            <Link href="/" className="inline-block py-2 hover:text-white transition-colors">Accueil</Link>
             <span aria-hidden="true">/</span>
             <span className="text-white/80">Contact</span>
           </nav>

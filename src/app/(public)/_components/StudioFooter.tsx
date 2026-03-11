@@ -87,7 +87,7 @@ export function StudioFooter({ studioLinks = DEFAULT_STUDIO_LINKS, legalLinks = 
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Mita Studio sur LinkedIn"
-              className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-white/[0.04] border border-white/[0.06] text-white/60 hover:text-white hover:border-white/[0.12] transition-all"
+              className="inline-flex items-center justify-center w-11 h-11 rounded-lg bg-white/[0.04] border border-white/[0.06] text-white/60 hover:text-white hover:border-white/[0.12] transition-all"
             >
               <LinkedinLogo size={16} weight="bold" />
             </a>
@@ -106,14 +106,14 @@ export function StudioFooter({ studioLinks = DEFAULT_STUDIO_LINKS, legalLinks = 
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block py-1 text-sm text-white hover:text-white transition-colors"
+                      className="inline-block py-2 text-sm text-white hover:text-white transition-colors"
                     >
                       {link.label}
                     </a>
                   ) : (
                     <Link
                       href={link.href}
-                      className="inline-block py-1 text-sm text-white hover:text-white transition-colors"
+                      className="inline-block py-2 text-sm text-white hover:text-white transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -136,14 +136,14 @@ export function StudioFooter({ studioLinks = DEFAULT_STUDIO_LINKS, legalLinks = 
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block py-1 text-sm text-white hover:text-white transition-colors"
+                      className="inline-block py-2 text-sm text-white hover:text-white transition-colors"
                     >
                       {link.label}
                     </a>
                   ) : (
                     <Link
                       href={link.href}
-                      className="inline-block py-1 text-sm text-white hover:text-white transition-colors"
+                      className="inline-block py-2 text-sm text-white hover:text-white transition-colors"
                     >
                       {link.label}
                     </Link>

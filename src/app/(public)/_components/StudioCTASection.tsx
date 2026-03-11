@@ -105,6 +105,7 @@ export function StudioCTASection({
   return (
     <section
       ref={sectionRef}
+      aria-label="Appel à l'action"
       className="min-h-[60vh] flex flex-col justify-center py-20 sm:py-28 relative overflow-hidden border-t border-white/[0.06]"
     >
       {/* Background glow — pulsing */}
