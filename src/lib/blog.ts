@@ -2669,50 +2669,64 @@ Le pricing n'est pas un exercice ponctuel. C'est une strat\u00e9gie continue qui
       "Mentions légales du site mita-studio.com conformément à la loi LCEN du 21 juin 2004.",
     category: "Légal",
     tags: ["mentions-legales", "legal", "lcen"],
-    date: "2026-02-25",
+    date: "2026-03-11",
     readingTime: "3 min",
     image: "/blog/votre-site-vous-coute-des-clients.webp",
     tldr: [
-      "Éditeur du site : Tahina Randrianandraina, entreprise individuelle.",
-      "Hébergement assuré par Vercel Inc.",
-      "Aucun cookie publicitaire ou de traçage n'est utilisé.",
+      "Éditeur : Tahina Randrianandraina, titulaire d'un CAPE auprès de PCE (SCOP AS).",
+      "SIRET : 423 194 307 00090 — TVA non applicable, art. 293 B du CGI.",
+      "Hébergement : Vercel Inc. — Aucun cookie publicitaire ou de traçage.",
     ],
     relatedSlugs: ["conditions-generales-de-vente", "politique-de-confidentialite"],
     content: `Conformément à la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique (LCEN), voici les informations légales relatives au site mita-studio.com.
 
 ## 1. Éditeur du site
 
-- **Nom** : Tahina Randrianandraina (entreprise individuelle)
+- **Nom** : Tahina Randrianandraina
 - **Nom commercial** : Mita Studio
+- **Statut** : Titulaire d'un Contrat d'Appui au Projet d'Entreprise (CAPE), conformément aux articles L127-1 à L127-7 du Code de commerce
+- **Structure d'appui** : PCE — Société Coopérative Ouvrière de Production par Actions Simplifiée (SCOP AS) à Capital Variable
+- **Adresse** : 6 Rue d'Amboise — 75002 Paris
+- **SIRET** : 423 194 307 00090
+- **SIREN / RCS** : 423 194 307
+- **Code APE / NAF** : 9499Z
+- **N° TVA intracommunautaire** : FR82423194307
+- **TVA** : Non applicable, article 293 B du CGI
 - **Directeur de la publication** : Tahina Randrianandraina
 - **Email** : tahina@mita-studio.com
 - **Site web** : [mita-studio.com](https://mita-studio.com)
 
-## 2. Hébergeur
+## 2. Assurance responsabilité civile professionnelle
+
+- **Assureur** : AXA — Contrat multiactivité professionnelle
+- **N° client** : 0693499104
+- **N° contrat** : 1353589504
+
+## 3. Hébergeur
 
 - **Raison sociale** : Vercel Inc.
 - **Adresse** : 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis
 - **Site web** : [vercel.com](https://vercel.com)
 
-## 3. Propriété intellectuelle
+## 4. Propriété intellectuelle
 
 L'ensemble du contenu du site mita-studio.com (textes, images, graphismes, logo, icônes, code source) est la propriété exclusive de Mita Studio ou fait l'objet d'une autorisation d'utilisation. Toute reproduction, représentation, modification, publication ou adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite sauf autorisation écrite préalable.
 
-## 4. Protection des données personnelles
+## 5. Protection des données personnelles
 
-Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez de droits sur vos données personnelles. Pour en savoir plus, consultez notre [Politique de Confidentialité](/blog/politique-de-confidentialite).
+Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez de droits sur vos données personnelles. Pour en savoir plus, consultez notre [Politique de Confidentialité](/confidentialite).
 
-## 5. Cookies
+## 6. Cookies
 
 Le site utilise uniquement des cookies strictement nécessaires au fonctionnement technique (aucun cookie publicitaire, de traçage ou d'analyse). Aucune donnée personnelle n'est collectée via les cookies.
 
-## 6. Limitation de responsabilité
+## 7. Limitation de responsabilité
 
 Mita Studio s'efforce de fournir des informations précises et à jour sur ce site. Toutefois, les informations diffusées sur le site ne sauraient prétendre à l'exhaustivité. Mita Studio ne saurait être tenu responsable des dommages directs ou indirects résultant de l'utilisation du site ou de l'impossibilité d'y accéder.
 
 Les sites web et outils digitaux créés par Mita Studio pour ses clients sont livrés conformément au devis validé. La responsabilité de Mita Studio est limitée au montant de la prestation facturée.
 
-## 7. Contact
+## 8. Contact
 
 Pour toute question, contactez-nous à l'adresse **tahina@mita-studio.com**.`,
   },
@@ -2935,7 +2949,7 @@ Le Client est responsable du traitement des données personnelles collectées vi
 
 Les données du Client ne sont jamais revendues ni transmises à des tiers à des fins commerciales. Le Client dispose d'un droit d'accès, de rectification, d'effacement, de limitation, de portabilité et d'opposition sur ses données personnelles. Contact : **tahina@mita-studio.com**.
 
-Pour plus de détails, consultez notre [Politique de Confidentialité](/blog/politique-de-confidentialite).
+Pour plus de détails, consultez notre [Politique de Confidentialité](/confidentialite).
 
 ## 17. Limitation de responsabilité
 
@@ -3014,7 +3028,7 @@ Pour toute question relative aux présentes CGV, contactez-nous à l'adresse **t
       "Politique de confidentialité et protection des données personnelles de Mita Studio, conforme au RGPD.",
     category: "Légal",
     tags: ["confidentialite", "rgpd", "donnees-personnelles", "legal"],
-    date: "2026-02-25",
+    date: "2026-03-11",
     readingTime: "6 min",
     image: "/blog/votre-site-vous-coute-des-clients.webp",
     tldr: [
@@ -3023,7 +3037,7 @@ Pour toute question relative aux présentes CGV, contactez-nous à l'adresse **t
       "Vous pouvez exercer vos droits RGPD à tout moment par email.",
     ],
     relatedSlugs: ["mentions-legales", "conditions-generales-de-vente"],
-    content: `Dernière mise à jour : 25 février 2026
+    content: `Dernière mise à jour : 11 mars 2026
 
 La présente Politique de Confidentialité décrit comment **Mita Studio** collecte, utilise et protège vos données personnelles lorsque vous utilisez le site mita-studio.com.
 
@@ -3031,8 +3045,12 @@ La présente Politique de Confidentialité décrit comment **Mita Studio** colle
 
 Le responsable du traitement des données est :
 
-- **Nom** : Tahina Randrianandraina (entreprise individuelle)
+- **Nom** : Tahina Randrianandraina
 - **Nom commercial** : Mita Studio
+- **Statut** : Titulaire d'un Contrat d'Appui au Projet d'Entreprise (CAPE)
+- **Structure d'appui** : PCE (SCOP AS)
+- **Adresse** : 6 Rue d'Amboise — 75002 Paris
+- **SIRET** : 423 194 307 00090
 - **Email de contact** : tahina@mita-studio.com
 
 ## 2. Données collectées

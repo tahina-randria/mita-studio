@@ -53,7 +53,7 @@ async function main() {
     { key: "hero_cta_secondary", value: "Voir comment ça marche", type: "text", section: "hero", label: "CTA secondaire" },
     { key: "hero_badge_1_value", value: "2 sem.", type: "text", section: "hero", label: "Badge 1 valeur" },
     { key: "hero_badge_1_label", value: "Délai moyen", type: "text", section: "hero", label: "Badge 1 label" },
-    { key: "hero_badge_2_value", value: "890 €", type: "text", section: "hero", label: "Badge 2 valeur" },
+    { key: "hero_badge_2_value", value: "890 € HT", type: "text", section: "hero", label: "Badge 2 valeur" },
     { key: "hero_badge_2_label", value: "À partir de", type: "text", section: "hero", label: "Badge 2 label" },
     { key: "hero_badge_3_value", value: "100%", type: "text", section: "hero", label: "Badge 3 valeur" },
     { key: "hero_badge_3_label", value: "Satisfait ou on corrige", type: "text", section: "hero", label: "Badge 3 label" },
@@ -410,7 +410,7 @@ async function main() {
     },
     {
       question: "Que se passe-t-il après la livraison ?",
-      answer: "Vous bénéficiez de 30 jours de support post-lancement inclus (corrections et ajustements mineurs). Ensuite, nos abonnements mensuels prennent le relais : maintenance technique, rédaction d'articles SEO et suivi de visibilité. Sans engagement, avec un quota d'heures transparent.",
+      answer: "Vous bénéficiez de 30 jours de support post-lancement inclus (corrections et ajustements mineurs). Ensuite, nos abonnements mensuels prennent le relais : maintenance technique et suivi de visibilité. Engagement minimum 3 mois, résiliable avec 30 jours de préavis.",
       category: "general",
       sortOrder: 4,
     },

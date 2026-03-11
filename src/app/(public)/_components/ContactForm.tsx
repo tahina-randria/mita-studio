@@ -275,8 +275,11 @@ export function ContactForm() {
         )}
       </button>
 
-      <p className="text-center text-[11px] text-white">
-        Vos donn&eacute;es sont prot&eacute;g&eacute;es et ne seront jamais partag&eacute;es.
+      <p className="text-center text-[11px] text-white/60">
+        Vos données sont protégées et ne seront jamais partagées.{" "}
+        <a href="/confidentialite" className="underline hover:text-white/80 transition-colors">
+          Politique de confidentialité
+        </a>
       </p>
     </form>
   );
