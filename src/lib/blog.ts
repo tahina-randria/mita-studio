@@ -2674,8 +2674,8 @@ Le pricing n'est pas un exercice ponctuel. C'est une strat\u00e9gie continue qui
     image: "/blog/votre-site-vous-coute-des-clients.webp",
     tldr: [
       "Éditeur : Tahina Randrianandraina, titulaire d'un CAPE auprès de PCE (SCOP AS).",
-      "SIRET : 423 194 307 00090 — TVA non applicable, art. 293 B du CGI.",
-      "Hébergement : Vercel Inc. — Aucun cookie publicitaire ou de traçage.",
+      "SIRET : 423 194 307 00090. TVA non applicable, art. 293 B du CGI.",
+      "Hébergement : Vercel Inc. Aucun cookie publicitaire ou de traçage.",
     ],
     relatedSlugs: ["conditions-generales-de-vente", "politique-de-confidentialite"],
     content: `Conformément à la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique (LCEN), voici les informations légales relatives au site mita-studio.com.
@@ -2685,8 +2685,8 @@ Le pricing n'est pas un exercice ponctuel. C'est une strat\u00e9gie continue qui
 - **Nom** : Tahina Randrianandraina
 - **Nom commercial** : Mita Studio
 - **Statut** : Titulaire d'un Contrat d'Appui au Projet d'Entreprise (CAPE), conformément aux articles L127-1 à L127-7 du Code de commerce
-- **Structure d'appui** : PCE — Société Coopérative Ouvrière de Production par Actions Simplifiée (SCOP AS) à Capital Variable
-- **Adresse** : 6 Rue d'Amboise — 75002 Paris
+- **Structure d'appui** : PCE, Société Coopérative Ouvrière de Production par Actions Simplifiée (SCOP AS) à Capital Variable
+- **Adresse** : 6 Rue d'Amboise, 75002 Paris
 - **SIRET** : 423 194 307 00090
 - **SIREN / RCS** : 423 194 307
 - **Code APE / NAF** : 9499Z
@@ -2698,7 +2698,7 @@ Le pricing n'est pas un exercice ponctuel. C'est une strat\u00e9gie continue qui
 
 ## 2. Assurance responsabilité civile professionnelle
 
-- **Assureur** : AXA — Contrat multiactivité professionnelle
+- **Assureur** : AXA, Contrat multiactivité professionnelle
 - **N° client** : 0693499104
 - **N° contrat** : 1353589504
 
@@ -2765,13 +2765,13 @@ Les présentes Conditions Générales de Vente (ci-après « CGV ») régissent 
 
 - **Prestataire** : Tahina Randrianandraina, exerçant sous le nom commercial Mita Studio
 - **Statut** : Titulaire d'un Contrat d'Appui au Projet d'Entreprise (CAPE)
-- **Structure d'appui** : PCE — Société Coopérative Ouvrière de Production par Actions Simplifiée (SCOP AS) à Capital Variable
-- **Adresse** : 6 Rue d'Amboise — 75002 Paris
+- **Structure d'appui** : PCE, Société Coopérative Ouvrière de Production par Actions Simplifiée (SCOP AS) à Capital Variable
+- **Adresse** : 6 Rue d'Amboise, 75002 Paris
 - **SIRET** : 423 194 307 00090
 - **SIREN/RCS** : 423 194 307
 - **Code APE/NAF** : 9499Z
 - **N° TVA intracommunautaire** : FR82423194307
-- **Assurance RCP** : Contrat multiactivité professionnelle AXA — N° client 0693499104 — N° contrat 1353589504
+- **Assurance RCP** : Contrat multiactivité professionnelle AXA, N° client 0693499104, N° contrat 1353589504
 - **Email** : tahina@mita-studio.com
 - **Site web** : [mita-studio.com](https://mita-studio.com)
 
@@ -2783,7 +2783,7 @@ Les présentes CGV régissent les relations entre Mita Studio et ses clients pou
 
 Mita Studio propose des prestations de services digitaux organisées en trois formules :
 
-### Formule Vitrine Express — 890 € HT
+### Formule Vitrine Express : 890 € HT
 
 - 1 landing page responsive (design sur mesure, pas de template)
 - Contenu rédigé pour le client (inclus)
@@ -2795,10 +2795,10 @@ Mita Studio propose des prestations de services digitaux organisées en trois fo
 - 15 jours de support email post-livraison
 - Livraison en 1 semaine (sous réserve de réception des éléments nécessaires)
 
-### Formule Présence Pro — 2 290 € HT — Recommandé
+### Formule Présence Pro : 2 290 € HT (Recommandé)
 
 - 3 à 5 pages responsive (design sur mesure)
-- CMS headless — le client modifie ses contenus en autonomie
+- CMS headless : le client modifie ses contenus en autonomie
 - Contenu rédigé pour le client (inclus)
 - SEO technique complet + Google Search Console
 - Jusqu'à 2 formulaires de contact
@@ -2807,7 +2807,7 @@ Mita Studio propose des prestations de services digitaux organisées en trois fo
 - 30 jours de support email post-livraison
 - Livraison en 2 semaines (sous réserve de réception des éléments nécessaires)
 
-### Formule Croissance Digitale — 3 990 € HT
+### Formule Croissance Digitale : 3 990 € HT
 
 - 5 à 8 pages responsive (design sur mesure)
 - CMS avancé avec modèles de contenu adaptés au métier
@@ -2834,14 +2834,14 @@ Mita Studio propose des prestations de services digitaux organisées en trois fo
 
 ### Abonnements de maintenance (optionnels)
 
-**Essentiel — 49 € HT/mois**
+**Essentiel : 49 € HT/mois**
 - Monitoring uptime + alertes
 - Backups hebdomadaires
 - Mises à jour de sécurité
 - 30 min de support email / mois
 - Temps de réponse : 48h ouvrées
 
-**Pro — 99 € HT/mois**
+**Pro : 99 € HT/mois**
 - Tout ce qui est inclus dans Essentiel
 - 1h de modifications / mois (textes, images, petits ajustements)
 - Rapport trimestriel (trafic, performance, recommandations)
@@ -2861,7 +2861,7 @@ Conformément aux articles 1366 et 1367 du Code civil, la signature électroniqu
 
 ## 6. Prix et paiement
 
-- **Échéancier** : 30 % acompte à la signature — 40 % à la validation du design — 30 % à la livraison
+- **Échéancier** : 30 % acompte à la signature, 40 % à la validation du design, 30 % à la livraison
 - **Moyens de paiement** : virement bancaire ou Stripe
 - **Délai de paiement** : 14 jours à compter de la date de facturation
 
@@ -2936,7 +2936,7 @@ Les parties s'engagent mutuellement à une obligation de confidentialité portan
 
 Dans le cadre de l'exécution de ses prestations, Mita Studio est susceptible de collecter et traiter des données personnelles du Client (nom, prénom, adresse email, téléphone, adresse postale).
 
-Ces données sont collectées et traitées conformément au Règlement Général sur la Protection des Données (RGPD — Règlement UE 2016/679) et à la loi Informatique et Libertés du 6 janvier 1978 modifiée. Elles sont utilisées aux seules fins d'exécution du contrat et de gestion de la relation commerciale.
+Ces données sont collectées et traitées conformément au Règlement Général sur la Protection des Données (RGPD, Règlement UE 2016/679) et à la loi Informatique et Libertés du 6 janvier 1978 modifiée. Elles sont utilisées aux seules fins d'exécution du contrat et de gestion de la relation commerciale.
 
 Le Client est responsable du traitement des données personnelles collectées via son propre site web. Le Prestataire peut conseiller sur la conformité mais n'agit pas en qualité de Délégué à la Protection des Données (DPO).
 
@@ -3002,7 +3002,7 @@ Conformément aux articles L611-1 et suivants du Code de la consommation, le Cli
 
 - **Centre de la Médiation de la Consommation de Conciliateurs de Justice (CM2C)**
 - Site web : [cm2c.net](https://www.cm2c.net)
-- Adresse : 14 rue Saint-Jean-de-Beauregard — 91400 Orsay
+- Adresse : 14 rue Saint-Jean-de-Beauregard, 91400 Orsay
 
 Le Client peut également soumettre sa réclamation sur la plateforme européenne de règlement en ligne des litiges : [ec.europa.eu/consumers/odr](https://ec.europa.eu/consumers/odr).
 
@@ -3042,7 +3042,7 @@ Le responsable du traitement des données est :
 - **Nom commercial** : Mita Studio
 - **Statut** : Titulaire d'un Contrat d'Appui au Projet d'Entreprise (CAPE)
 - **Structure d'appui** : PCE (SCOP AS)
-- **Adresse** : 6 Rue d'Amboise — 75002 Paris
+- **Adresse** : 6 Rue d'Amboise, 75002 Paris
 - **SIRET** : 423 194 307 00090
 - **Email de contact** : tahina@mita-studio.com
 
@@ -3085,8 +3085,8 @@ Des données techniques minimales sont automatiquement collectées par l'héberg
 
 Nous faisons appel aux sous-traitants suivants :
 
-- **Vercel** (hébergement et diffusion CDN) — États-Unis — certifié EU-U.S. Data Privacy Framework
-- **Resend** (envoi d'emails transactionnels) — États-Unis — Clauses Contractuelles Types
+- **Vercel** (hébergement et diffusion CDN), États-Unis, certifié EU-U.S. Data Privacy Framework
+- **Resend** (envoi d'emails transactionnels), États-Unis, Clauses Contractuelles Types
 
 Aucune donnée n'est vendue, louée ou partagée avec des tiers à des fins commerciales.
 
@@ -3119,7 +3119,7 @@ Pour exercer vos droits, contactez-nous à **tahina@mita-studio.com**. Nous rép
 
 ## 9. Réclamation
 
-Vous avez le droit d'introduire une réclamation auprès de la **CNIL** (Commission Nationale de l'Informatique et des Libertés) — [www.cnil.fr](https://www.cnil.fr).
+Vous avez le droit d'introduire une réclamation auprès de la **CNIL** (Commission Nationale de l'Informatique et des Libertés) : [www.cnil.fr](https://www.cnil.fr).
 
 ## 10. Mise à jour
 
