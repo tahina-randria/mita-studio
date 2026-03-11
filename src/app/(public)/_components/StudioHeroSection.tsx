@@ -180,29 +180,6 @@ export function StudioHeroSection({
             {content.hero_cta_secondary || "Voir comment ça marche"}
           </button>
         </div>
-
-        {/* Social proof badges */}
-        <div className="mt-10 sm:mt-14 flex items-stretch justify-center gap-0">
-          {[
-            { value: content.badge_1_value || "2 sem.", label: content.badge_1_label || "D\u00e9lai moyen" },
-            { value: content.badge_2_value || "790\u00a0\u20ac", label: content.badge_2_label || "\u00c0 partir de" },
-            { value: content.badge_3_value || "100%", label: content.badge_3_label || "Satisfait ou on corrige" },
-          ].map((badge, i) => (
-            <div key={i} className="flex items-stretch">
-              {i > 0 && (
-                <div className="w-px bg-white/[0.12] self-stretch mx-5 sm:mx-8" />
-              )}
-              <div className="flex flex-col items-center gap-1">
-                <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-white tracking-tight">
-                  {badge.value}
-                </span>
-                <span className="text-[11px] sm:text-xs uppercase tracking-[0.15em] text-white">
-                  {badge.label}
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
 
     </section>

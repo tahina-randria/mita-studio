@@ -321,7 +321,7 @@ async function main() {
   const commitments = [
     {
       title: "Livraison rapide",
-      description: "Votre site est en ligne en 2 à 4 semaines. On s'engage sur un planning précis dès le départ.",
+      description: "Votre site est en ligne en 1 à 3 semaines selon la formule. Planning précis dès la signature.",
       iconUrl: "/images/icons/icon-timer.webp",
       sortOrder: 0,
     },
@@ -333,13 +333,13 @@ async function main() {
     },
     {
       title: "Satisfait ou on corrige",
-      description: "Des rounds de révisions inclus pour affiner le résultat jusqu'à ce que ça vous convienne.",
+      description: "2 à 3 tours de révisions inclus selon la formule pour affiner le résultat.",
       iconUrl: "/images/icons/icon-shield.webp",
       sortOrder: 2,
     },
     {
       title: "Accompagnement inclus",
-      description: "Formation, 30 jours de support post-lancement. On ne disparaît pas après la livraison.",
+      description: "Formation et jusqu'à 45 jours de support post-lancement selon la formule choisie.",
       iconUrl: "/images/icons/icon-handshake.webp",
       sortOrder: 3,
     },
