@@ -12,8 +12,10 @@ const nextConfig: NextConfig = {
       { source: "/cgu", destination: "/cgv", permanent: true },
       // Anciens slugs blog → pages légales dédiées
       { source: "/blog/conditions-generales-de-vente", destination: "/cgv", permanent: true },
+      { source: "/blog/cgv", destination: "/cgv", permanent: true },
       { source: "/blog/mentions-legales", destination: "/mentions-legales", permanent: true },
       { source: "/blog/politique-de-confidentialite", destination: "/confidentialite", permanent: true },
+      { source: "/blog/confidentialite", destination: "/confidentialite", permanent: true },
     ];
   },
 };
