@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { StudioHeader } from "../_components/StudioHeader";
 import { StudioFooter } from "../_components/StudioFooter";
 import { LegalPageLayout } from "../_components/LegalPageLayout";
-import { getArticleBySlug } from "@/lib/blog";
+import { getLegalArticle } from "@/lib/legal";
 
 const SLUG = "mentions-legales";
 
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 export default function MentionsLegalesPage() {
-  const article = getArticleBySlug(SLUG);
+  const article = getLegalArticle(SLUG);
   if (!article) return notFound();
 
   return (

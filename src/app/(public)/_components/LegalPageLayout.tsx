@@ -1,6 +1,6 @@
 import Link from "next/link";
-import type { BlogArticle } from "@/lib/blog";
-import { formatDate } from "@/lib/blog";
+import type { LegalArticle } from "@/lib/legal";
+import { formatDate } from "@/lib/legal";
 
 /** Simple Markdown-to-JSX renderer (same as blog articles) */
 function renderContent(content: string) {
@@ -111,7 +111,7 @@ function renderContent(content: string) {
 }
 
 interface LegalPageLayoutProps {
-  article: BlogArticle;
+  article: LegalArticle;
   breadcrumbLabel: string;
 }
 
