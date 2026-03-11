@@ -2742,14 +2742,7 @@ Pour toute question, contactez-nous à l'adresse **tahina@mita-studio.com**.`,
     date: "2026-03-10",
     readingTime: "18 min",
     image: "/blog/votre-site-vous-coute-des-clients.webp",
-    tldr: [
-      "Prestations réalisées dans le cadre d'un CAPE avec la structure d'appui PCE (SCOP AS).",
-      "TVA non applicable, article 293 B du CGI.",
-      "Paiement en 3 échéances : 30 % acompte, 40 % validation design, 30 % livraison.",
-      "Assurance RCP multiactivité AXA incluse.",
-      "Médiation consommateur CM2C et protection des données RGPD.",
-      "Signature électronique valable comme signature manuscrite.",
-    ],
+    tldr: [],
     relatedSlugs: ["mentions-legales", "politique-de-confidentialite"],
     content: `Dernière mise à jour : 10 mars 2026
 
