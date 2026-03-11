@@ -227,7 +227,7 @@ export function StudioAboutSection({ content }: { content: Record<string, string
                 href="/fondateur"
                 className="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-white transition-colors group"
               >
-                Voir le portfolio
+                En savoir plus
                 <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
