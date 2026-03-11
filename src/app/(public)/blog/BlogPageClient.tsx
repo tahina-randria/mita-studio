@@ -29,7 +29,7 @@ export function BlogPageClient({ articles, categories }: BlogPageClientProps) {
           aria-label="Fil d'Ariane"
           className="flex items-center gap-2 text-xs text-white/50 mb-10"
         >
-          <Link href="/" className="hover:text-white transition-colors">
+          <Link href="/" className="inline-block py-1 hover:text-white transition-colors">
             Accueil
           </Link>
           <span aria-hidden="true">/</span>
@@ -99,7 +99,7 @@ export function BlogPageClient({ articles, categories }: BlogPageClientProps) {
         <div className="flex items-center gap-2 mb-10 overflow-x-auto pb-2 scrollbar-hide">
           <button
             onClick={() => setActiveCategory(null)}
-            className={`shrink-0 rounded-full px-4 py-1.5 text-xs font-medium tracking-wide transition-all ${
+            className={`shrink-0 rounded-full px-4 py-2 text-sm font-medium tracking-wide transition-all ${
               activeCategory === null
                 ? "bg-white text-[#050a1e]"
                 : "bg-white/[0.06] text-white/50 hover:bg-white/[0.1] hover:text-white/70"
@@ -113,7 +113,7 @@ export function BlogPageClient({ articles, categories }: BlogPageClientProps) {
               onClick={() =>
                 setActiveCategory(activeCategory === cat ? null : cat)
               }
-              className={`shrink-0 rounded-full px-4 py-1.5 text-xs font-medium tracking-wide transition-all ${
+              className={`shrink-0 rounded-full px-4 py-2 text-sm font-medium tracking-wide transition-all ${
                 activeCategory === cat
                   ? "bg-white text-[#050a1e]"
                   : "bg-white/[0.06] text-white/50 hover:bg-white/[0.1] hover:text-white/70"
@@ -210,7 +210,7 @@ export function BlogPageClient({ articles, categories }: BlogPageClientProps) {
               <input
                 type="email"
                 placeholder="votre@email.com"
-                className="flex-1 rounded-xl border border-white/[0.1] bg-white/[0.04] px-4 py-2.5 text-sm text-white placeholder:text-white/30 outline-none focus:border-white/[0.2] transition-colors"
+                className="flex-1 rounded-xl border border-white/[0.1] bg-white/[0.04] px-4 py-2.5 text-sm text-white placeholder:text-white/50 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/40 transition-colors"
               />
               <button
                 type="submit"
@@ -219,11 +219,11 @@ export function BlogPageClient({ articles, categories }: BlogPageClientProps) {
                 S&apos;inscrire
               </button>
             </form>
-            <p className="text-[10px] text-white/30 mt-3">
+            <p className="text-xs text-white/50 mt-3">
               En vous inscrivant, vous acceptez notre{" "}
               <Link
                 href="/confidentialite"
-                className="underline hover:text-white/50"
+                className="underline hover:text-white/70"
               >
                 politique de confidentialit&eacute;
               </Link>

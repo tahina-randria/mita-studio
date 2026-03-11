@@ -106,14 +106,14 @@ export function StudioFooter({ studioLinks = DEFAULT_STUDIO_LINKS, legalLinks = 
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-white hover:text-white transition-colors"
+                      className="inline-block py-1 text-sm text-white hover:text-white transition-colors"
                     >
                       {link.label}
                     </a>
                   ) : (
                     <Link
                       href={link.href}
-                      className="text-sm text-white hover:text-white transition-colors"
+                      className="inline-block py-1 text-sm text-white hover:text-white transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -136,14 +136,14 @@ export function StudioFooter({ studioLinks = DEFAULT_STUDIO_LINKS, legalLinks = 
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-white hover:text-white transition-colors"
+                      className="inline-block py-1 text-sm text-white hover:text-white transition-colors"
                     >
                       {link.label}
                     </a>
                   ) : (
                     <Link
                       href={link.href}
-                      className="text-sm text-white hover:text-white transition-colors"
+                      className="inline-block py-1 text-sm text-white hover:text-white transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -161,7 +161,7 @@ export function StudioFooter({ studioLinks = DEFAULT_STUDIO_LINKS, legalLinks = 
           </p>
           <a
             href={`mailto:${settings.contact_email || "tahina@mita-studio.com"}`}
-            className="text-xs text-white hover:text-white transition-colors"
+            className="inline-block py-1 text-xs text-white hover:text-white transition-colors"
           >
             {settings.contact_email || "tahina@mita-studio.com"}
           </a>

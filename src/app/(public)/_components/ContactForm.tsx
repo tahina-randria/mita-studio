@@ -275,9 +275,9 @@ export function ContactForm() {
         )}
       </button>
 
-      <p className="text-center text-[11px] text-white/60">
+      <p className="text-center text-xs text-white/60">
         Vos données sont protégées et ne seront jamais partagées.{" "}
-        <a href="/confidentialite" className="underline hover:text-white/80 transition-colors">
+        <a href="/confidentialite" className="inline-block py-0.5 underline hover:text-white/80 transition-colors">
           Politique de confidentialité
         </a>
       </p>
