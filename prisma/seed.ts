@@ -48,7 +48,7 @@ async function main() {
   console.log("→ SiteContent (hero)...");
   const heroContent = [
     { key: "hero_title", value: "Le digital pro, enfin accessible", type: "text", section: "hero", label: "Titre hero" },
-    { key: "hero_subtitle", value: "Site web, référencement Google et outils digitaux sur mesure. Livrés en 2 semaines.", type: "text", section: "hero", label: "Sous-titre hero" },
+    { key: "hero_subtitle", value: "Site web, référencement Google et outils digitaux sur mesure.\nLivrés en 1 à 3 semaines.", type: "text", section: "hero", label: "Sous-titre hero" },
     { key: "hero_cta_primary", value: "Démarrer mon projet", type: "text", section: "hero", label: "CTA primaire" },
     { key: "hero_cta_secondary", value: "Voir comment ça marche", type: "text", section: "hero", label: "CTA secondaire" },
     { key: "hero_badge_1_value", value: "2 sem.", type: "text", section: "hero", label: "Badge 1 valeur" },
@@ -73,7 +73,7 @@ async function main() {
     { key: "about_value_1_label", value: "Votre projet, vos règles", type: "text", section: "about", label: "Valeur 1 titre" },
     { key: "about_value_1_description", value: "On s'adapte à votre budget, vos délais et vos objectifs. Pas l'inverse.", type: "text", section: "about", label: "Valeur 1 description" },
     { key: "about_value_2_label", value: "Résultats mesurables", type: "text", section: "about", label: "Valeur 2 titre" },
-    { key: "about_value_2_description", value: "Chaque euro investi doit rapporter. Tracking, analytics, ROI — on ne travaille pas à l'aveugle.", type: "text", section: "about", label: "Valeur 2 description" },
+    { key: "about_value_2_description", value: "Chaque euro investi doit rapporter. Tracking, analytics, ROI : on ne travaille pas à l'aveugle.", type: "text", section: "about", label: "Valeur 2 description" },
     { key: "about_value_3_label", value: "Zéro surprise", type: "text", section: "about", label: "Valeur 3 titre" },
     { key: "about_value_3_description", value: "Prix fixés dès le départ, livrables clairs, suivi en temps réel. Vous savez toujours où on en est.", type: "text", section: "about", label: "Valeur 3 description" },
   ];
@@ -101,13 +101,13 @@ async function main() {
   const services = [
     {
       title: "Sites web",
-      description: "Sites vitrines, e-commerce et applications web sur mesure. Design soigné, rapide, optimisé pour convertir.",
+      description: "Sites vitrines et applications web sur mesure. Design soigné, rapide, optimisé pour convertir.",
       iconUrl: "/images/services/icon-web.webp",
       sortOrder: 0,
     },
     {
       title: "Référencement Google",
-      description: "Stratégie SEO complète et multilingue. Contenu optimisé, suivi de positions pour une visibilité durable.",
+      description: "Stratégie SEO complète. Contenu optimisé, suivi de positions et Google Search Console pour une visibilité durable.",
       iconUrl: "/images/services/icon-seo.webp",
       sortOrder: 1,
     },
@@ -163,7 +163,7 @@ async function main() {
       ctaUrl: "/contact",
       features: [
         "3 à 5 pages responsive",
-        "CMS — modifiez vos contenus en autonomie",
+        "CMS : modifiez vos contenus en autonomie",
         "Contenu rédigé pour vous (inclus)",
         "SEO technique + Google Search Console",
         "Formation CMS (visio + guide écrit)",

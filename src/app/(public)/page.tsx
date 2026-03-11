@@ -9,7 +9,7 @@ import { ServicesSection } from "./_components/ServicesSection";
 import { ProcessSection } from "./_components/ProcessSection";
 import { StudioPricingSection } from "./_components/StudioPricingSection";
 import { ClientTestimonialsSection } from "./_components/ClientTestimonialsSection";
-import { CommitmentsSection } from "./_components/TestimonialsSection";
+import { CommitmentsSection } from "./_components/CommitmentsSection";
 import { HomeFAQSection } from "./_components/HomeFAQSection";
 import { StudioAboutSection } from "./_components/StudioAboutSection";
 import { StudioCTASection } from "./_components/StudioCTASection";
