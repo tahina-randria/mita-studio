@@ -242,7 +242,7 @@ export function StudioAboutSection({ content }: { content: Record<string, string
             ].map((value, i, arr) => (
               <div key={i} className="py-7 relative">
                 <div className="flex items-start gap-4">
-                  <span className="text-sm font-mono mt-0.5 shrink-0 accent-text opacity-40">
+                  <span className="text-sm font-mono mt-0.5 shrink-0 accent-text opacity-70">
                     0{i + 1}
                   </span>
                   <div>

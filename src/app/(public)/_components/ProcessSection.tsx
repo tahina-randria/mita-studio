@@ -33,7 +33,7 @@ function CalendlyMockup() {
         </div>
         <div>
           <span className="text-sm font-medium text-white/80 block">Appel d&eacute;couverte</span>
-          <span className="text-[11px] text-white/35">20&nbsp;min &middot; Gratuit</span>
+          <span className="text-[11px] text-white/60">20&nbsp;min &middot; Gratuit</span>
         </div>
       </div>
 
@@ -42,7 +42,7 @@ function CalendlyMockup() {
         <span className="text-xs font-medium text-white/60">Mars 2026</span>
         <div className="flex gap-1">
           <div className="w-6 h-6 rounded-md bg-white/[0.04] flex items-center justify-center">
-            <svg className="w-3 h-3 text-white/30" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg className="w-3 h-3 text-white/50" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
             </svg>
           </div>
@@ -57,7 +57,7 @@ function CalendlyMockup() {
       {/* Calendar grid */}
       <div className="grid grid-cols-5 gap-1.5 mb-4">
         {days.map((d) => (
-          <span key={d} className="text-[10px] text-white/30 text-center font-medium pb-1">{d}</span>
+          <span key={d} className="text-[10px] text-white/60 text-center font-medium pb-1">{d}</span>
         ))}
         {dates.map((d, i) => (
           <div
@@ -67,7 +67,7 @@ function CalendlyMockup() {
                 ? "bg-white text-[#0a0a0a] font-semibold shadow-lg shadow-white/10"
                 : d.avail
                   ? "bg-white/[0.04] text-white/50"
-                  : "text-white/15"
+                  : "text-white/40"
             }`}
           >
             {d.day}
@@ -77,7 +77,7 @@ function CalendlyMockup() {
 
       {/* Time slots */}
       <div className="pt-3 border-t border-white/[0.06]">
-        <span className="text-[10px] text-white/30 uppercase tracking-wider block mb-2.5">Cr&eacute;neaux disponibles</span>
+        <span className="text-[10px] text-white/60 uppercase tracking-wider block mb-2.5">Cr&eacute;neaux disponibles</span>
         <div className="grid grid-cols-2 gap-2">
           {slots.map((t, i) => (
             <div
@@ -85,7 +85,7 @@ function CalendlyMockup() {
               className={`rounded-lg py-2.5 text-xs text-center font-medium ${
                 i === 1
                   ? "bg-white text-[#0a0a0a] shadow-lg shadow-white/10"
-                  : "bg-white/[0.04] text-white/45"
+                  : "bg-white/[0.04] text-white/60"
               }`}
             >
               {t}

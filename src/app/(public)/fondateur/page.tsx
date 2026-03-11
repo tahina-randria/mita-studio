@@ -119,7 +119,7 @@ export default function FondateurPage() {
       <main className="pt-28 sm:pt-36 pb-20 sm:pb-28">
         <div className="mx-auto max-w-4xl px-4 sm:px-6">
           {/* Breadcrumb */}
-          <nav aria-label="Fil d'Ariane" className="flex items-center gap-2 text-xs text-white/50 mb-10">
+          <nav aria-label="Fil d'Ariane" className="flex items-center gap-2 text-xs text-white/60 mb-10">
             <Link href="/" className="hover:text-white transition-colors">Accueil</Link>
             <span aria-hidden="true">/</span>
             <span className="text-white/80">Fondateur</span>
@@ -141,7 +141,7 @@ export default function FondateurPage() {
 
             {/* Bio */}
             <div className="lg:col-span-2">
-              <p className="text-xs uppercase tracking-[0.25em] text-white/50 font-medium mb-3">
+              <p className="text-xs uppercase tracking-[0.25em] text-white/60 font-medium mb-3">
                 Fondateur
               </p>
               <h1 className="text-3xl sm:text-4xl text-white tracking-tight mb-4">
@@ -200,7 +200,7 @@ export default function FondateurPage() {
             <div className="space-y-8">
               {MILESTONES.map((m, i) => (
                 <div key={i} className="flex gap-5 sm:gap-8">
-                  <span className="text-sm font-mono text-white/40 shrink-0 pt-0.5 tabular-nums">
+                  <span className="text-sm font-mono text-white/60 shrink-0 pt-0.5 tabular-nums">
                     {m.year}
                   </span>
                   <div>

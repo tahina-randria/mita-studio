@@ -64,7 +64,7 @@ export default function ContactPage() {
       <main className="relative pt-28 sm:pt-36 pb-20 sm:pb-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           {/* Breadcrumb */}
-          <nav aria-label="Fil d'Ariane" className="flex items-center gap-2 text-xs text-white/50 mb-10">
+          <nav aria-label="Fil d'Ariane" className="flex items-center gap-2 text-xs text-white/60 mb-10">
             <Link href="/" className="hover:text-white transition-colors">Accueil</Link>
             <span aria-hidden="true">/</span>
             <span className="text-white/80">Contact</span>
@@ -104,7 +104,7 @@ export default function ContactPage() {
 
               {/* Direct email fallback */}
               <div className="border-t border-white/[0.06] pt-6">
-                <p className="text-xs text-white/50 mb-1">
+                <p className="text-xs text-white/60 mb-1">
                   Vous pr&eacute;f&eacute;rez &eacute;crire directement&nbsp;?
                 </p>
                 <a

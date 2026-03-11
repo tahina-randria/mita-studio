@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <div className="studio-page min-h-screen bg-[#050a1e] text-white flex flex-col items-center justify-center px-5">
-      <p className="text-[11px] font-semibold tracking-widest text-white/50 uppercase mb-6">
+      <p className="text-[11px] font-semibold tracking-widest text-white/70 uppercase mb-6">
         Erreur 404
       </p>
 

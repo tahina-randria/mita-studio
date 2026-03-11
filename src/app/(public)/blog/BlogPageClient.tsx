@@ -27,7 +27,7 @@ export function BlogPageClient({ articles, categories }: BlogPageClientProps) {
         {/* Breadcrumb */}
         <nav
           aria-label="Fil d'Ariane"
-          className="flex items-center gap-2 text-xs text-white/50 mb-10"
+          className="flex items-center gap-2 text-xs text-white/60 mb-10"
         >
           <Link href="/" className="inline-block py-1 hover:text-white transition-colors">
             Accueil
@@ -41,7 +41,7 @@ export function BlogPageClient({ articles, categories }: BlogPageClientProps) {
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
             Blog
           </h1>
-          <p className="text-base sm:text-lg text-white/50 max-w-2xl">
+          <p className="text-base sm:text-lg text-white/60 max-w-2xl">
             Insights, guides et actualit&eacute;s du digital. SEO, IA,
             performance web et strat&eacute;gie business.
           </p>
@@ -69,10 +69,10 @@ export function BlogPageClient({ articles, categories }: BlogPageClientProps) {
           {/* Content */}
           <div className="flex flex-col justify-center p-6 sm:p-8 lg:py-10 lg:pr-10 lg:pl-0">
             <div className="flex items-center gap-3 mb-4">
-              <span className="inline-flex items-center rounded-full bg-white/[0.08] px-3 py-1 text-[10px] font-medium tracking-widest text-white/70 uppercase">
+              <span className="inline-flex items-center rounded-full bg-white/[0.08] px-3 py-1 text-xs font-medium tracking-widest text-white/70 uppercase">
                 {featured.category}
               </span>
-              <span className="text-xs text-white/30">
+              <span className="text-xs text-white/60">
                 {formatDate(featured.date)}
               </span>
             </div>
@@ -81,11 +81,11 @@ export function BlogPageClient({ articles, categories }: BlogPageClientProps) {
               {featured.title}
             </h2>
 
-            <p className="text-sm sm:text-base text-white/50 leading-relaxed mb-6 line-clamp-3">
+            <p className="text-sm sm:text-base text-white/60 leading-relaxed mb-6 line-clamp-3">
               {featured.description}
             </p>
 
-            <span className="inline-flex items-center gap-2 text-sm font-medium text-white/50 group-hover:text-white/80 transition-colors">
+            <span className="inline-flex items-center gap-2 text-sm font-medium text-white/60 group-hover:text-white/80 transition-colors">
               Lire l&apos;article &middot; {featured.readingTime}
               <ArrowRight
                 size={14}
@@ -102,7 +102,7 @@ export function BlogPageClient({ articles, categories }: BlogPageClientProps) {
             className={`shrink-0 rounded-full px-4 py-2 text-sm font-medium tracking-wide transition-all ${
               activeCategory === null
                 ? "bg-white text-[#050a1e]"
-                : "bg-white/[0.06] text-white/50 hover:bg-white/[0.1] hover:text-white/70"
+                : "bg-white/[0.06] text-white/60 hover:bg-white/[0.1] hover:text-white/80"
             }`}
           >
             Tous
@@ -116,7 +116,7 @@ export function BlogPageClient({ articles, categories }: BlogPageClientProps) {
               className={`shrink-0 rounded-full px-4 py-2 text-sm font-medium tracking-wide transition-all ${
                 activeCategory === cat
                   ? "bg-white text-[#050a1e]"
-                  : "bg-white/[0.06] text-white/50 hover:bg-white/[0.1] hover:text-white/70"
+                  : "bg-white/[0.06] text-white/60 hover:bg-white/[0.1] hover:text-white/80"
               }`}
             >
               {cat}
@@ -149,11 +149,11 @@ export function BlogPageClient({ articles, categories }: BlogPageClientProps) {
               <div className="flex flex-col flex-1 p-5 sm:p-6">
                 {/* Meta */}
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="text-[10px] font-medium tracking-widest text-white/60 uppercase">
+                  <span className="text-xs font-medium tracking-widest text-white/60 uppercase">
                     {article.category}
                   </span>
-                  <span className="text-[10px] text-white/30">&middot;</span>
-                  <span className="text-[10px] text-white/30">
+                  <span className="text-xs text-white/60">&middot;</span>
+                  <span className="text-xs text-white/60">
                     {formatDate(article.date)}
                   </span>
                 </div>
@@ -164,12 +164,12 @@ export function BlogPageClient({ articles, categories }: BlogPageClientProps) {
                 </h2>
 
                 {/* Description */}
-                <p className="text-xs sm:text-sm text-white/50 leading-relaxed mb-4 line-clamp-2">
+                <p className="text-xs sm:text-sm text-white/60 leading-relaxed mb-4 line-clamp-2">
                   {article.description}
                 </p>
 
                 {/* Read more */}
-                <span className="mt-auto inline-flex items-center gap-1.5 text-xs font-medium text-white/40 group-hover:text-white/70 transition-colors">
+                <span className="mt-auto inline-flex items-center gap-1.5 text-xs font-medium text-white/60 group-hover:text-white/80 transition-colors">
                   Lire &middot; {article.readingTime}
                   <ArrowRight
                     size={11}
@@ -184,7 +184,7 @@ export function BlogPageClient({ articles, categories }: BlogPageClientProps) {
         {/* Empty state */}
         {filteredArticles.length === 0 && (
           <div className="text-center py-20">
-            <p className="text-white/40 text-sm">
+            <p className="text-white/60 text-sm">
               Aucun article dans cette cat&eacute;gorie pour le moment.
             </p>
           </div>
@@ -199,7 +199,7 @@ export function BlogPageClient({ articles, categories }: BlogPageClientProps) {
             <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">
               Restez inform&eacute;
             </h3>
-            <p className="text-sm text-white/50 mb-6">
+            <p className="text-sm text-white/60 mb-6">
               Un email par semaine. Pas de spam. Les meilleures ressources SEO,
               IA et web directement dans votre bo&icirc;te.
             </p>
