@@ -2795,7 +2795,7 @@ Mita Studio propose des prestations de services digitaux organisées en trois fo
 - 15 jours de support email post-livraison
 - Livraison en 1 semaine (sous réserve de réception des éléments nécessaires)
 
-### Formule Présence Pro — 2 290 € HT ⭐ Recommandé
+### Formule Présence Pro — 2 290 € HT — Recommandé
 
 - 3 à 5 pages responsive (design sur mesure)
 - CMS headless — le client modifie ses contenus en autonomie
