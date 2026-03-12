@@ -34,7 +34,7 @@ async function main() {
   console.log("→ SiteSettings...");
   const settings = [
     { key: "company_name", value: "Mita Studio", type: "text", label: "Nom de l'entreprise", group: "general" },
-    { key: "tagline", value: "Sites web, SEO & automatisation propulsés par l'IA.", type: "text", label: "Tagline", group: "general" },
+    { key: "tagline", value: "Sites web clé en main pour indépendants et PME.", type: "text", label: "Tagline", group: "general" },
     { key: "copyright", value: "© {year} Mita Studio. Tous droits réservés.", type: "text", label: "Copyright", group: "general" },
     { key: "email", value: "tahina@mita-studio.com", type: "email", label: "Email principal", group: "contact" },
     { key: "linkedin_url", value: "https://www.linkedin.com/company/mita-studio", type: "url", label: "LinkedIn", group: "social" },
@@ -49,7 +49,7 @@ async function main() {
   console.log("→ SiteContent (hero)...");
   const heroContent = [
     { key: "hero_title", value: "Le digital pro, enfin accessible", type: "text", section: "hero", label: "Titre hero" },
-    { key: "hero_subtitle", value: "Site web, référencement Google et outils digitaux sur mesure.\nLivrés en 1 à 3 semaines.", type: "text", section: "hero", label: "Sous-titre hero" },
+    { key: "hero_subtitle", value: "Site web clé en main, référencement Google et contenu rédigé inclus.\nLivrés en 1 à 3 semaines.", type: "text", section: "hero", label: "Sous-titre hero" },
     { key: "hero_cta_primary", value: "Démarrer mon projet", type: "text", section: "hero", label: "CTA primaire" },
     { key: "hero_cta_secondary", value: "Voir comment ça marche", type: "text", section: "hero", label: "CTA secondaire" },
     { key: "hero_badge_1_value", value: "2 sem.", type: "text", section: "hero", label: "Badge 1 valeur" },
@@ -69,7 +69,7 @@ async function main() {
   console.log("→ SiteContent (about)...");
   const aboutContent = [
     { key: "about_quote", value: "On rend accessible ce qui était réservé aux gros budgets.", type: "text", section: "about", label: "Citation" },
-    { key: "about_bio_1", value: "J'ai créé Mita Studio après un constat simple : trop de petites entreprises payent 5 000 € pour un site qui ne leur rapporte rien. L'IA change la donne. On peut faire mieux, plus vite, pour beaucoup moins.", type: "text", section: "about", label: "Bio paragraphe 1" },
+    { key: "about_bio_1", value: "J'ai créé Mita Studio après un constat simple : trop de petites entreprises payent 5 000 € pour un site qui ne leur rapporte rien. On peut faire mieux, plus vite, pour beaucoup moins.", type: "text", section: "about", label: "Bio paragraphe 1" },
     { key: "about_bio_2", value: "Mon obsession : que chaque euro investi par nos clients se transforme en résultat concret. Pas de jargon, pas de promesses vides. Juste du travail bien fait.", type: "text", section: "about", label: "Bio paragraphe 2" },
     { key: "about_value_1_label", value: "Votre projet, vos règles", type: "text", section: "about", label: "Valeur 1 titre" },
     { key: "about_value_1_description", value: "On s'adapte à votre budget, vos délais et vos objectifs. Pas l'inverse.", type: "text", section: "about", label: "Valeur 1 description" },
@@ -387,13 +387,13 @@ async function main() {
   const faqs = [
     {
       question: "Combien de temps faut-il pour créer un site ?",
-      answer: "En moyenne 2 à 4 semaines, selon la complexité du projet. Un site vitrine simple peut être livré en 10 jours. Nous définissons un planning précis dès le démarrage.",
+      answer: "En moyenne 1 à 3 semaines selon la formule : 1 semaine pour une landing page, 2 semaines pour un site complet, 3 semaines pour un projet avancé. Planning précis dès la signature.",
       category: "general",
       sortOrder: 0,
     },
     {
       question: "Quels sont vos tarifs ?",
-      answer: "À partir de 890 € HT pour une landing page professionnelle (Vitrine Express). Le tarif dépend du nombre de pages, des fonctionnalités et du niveau de personnalisation. TVA non applicable, art. 293 B du CGI. Chaque devis est définitif, pas de frais cachés.",
+      answer: "À partir de 890 € HT pour une landing page professionnelle (Vitrine Express). Le tarif dépend du nombre de pages, des fonctionnalités et du niveau de personnalisation. Prix HT, TVA 20 % en sus. Chaque devis est définitif, pas de frais cachés.",
       category: "pricing",
       sortOrder: 1,
     },
@@ -405,13 +405,13 @@ async function main() {
     },
     {
       question: "Je ne suis pas technique, c'est un problème ?",
-      answer: "Pas du tout. On gère toute la partie technique. Vous n'avez qu'à fournir vos textes et images (on peut aussi s'en charger). Après livraison, on vous forme pour gérer votre site en autonomie.",
+      answer: "Pas du tout. On gère tout de A à Z : technique, design et contenu rédigé pour vous (inclus dans chaque formule). Après livraison, on vous forme pour gérer votre site en autonomie.",
       category: "general",
       sortOrder: 3,
     },
     {
       question: "Que se passe-t-il après la livraison ?",
-      answer: "Vous bénéficiez de 30 jours de support post-lancement inclus (corrections et ajustements mineurs). Ensuite, nos abonnements mensuels prennent le relais : maintenance technique et suivi de visibilité. Engagement minimum 3 mois, résiliable avec 30 jours de préavis.",
+      answer: "Vous bénéficiez d'un support post-lancement inclus (jusqu'à 45 jours selon la formule) pour corrections et ajustements mineurs. Ensuite, nos abonnements mensuels prennent le relais : maintenance technique et suivi de visibilité. Engagement minimum 3 mois, résiliable avec 30 jours de préavis.",
       category: "general",
       sortOrder: 4,
     },
@@ -433,7 +433,7 @@ async function main() {
   const milestones = [
     { year: 2024, title: "Création de Mita Studio", description: "Lancement du studio avec une mission claire : rendre le digital pro accessible aux petites structures.", sortOrder: 0 },
     { year: 2024, title: "Premiers projets clients", description: "Sites web, SEO, outils sur mesure. Les premiers retours confirment l'approche.", sortOrder: 1 },
-    { year: 2025, title: "Accélération", description: "Intégration de l'IA dans le processus de travail. Résultats plus rapides, coûts réduits pour les clients.", sortOrder: 2 },
+    { year: 2025, title: "Accélération", description: "Méthodes et outils optimisés. Résultats plus rapides, coûts réduits pour les clients.", sortOrder: 2 },
   ];
   for (const m of milestones) {
     await prisma.founderMilestone.create({ data: m });
@@ -446,7 +446,7 @@ async function main() {
   const skills = [
     { title: "Développement web", description: "Next.js, React, TypeScript, Tailwind CSS", sortOrder: 0 },
     { title: "SEO & Contenu", description: "Audit SEO, stratégie de contenu, analytics", sortOrder: 1 },
-    { title: "IA & Automatisation", description: "Workflows IA, outils métier sur mesure", sortOrder: 2 },
+    { title: "Automatisation", description: "Workflows optimisés, outils métier sur mesure", sortOrder: 2 },
     { title: "Design UI/UX", description: "Interfaces modernes, responsive, centrées utilisateur", sortOrder: 3 },
   ];
   for (const s of skills) {

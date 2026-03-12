@@ -386,7 +386,7 @@ export function ProcessSection() {
                     C&rsquo;est en ligne
                   </h3>
                   <p className="text-[15px] sm:text-lg leading-relaxed text-white max-w-lg">
-                    Votre site est live, optimis&eacute; pour Google, pr&ecirc;t &agrave; recevoir vos clients. Formation prise en main incluse.
+                    Votre site est live avec son contenu r&eacute;dig&eacute;, optimis&eacute; pour Google, pr&ecirc;t &agrave; recevoir vos clients. Formation prise en main incluse.
                   </p>
                 </div>
                 <div className="w-full md:w-80 lg:w-[360px] shrink-0">

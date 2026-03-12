@@ -63,7 +63,7 @@ const MILESTONES: Milestone[] = [
     year: "2025",
     title: "Acc\u00e9l\u00e9ration",
     description:
-      "Int\u00e9gration de l\u2019IA dans le processus de travail. R\u00e9sultats plus rapides, co\u00fbts r\u00e9duits pour les clients.",
+      "M\u00e9thodes et outils optimis\u00e9s. R\u00e9sultats plus rapides, co\u00fbts r\u00e9duits pour les clients.",
   },
 ];
 
@@ -82,8 +82,8 @@ const SKILLS: Skill[] = [
     description: "Audit SEO, strat\u00e9gie de contenu, analytics",
   },
   {
-    label: "IA & Automatisation",
-    description: "Workflows IA, outils m\u00e9tier sur mesure",
+    label: "Automatisation",
+    description: "Workflows optimis\u00e9s, outils m\u00e9tier sur mesure",
   },
   {
     label: "Design UI/UX",
@@ -150,7 +150,7 @@ export default function FondateurPage() {
               <p className="text-base sm:text-lg text-white leading-relaxed mb-4">
                 J&rsquo;ai cr&eacute;&eacute; Mita Studio apr&egrave;s un constat simple&nbsp;:
                 trop de petites entreprises payent cher pour un digital qui ne leur rapporte rien.
-                L&rsquo;IA change la donne. On peut faire mieux, plus vite,
+                On peut faire mieux, plus vite,
                 pour beaucoup moins.
               </p>
               <p className="text-base sm:text-lg text-white leading-relaxed mb-6">

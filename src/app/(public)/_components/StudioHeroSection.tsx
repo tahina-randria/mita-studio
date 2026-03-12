@@ -160,7 +160,7 @@ export function StudioHeroSection({
           ref={descRef}
           className="mx-auto mt-4 sm:mt-5 max-w-2xl text-base sm:text-lg lg:text-xl leading-relaxed text-white"
         >
-          {content.hero_subtitle || "Site web, référencement Google et outils digitaux sur mesure.\nLivrés en 2\u00a0semaines."}
+          {content.hero_subtitle || "Site web cl\u00e9 en main, contenu r\u00e9dig\u00e9 inclus.\nLivr\u00e9s en 1 \u00e0 3\u00a0semaines."}
         </p>
 
         <div
