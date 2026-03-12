@@ -21,11 +21,7 @@ const LEGAL_ARTICLES: LegalArticle[] = [
       "Mentions légales du site mita-studio.com conformément à la loi LCEN du 21 juin 2004.",
     date: "2026-03-12",
     readingTime: "3 min",
-    tldr: [
-      "Éditeur : Tahina Randrianandraina (Mita Studio), titulaire du CAPE n°C1538 (échéant le 28/02/2027) auprès de PCE.",
-      "SIRET 423 194 307 00090 · APE 9499Z · TVA 20 %. RCP multiactivité AXA (contrat 1353589504).",
-      "Hébergement : Vercel Inc. Aucun cookie publicitaire, de traçage ou d'analyse.",
-    ],
+    tldr: [],
     content: `Conformément à la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique (LCEN), voici les informations légales relatives au site mita-studio.com.
 
 ## 1. Éditeur du site
