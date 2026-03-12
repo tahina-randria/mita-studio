@@ -19,12 +19,12 @@ const LEGAL_ARTICLES: LegalArticle[] = [
     title: "Mentions légales",
     description:
       "Mentions légales du site mita-studio.com conformément à la loi LCEN du 21 juin 2004.",
-    date: "2026-03-11",
+    date: "2026-03-12",
     readingTime: "3 min",
     tldr: [
-      "Éditeur : Tahina Randrianandraina, titulaire d'un CAPE auprès de PCE (SCOP AS).",
-      "SIRET : 423 194 307 00090. CAPE n°C1538 auprès de PCE. TVA 20 %.",
-      "Hébergement : Vercel Inc. Aucun cookie publicitaire ou de traçage.",
+      "Éditeur : Tahina Randrianandraina (Mita Studio), titulaire du CAPE n°C1538 (échéant le 28/02/2027) auprès de PCE.",
+      "SIRET 423 194 307 00090 · APE 9499Z · TVA 20 %. RCP multiactivité AXA (contrat 1353589504).",
+      "Hébergement : Vercel Inc. Aucun cookie publicitaire, de traçage ou d'analyse.",
     ],
     content: `Conformément à la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique (LCEN), voici les informations légales relatives au site mita-studio.com.
 
@@ -87,7 +87,7 @@ Pour toute question, contactez-nous à l'adresse **tahina@mita-studio.com**.`,
     title: "Conditions Générales de Vente",
     description:
       "Conditions générales de vente des prestations de Mita Studio, entrepreneur accompagné par PCE dans le cadre d'un CAPE : création de sites web, référencement Google et outils digitaux.",
-    date: "2026-03-10",
+    date: "2026-03-12",
     readingTime: "18 min",
     tldr: [],
     content: `Dernière mise à jour : 12 mars 2026
@@ -367,12 +367,12 @@ Pour toute question relative aux présentes CGV, contactez-nous à l'adresse **t
     title: "Politique de Confidentialité",
     description:
       "Politique de confidentialité et protection des données personnelles de Mita Studio, conforme au RGPD.",
-    date: "2026-03-11",
+    date: "2026-03-12",
     readingTime: "6 min",
     tldr: [
-      "Seules les données du formulaire de contact sont collectées (nom, email, téléphone, message).",
-      "Aucun cookie publicitaire, aucun outil de tracking, aucune revente de données.",
-      "Vous pouvez exercer vos droits RGPD à tout moment par email.",
+      "Responsable : Tahina Randrianandraina (Mita Studio), CAPE n°C1538 auprès de PCE. SIRET 423 194 307 00090.",
+      "Seules les données du formulaire de contact sont collectées. Aucun cookie publicitaire, aucun tracking, aucune revente.",
+      "Droits RGPD (accès, rectification, effacement, portabilité) : tahina@mita-studio.com.",
     ],
     content: `Dernière mise à jour : 12 mars 2026
 
@@ -385,9 +385,12 @@ Le responsable du traitement des données est :
 - **Nom** : Tahina Randrianandraina
 - **Nom commercial** : Mita Studio
 - **Statut** : Titulaire d'un Contrat d'Appui au Projet d'Entreprise (CAPE)
-- **Structure d'appui** : PCE (SCOP AS)
+- **CAPE** : Contrat n°C1538, échéant le 28/02/2027
+- **Structure d'appui** : PCE, Société Coopérative Ouvrière de Production par Actions Simplifiée (SCOP AS) à Capital Variable
+- **Site PCE** : [pce-couveuse.fr](https://www.pce-couveuse.fr)
 - **Adresse** : 6 Rue d'Amboise, 75002 Paris
 - **SIRET** : 423 194 307 00090
+- **Code APE / NAF** : 9499Z
 - **Email de contact** : tahina@mita-studio.com
 
 ## 2. Données collectées
