@@ -248,7 +248,12 @@ Conformément aux articles 1366 et 1367 du Code civil, la signature électroniqu
 
 ## 6. Prix et paiement
 
-- **Échéancier** : 30 % acompte à la signature, 40 % à la validation du design, 30 % à la livraison
+Le paiement s'effectue en trois échéances liées à l'avancement du projet :
+
+1. **30 % — Acompte à la signature du devis** : exigible dès acceptation du devis. Déclenche le démarrage effectif du projet.
+2. **40 % — Validation du design** : exigible lorsque le Client approuve la maquette visuelle (wireframe ou prototype haute-fidélité) présentée par le Prestataire. Cette validation porte sur la direction artistique, l'arborescence et la structure des pages. Elle est formalisée par un accord écrit (email ou signature du bon à tirer). Une fois validé, le design sert de référence pour le développement.
+3. **30 % — Livraison finale** : exigible à la signature du procès-verbal de recette (cf. article 13), attestant la conformité des livrables au devis.
+
 - **Moyens de paiement** : virement bancaire ou Stripe
 - **Délai de paiement** : 14 jours à compter de la date de facturation
 
