@@ -17,7 +17,7 @@ function renderContent(content: string) {
       elements.push(
         <p
           key={key++}
-          className="text-sm sm:text-base leading-relaxed text-white/90 mb-6"
+          className="text-base sm:text-lg leading-relaxed text-white/90 mb-6"
           dangerouslySetInnerHTML={{ __html: formatInline(text) }}
         />
       );
@@ -32,7 +32,7 @@ function renderContent(content: string) {
       elements.push(
         <Tag
           key={key++}
-          className={`${listClass} list-outside ml-5 text-sm sm:text-base text-white/90 space-y-2 mb-6`}
+          className={`${listClass} list-outside ml-5 text-base sm:text-lg text-white/90 space-y-2 mb-6`}
         >
           {currentList.map((item, i) => (
             <li
@@ -70,7 +70,7 @@ function renderContent(content: string) {
       elements.push(
         <h3
           key={key++}
-          className="text-base sm:text-lg font-semibold text-white mt-8 mb-3"
+          className="text-lg sm:text-xl font-semibold text-white mt-8 mb-3"
           dangerouslySetInnerHTML={{ __html: formatInline(heading) }}
         />
       );
@@ -81,7 +81,7 @@ function renderContent(content: string) {
       elements.push(
         <h2
           key={key++}
-          className="text-lg sm:text-xl font-semibold text-white mt-10 mb-4"
+          className="text-xl sm:text-2xl font-semibold text-white mt-10 mb-4"
           dangerouslySetInnerHTML={{ __html: formatInline(heading) }}
         />
       );
@@ -151,7 +151,7 @@ export function LegalPageLayout({ article, breadcrumbLabel }: LegalPageLayoutPro
             {article.title}
           </h1>
 
-          <p className="text-base sm:text-lg text-white/60 leading-relaxed">
+          <p className="text-lg sm:text-xl text-white/60 leading-relaxed">
             {article.description}
           </p>
         </header>
@@ -166,7 +166,7 @@ export function LegalPageLayout({ article, breadcrumbLabel }: LegalPageLayoutPro
               {article.tldr.map((point, i) => (
                 <li
                   key={i}
-                  className="flex items-start gap-3 text-sm sm:text-base text-white/90 leading-relaxed"
+                  className="flex items-start gap-3 text-base sm:text-lg text-white/90 leading-relaxed"
                 >
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-white/40" />
                   <span>{point}</span>
