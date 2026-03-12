@@ -341,12 +341,56 @@ model ContactSubmission {
   status    String   @default("new") // new | read | replied | archived
   notes     String?  @db.Text // Admin notes
   assignedTo String? // Admin user id
+
+  // ── CRM Pipeline fields ──
+  stage           String    @default("NEW") // NEW | CONTACTED | CALL_BOOKED | CALL_DONE | PROPOSAL_SENT | NEGOTIATION | WON | LOST
+  score           Int       @default(0)     // 0-100 lead score
+  scoreBreakdown  Json?     // { budget: 20, service: 15, urgency: 0, engagement: 10, company: 5 }
+  lostReason      String?   // budget | timing | competitor | no_response | other
+  noShowCount     Int       @default(0)
+  isNoShow        Boolean   @default(false)
+  calendlyEventId String?
+  calendlyEventUrl String?
+  lastContactedAt DateTime?
+  nextFollowUpAt  DateTime?
+  convertedAt     DateTime? // when moved to WON
+  dealValue       Int?      // in cents
+
+  // ── Call fields (Week 3) ──
+  callScheduledAt       DateTime?
+  callVideoLink         String?
+  callCalendlyEventUri  String?   // Calendly event URI for matching cancellations
+  callRescheduleUrl     String?
+  callCancelUrl         String?
+  callCompletedAt       DateTime?
+  callDurationMinutes   Int?
+  callResult            String?   // good_fit | medium_fit | bad_fit | no_show
+  callNotes             String?   @db.Text
+  callBudgetDiscussed   Boolean?
+  callUrgencyDiscussed  Boolean?
+  callIsDecisionMaker   Boolean?
+  callFeaturesNeeded    Json      @default("[]") // string[]
+  callNextAction        String?
+  callProposalDeadline  DateTime?
+  callEstimatedAmountCents Int?
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  // Relations
+  activities LeadActivity[]
+  leadNotes  LeadNote[]
+  proposals  Proposal[]
+  emailLogs  EmailLog[]
+  crmTasks   CrmTask[]
 
   @@index([createdAt])
   @@index([email])
   @@index([status])
+  @@index([stage])
+  @@index([score])
+  @@index([nextFollowUpAt])
+  @@index([callScheduledAt])
 }
 
 // ============================================================================
@@ -366,20 +410,31 @@ model EmailTemplate {
 }
 
 model EmailLog {
-  id          String   @id @default(cuid())
+  id          String    @id @default(cuid())
   templateId  String?
   to          String
   from        String
   subject     String
-  status      String   // sent | failed | bounced | delivered
-  resendId    String?  // Resend message ID
-  error       String?  @db.Text
-  metadata    Json?    // Extra context (contactId, etc.)
-  sentAt      DateTime @default(now())
+  status      String    // sending | sent | failed | bounced | delivered
+  resendId    String?   // Resend message ID
+  error       String?   @db.Text
+  metadata    Json?     // Extra context (contactId, etc.)
+  sentAt      DateTime  @default(now())
+
+  // ── Tracking fields ──
+  openToken   String?   @unique @default(cuid())
+  openCount   Int       @default(0)
+  openedAt    DateTime?
+
+  // ── Lead relation ──
+  leadId      String?
+  lead        ContactSubmission? @relation(fields: [leadId], references: [id], onDelete: SetNull)
 
   @@index([status])
   @@index([to])
   @@index([sentAt])
+  @@index([openToken])
+  @@index([leadId])
 }
 
 // ============================================================================
@@ -476,4 +531,119 @@ model ScheduledJob {
   updatedAt   DateTime  @updatedAt
 
   @@index([enabled, nextRunAt])
+}
+
+// ============================================================================
+// CRM — LEAD ACTIVITY TIMELINE
+// ============================================================================
+
+model LeadActivity {
+  id        String   @id @default(cuid())
+  leadId    String
+  lead      ContactSubmission @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  type      String   // stage_change | email_sent | email_opened | note_added | call_scheduled | call_done | no_show | proposal_sent | proposal_viewed | score_update | auto_relance
+  title     String   // Human-readable: "Stage changed to CONTACTED"
+  details   Json?    // { from: "NEW", to: "CONTACTED", triggeredBy: "admin" }
+  adminId   String?  // null if automated
+  createdAt DateTime @default(now())
+
+  @@index([leadId, createdAt])
+  @@index([type])
+}
+
+// ============================================================================
+// CRM — LEAD NOTES
+// ============================================================================
+
+model LeadNote {
+  id        String   @id @default(cuid())
+  leadId    String
+  lead      ContactSubmission @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  content   String   @db.Text
+  adminId   String?
+  pinned    Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([leadId, createdAt])
+}
+
+// ============================================================================
+// CRM — PROPOSALS (Devis)
+// ============================================================================
+
+model Proposal {
+  id          String   @id @default(cuid())
+  leadId      String
+  lead        ContactSubmission @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  reference   String   @unique // DEV-2025-001
+  title       String
+  items       Json     // [{ description, quantity, unitPrice, total }]
+  subtotal    Int      // cents
+  taxRate     Int      @default(0) // TVA non applicable — art. 293 B du CGI (CAPE)
+  taxAmount   Int      @default(0) // cents
+  total       Int      // cents
+  validUntil  DateTime
+  status      String   @default("draft") // draft | sent | viewed | accepted | rejected | expired
+  viewCount   Int      @default(0)
+  viewToken   String   @unique @default(cuid())
+  pdfUrl      String?
+  sentAt      DateTime?
+  viewedAt    DateTime?
+  respondedAt DateTime?
+  adminNotes  String?  @db.Text
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([leadId])
+  @@index([status])
+  @@index([viewToken])
+}
+
+// ============================================================================
+// CRM — DAILY STATS (for analytics dashboard)
+// ============================================================================
+
+model CrmDailyStat {
+  id              String   @id @default(cuid())
+  date            DateTime @unique @db.Date
+  newLeads        Int      @default(0)
+  contactedLeads  Int      @default(0)
+  callsBooked     Int      @default(0)
+  callsDone       Int      @default(0)
+  proposalsSent   Int      @default(0)
+  wonDeals        Int      @default(0)
+  lostDeals       Int      @default(0)
+  pipelineValue   Int      @default(0) // total cents in pipeline
+  conversionRate  Float    @default(0) // percentage
+  avgDealTime     Int      @default(0) // days from NEW to WON
+  emailsSent      Int      @default(0)
+  emailsOpened    Int      @default(0)
+  createdAt       DateTime @default(now())
+
+  @@index([date])
+}
+
+// ============================================================================
+// CRM — TASKS (per-lead scheduled tasks for calls, reminders, etc.)
+// ============================================================================
+
+model CrmTask {
+  id            String   @id @default(cuid())
+  leadId        String
+  lead          ContactSubmission @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  type          String   // call_reminder_24h | call_reminder_1h | call_brief_prep | call_followup_check | no_show_check | draft_proposal_reminder
+  status        String   @default("pending") // pending | completed | cancelled | failed
+  scheduledFor  DateTime
+  executedAt    DateTime?
+  cancelledReason String?
+  attempts      Int      @default(0)
+  maxAttempts   Int      @default(3)
+  lastError     String?  @db.Text
+  metadata      Json?
+  createdAt     DateTime @default(now())
+
+  @@index([status, scheduledFor])
+  @@index([leadId])
+  @@index([type, status])
 }

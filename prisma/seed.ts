@@ -1,5 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
+import bcrypt from "bcryptjs";
 
 const adapter = new PrismaPg({
   connectionString: process.env.DATABASE_URL!,
@@ -485,6 +486,26 @@ async function main() {
   for (const n of [...footerNavStudio, ...footerNavLegal, ...footerNavSocial]) {
     await prisma.navItem.create({ data: n });
   }
+
+  // ============================================================================
+  // ADMIN USER
+  // ============================================================================
+  console.log("→ AdminUser...");
+  const adminPassword = process.env.ADMIN_DEFAULT_PASSWORD || "MitaAdmin2025!";
+  const passwordHash = await bcrypt.hash(adminPassword, 12);
+
+  await prisma.adminUser.upsert({
+    where: { email: "tahina@mita-studio.com" },
+    update: { passwordHash, active: true },
+    create: {
+      email: "tahina@mita-studio.com",
+      name: "Tahina",
+      passwordHash,
+      role: "super_admin",
+      active: true,
+    },
+  });
+  console.log(`  Admin: tahina@mita-studio.com (password: ${adminPassword})`);
 
   console.log("\n✅ Seed complete! All data inserted.");
 }

@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod/v4";
 import { prisma } from "@/lib/db";
+import { calculateLeadScore } from "@/lib/crm/scoring";
+import { sendTemplateEmail, buildVariablesFromLead } from "@/lib/crm/email-service";
 
 // Validation schema
 const contactSchema = z.object({
@@ -18,7 +20,16 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const data = contactSchema.parse(body);
 
-    // Save to database
+    // Calculate lead score
+    const { score, breakdown } = calculateLeadScore({
+      budget: data.budget,
+      service: data.service,
+      message: data.message,
+      phone: data.phone,
+      company: data.company,
+    });
+
+    // Save to database with CRM fields
     const submission = await prisma.contactSubmission.create({
       data: {
         name: data.name,
@@ -29,6 +40,20 @@ export async function POST(req: NextRequest) {
         budget: data.budget ?? null,
         message: data.message,
         source: "website",
+        stage: "NEW",
+        score,
+        scoreBreakdown: JSON.parse(JSON.stringify(breakdown)),
+        nextFollowUpAt: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000), // +3 days
+      },
+    });
+
+    // Create initial activity
+    await prisma.leadActivity.create({
+      data: {
+        leadId: submission.id,
+        type: "stage_change",
+        title: "Lead créé depuis le formulaire de contact",
+        details: { to: "NEW", score, source: "website" },
       },
     });
 
@@ -75,6 +100,27 @@ export async function POST(req: NextRequest) {
         // Email failure should not block the submission
         console.error("[contact] Email notification failed:", emailError);
       }
+    }
+
+    // Send T01 — Accusé de réception to the lead
+    try {
+      const t01 = await prisma.emailTemplate.findUnique({
+        where: { name: "accuse_reception" },
+      });
+
+      if (t01 && t01.active) {
+        const variables = buildVariablesFromLead(submission);
+        await sendTemplateEmail({
+          templateId: t01.id,
+          to: submission.email,
+          leadId: submission.id,
+          variables,
+          adminId: null,
+        });
+      }
+    } catch (t01Error) {
+      // T01 failure should not block the submission
+      console.error("[contact] T01 email failed:", t01Error);
     }
 
     return NextResponse.json(
