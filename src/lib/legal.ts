@@ -23,7 +23,7 @@ const LEGAL_ARTICLES: LegalArticle[] = [
     readingTime: "3 min",
     tldr: [
       "Éditeur : Tahina Randrianandraina, titulaire d'un CAPE auprès de PCE (SCOP AS).",
-      "SIRET : 423 194 307 00090. TVA non applicable, art. 293 B du CGI.",
+      "SIRET : 423 194 307 00090. CAPE n°C1538 auprès de PCE. TVA 20 %.",
       "Hébergement : Vercel Inc. Aucun cookie publicitaire ou de traçage.",
     ],
     content: `Conformément à la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique (LCEN), voici les informations légales relatives au site mita-studio.com.
@@ -39,7 +39,8 @@ const LEGAL_ARTICLES: LegalArticle[] = [
 - **SIREN / RCS** : 423 194 307
 - **Code APE / NAF** : 9499Z
 - **N° TVA intracommunautaire** : FR82423194307
-- **TVA** : Non applicable, article 293 B du CGI
+- **CAPE** : Contrat n°C1538, échéant le 28/02/2027
+- **TVA** : 20 % (taux normal)
 - **Directeur de la publication** : Tahina Randrianandraina
 - **Email** : tahina@mita-studio.com
 - **Site web** : [mita-studio.com](https://mita-studio.com)
@@ -193,7 +194,7 @@ Mita Studio propose des prestations de services digitaux organisées en trois fo
 
 Les abonnements de maintenance sont souscrits pour un engagement minimum de 3 mois, résiliables avec un préavis de 30 jours. Les heures non utilisées ne sont pas reportables. Au-delà du quota mensuel, facturation au tarif de 90 € HT/heure.
 
-Les tarifs indiqués sont en euros (EUR). TVA non applicable, article 293 B du CGI.
+Les tarifs indiqués sont en euros (EUR) hors taxes. TVA au taux de 20 % en sus.
 
 ## 5. Devis et commande
 
@@ -209,9 +210,9 @@ Conformément aux articles 1366 et 1367 du Code civil, la signature électroniqu
 - **Moyens de paiement** : virement bancaire ou Stripe
 - **Délai de paiement** : 14 jours à compter de la date de facturation
 
-TVA non applicable, article 293 B du CGI.
+Les prix s'entendent hors taxes. La TVA au taux de 20 % est appliquée conformément à la législation en vigueur.
 
-Les factures sont émises via le logiciel de facturation de la structure d'appui PCE, conformément à la réglementation en vigueur.
+Les factures sont émises via Pennylane, logiciel de facturation agréé, conformément à la réglementation en vigueur.
 
 ## 7. Acompte
 

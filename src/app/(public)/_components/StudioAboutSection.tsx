@@ -217,7 +217,7 @@ export function StudioAboutSection({ content }: { content: Record<string, string
               </div>
 
               <p className="text-base sm:text-lg text-white leading-relaxed mb-4">
-                {content.founder_bio_1 || "J\u2019ai cr\u00e9\u00e9 Mita Studio apr\u00e8s un constat simple\u00a0: trop de petites entreprises payent 5\u00a0000\u00a0\u20ac pour un site qui ne leur rapporte rien. L\u2019IA change la donne. On peut faire mieux, plus vite, pour beaucoup moins."}
+                {content.founder_bio_1 || "J\u2019ai cr\u00e9\u00e9 Mita Studio apr\u00e8s un constat simple\u00a0: trop de petites entreprises payent 5\u00a0000\u00a0\u20ac pour un site qui ne leur rapporte rien. On peut faire mieux, plus vite, pour beaucoup moins."}
               </p>
               <p className="text-base sm:text-lg text-white leading-relaxed mb-6">
                 {content.founder_bio_2 || "Mon obsession\u00a0: que chaque euro investi par nos clients se transforme en r\u00e9sultat concret. Pas de jargon, pas de promesses vides. Juste du travail bien fait."}

@@ -456,7 +456,7 @@ export function StudioPricingSection({
 
         {/* Compliance */}
         <p className="mt-8 text-center text-xs text-white leading-relaxed max-w-lg mx-auto">
-          TVA non applicable, article 293&nbsp;B du CGI. Le tarif final est &eacute;tabli sur devis apr&egrave;s &eacute;change.
+          Prix HT, TVA 20&nbsp;% en sus. Le tarif final est &eacute;tabli sur devis apr&egrave;s &eacute;change.
           D&eacute;lais indicatifs, variables selon la complexit&eacute; du projet.
         </p>
       </div>

@@ -77,6 +77,11 @@ export function StudioFooter({ studioLinks = DEFAULT_STUDIO_LINKS, legalLinks = 
                 className="h-7 w-auto mb-2"
               />
             </Link>
+            <p className="text-xs text-white leading-relaxed mb-3">
+              Sites web cl&eacute; en main
+              <br />
+              pour ind&eacute;pendants et&nbsp;PME.
+            </p>
             <a
               href={settings.linkedin_url || "https://www.linkedin.com/company/mita-studio"}
               target="_blank"
