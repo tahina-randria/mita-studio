@@ -69,7 +69,7 @@ function PriceDisplay({
     return (
       <div className="flex items-baseline gap-2">
         {tier.priceLabel && (
-          <span className="text-xs text-white uppercase tracking-wide">
+          <span className="text-base text-white uppercase tracking-wide">
             {tier.priceLabel}
           </span>
         )}
@@ -274,7 +274,7 @@ export function StudioPricingSection({
               {/* Featured badge — gradient accent */}
               {tier.featured && (
                 <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                  <span className="inline-block rounded-full bg-white px-5 py-1.5 text-[11px] font-semibold tracking-wider uppercase text-[#0a0a0a]">
+                  <span className="inline-block rounded-full bg-white px-5 py-1.5 text-base font-semibold tracking-wider uppercase text-[#0a0a0a]">
                     Recommand&eacute;
                   </span>
                 </div>
@@ -285,7 +285,7 @@ export function StudioPricingSection({
                 <h3 className="text-lg font-medium text-white mb-1.5">
                   {tier.name}
                 </h3>
-                <p className="text-[15px] text-white leading-relaxed mb-4 min-h-[36px]">
+                <p className="text-base text-white leading-relaxed mb-4 min-h-[36px]">
                   {tier.description}
                 </p>
 
@@ -293,7 +293,7 @@ export function StudioPricingSection({
                 <div>
                   <PriceDisplay tier={tier} priceRef={setPriceRef(i)} />
                   {tier.priceNumeric !== null && (
-                    <span className="text-xs text-white/60 ml-1">HT</span>
+                    <span className="text-base text-white/60 ml-1">HT</span>
                   )}
                 </div>
               </div>
@@ -325,7 +325,7 @@ export function StudioPricingSection({
                       />
                     )}
                     <span
-                      className={`text-sm leading-relaxed ${
+                      className={`text-base leading-relaxed ${
                         f.included ? "text-white" : "text-white/60 line-through"
                       }`}
                     >
@@ -338,7 +338,7 @@ export function StudioPricingSection({
               {/* CTA */}
               <a
                 href={tier.ctaUrl}
-                className={`mt-auto block w-full rounded-xl py-3 text-center text-sm font-semibold transition-all duration-200 active:scale-[0.98] ${
+                className={`mt-auto block w-full rounded-xl py-3 text-center text-base font-semibold transition-all duration-200 active:scale-[0.98] ${
                   tier.featured
                     ? "btn-accent"
                     : "border border-white/[0.1] hover:border-white/20 hover:bg-white/[0.04] text-white"
@@ -370,7 +370,7 @@ export function StudioPricingSection({
                 <h3 className="text-lg font-medium text-white mb-1">
                   {sub.name}
                 </h3>
-                <p className="text-[15px] text-white leading-relaxed mb-4">
+                <p className="text-base text-white leading-relaxed mb-4">
                   {sub.description}
                 </p>
                 <div className="flex items-baseline gap-1 mb-5">
@@ -380,7 +380,7 @@ export function StudioPricingSection({
                       <span className="text-base font-normal text-white/60">{sub.priceSuffix}</span>
                     )}
                   </span>
-                  <span className="text-xs text-white/60">HT</span>
+                  <span className="text-base text-white/60">HT</span>
                 </div>
                 <div className="border-t border-white/[0.06] mb-5" />
                 <ul className="flex-1 space-y-2.5 mb-5">
@@ -400,7 +400,7 @@ export function StudioPricingSection({
                         />
                       )}
                       <span
-                        className={`text-sm leading-relaxed ${
+                        className={`text-base leading-relaxed ${
                           f.included ? "text-white" : "text-white/60 line-through"
                         }`}
                       >
@@ -411,7 +411,7 @@ export function StudioPricingSection({
                 </ul>
                 <a
                   href={sub.ctaUrl}
-                  className="mt-auto block w-full rounded-xl py-3 text-center text-sm font-semibold border border-white/[0.1] hover:border-white/20 hover:bg-white/[0.04] text-white transition-all active:scale-[0.98]"
+                  className="mt-auto block w-full rounded-xl py-3 text-center text-base font-semibold border border-white/[0.1] hover:border-white/20 hover:bg-white/[0.04] text-white transition-all active:scale-[0.98]"
                 >
                   {sub.ctaLabel}
                 </a>
@@ -419,7 +419,7 @@ export function StudioPricingSection({
             ))}
           </div>
 
-          <p className="mt-5 text-center text-xs text-white">
+          <p className="mt-5 text-center text-base text-white">
             Engagement minimum 3&nbsp;mois. R&eacute;siliable avec 30&nbsp;jours de pr&eacute;avis. Quotas mensuels non reportables.
           </p>
         </div>
@@ -433,7 +433,7 @@ export function StudioPricingSection({
 
             <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-6">
               <div className="flex-1">
-                <span className="inline-block text-xs uppercase tracking-[0.2em] font-semibold text-white mb-3">
+                <span className="inline-block text-base uppercase tracking-[0.2em] font-semibold text-white mb-3">
                   Sur mesure
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
@@ -446,7 +446,7 @@ export function StudioPricingSection({
               </div>
               <Link
                 href="/contact"
-                className="shrink-0 inline-flex items-center justify-center rounded-xl bg-white px-8 py-3.5 text-sm font-semibold text-[#0a0a0a] hover:bg-white/90 transition-all active:scale-[0.98]"
+                className="shrink-0 inline-flex items-center justify-center rounded-xl bg-white px-8 py-3.5 text-base font-semibold text-[#0a0a0a] hover:bg-white/90 transition-all active:scale-[0.98]"
               >
                 Discuter de mon projet
               </Link>
@@ -455,7 +455,7 @@ export function StudioPricingSection({
         </div>
 
         {/* Compliance */}
-        <p className="mt-8 text-center text-xs text-white leading-relaxed max-w-lg mx-auto">
+        <p className="mt-8 text-center text-base text-white leading-relaxed max-w-lg mx-auto">
           Prix HT, TVA 20&nbsp;% en sus. Le tarif final est &eacute;tabli sur devis apr&egrave;s &eacute;change.
           D&eacute;lais indicatifs, variables selon la complexit&eacute; du projet.
         </p>

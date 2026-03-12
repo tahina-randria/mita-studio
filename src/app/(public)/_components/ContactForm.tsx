@@ -33,10 +33,10 @@ const BUDGETS = [
 ];
 
 const INPUT_CLASSES =
-  "w-full rounded-xl border border-white/[0.08] bg-white/[0.03] px-4 py-3 text-base sm:text-sm text-white placeholder:text-white/60 focus:border-white/30 focus:outline-none focus:ring-1 focus:ring-white/40 transition-colors";
+  "w-full rounded-xl border border-white/[0.08] bg-white/[0.03] px-4 py-3 text-base text-white placeholder:text-white/60 focus:border-white/30 focus:outline-none focus:ring-1 focus:ring-white/40 transition-colors";
 
 const SELECT_CLASSES =
-  "w-full rounded-xl border border-white/[0.08] bg-white/[0.03] px-4 py-3 text-base sm:text-sm text-white focus:border-white/30 focus:outline-none focus:ring-1 focus:ring-white/40 transition-colors appearance-none cursor-pointer";
+  "w-full rounded-xl border border-white/[0.08] bg-white/[0.03] px-4 py-3 text-base text-white focus:border-white/30 focus:outline-none focus:ring-1 focus:ring-white/40 transition-colors appearance-none cursor-pointer";
 
 export function ContactForm() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -118,7 +118,7 @@ export function ContactForm() {
         <h3 className="text-xl font-medium text-white mb-2">
           Message envoy&eacute;&nbsp;!
         </h3>
-        <p className="text-sm text-white max-w-sm">
+        <p className="text-base text-white max-w-sm">
           Merci pour votre message. On revient vers vous sous 24h
           avec une premi&egrave;re r&eacute;ponse.
         </p>
@@ -131,7 +131,7 @@ export function ContactForm() {
       {/* Name + Email */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="name" className="block text-xs text-white mb-1.5">
+          <label htmlFor="name" className="block text-base text-white mb-1.5">
             Nom complet *
           </label>
           <input
@@ -147,7 +147,7 @@ export function ContactForm() {
           />
         </div>
         <div>
-          <label htmlFor="email" className="block text-xs text-white mb-1.5">
+          <label htmlFor="email" className="block text-base text-white mb-1.5">
             Email *
           </label>
           <input
@@ -167,7 +167,7 @@ export function ContactForm() {
       {/* Phone + Company */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="phone" className="block text-xs text-white mb-1.5">
+          <label htmlFor="phone" className="block text-base text-white mb-1.5">
             T&eacute;l&eacute;phone
           </label>
           <input
@@ -183,7 +183,7 @@ export function ContactForm() {
           />
         </div>
         <div>
-          <label htmlFor="company" className="block text-xs text-white mb-1.5">
+          <label htmlFor="company" className="block text-base text-white mb-1.5">
             Entreprise
           </label>
           <input
@@ -202,7 +202,7 @@ export function ContactForm() {
       {/* Service + Budget */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="service" className="block text-xs text-white mb-1.5">
+          <label htmlFor="service" className="block text-base text-white mb-1.5">
             Service
           </label>
           <select
@@ -220,7 +220,7 @@ export function ContactForm() {
           </select>
         </div>
         <div>
-          <label htmlFor="budget" className="block text-xs text-white mb-1.5">
+          <label htmlFor="budget" className="block text-base text-white mb-1.5">
             Budget
           </label>
           <select
@@ -241,7 +241,7 @@ export function ContactForm() {
 
       {/* Message */}
       <div>
-        <label htmlFor="message" className="block text-xs text-white mb-1.5">
+        <label htmlFor="message" className="block text-base text-white mb-1.5">
           Votre projet *
         </label>
         <textarea
@@ -258,14 +258,14 @@ export function ContactForm() {
 
       {/* Error */}
       {status === "error" && errorMessage && (
-        <p role="alert" aria-live="assertive" className="text-sm text-red-400">{errorMessage}</p>
+        <p role="alert" aria-live="assertive" className="text-base text-red-400">{errorMessage}</p>
       )}
 
       {/* Submit */}
       <button
         type="submit"
         disabled={status === "loading"}
-        className="w-full flex items-center justify-center gap-2 rounded-xl bg-white py-3.5 text-sm font-semibold text-[#0a0a0a] hover:bg-white/90 active:scale-[0.98] transition-all disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+        className="w-full flex items-center justify-center gap-2 rounded-xl bg-white py-3.5 text-base font-semibold text-[#0a0a0a] hover:bg-white/90 active:scale-[0.98] transition-all disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
       >
         {status === "loading" ? (
           <>
@@ -277,7 +277,7 @@ export function ContactForm() {
         )}
       </button>
 
-      <p className="text-center text-xs text-white/60">
+      <p className="text-center text-base text-white/60">
         Vos données sont protégées et ne seront jamais partagées.{" "}
         <a href="/confidentialite" className="inline-block py-0.5 underline hover:text-white/80 transition-colors">
           Politique de confidentialité

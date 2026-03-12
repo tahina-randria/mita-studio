@@ -65,7 +65,7 @@ function renderContent(content: string) {
       elements.push(
         <p
           key={key++}
-          className="text-sm sm:text-base leading-relaxed text-white/90 mb-6"
+          className="text-base sm:text-lg leading-relaxed text-white/90 mb-6"
           dangerouslySetInnerHTML={{ __html: formatInline(text) }}
         />
       );
@@ -78,7 +78,7 @@ function renderContent(content: string) {
       elements.push(
         <ul
           key={key++}
-          className="list-disc list-outside ml-5 text-sm sm:text-base text-white/90 space-y-2 mb-6"
+          className="list-disc list-outside ml-5 text-base sm:text-lg text-white/90 space-y-2 mb-6"
         >
           {currentList.map((item, i) => (
             <li
@@ -136,7 +136,7 @@ function renderContent(content: string) {
       elements.push(
         <blockquote
           key={key++}
-          className="my-8 border-l-2 border-white/20 pl-5 text-sm sm:text-base italic text-white/70 leading-relaxed"
+          className="my-8 border-l-2 border-white/20 pl-5 text-base sm:text-lg italic text-white/70 leading-relaxed"
           dangerouslySetInnerHTML={{ __html: formatInline(quote) }}
         />
       );
@@ -280,7 +280,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
           {/* Breadcrumb */}
           <nav
             aria-label="Fil d'Ariane"
-            className="flex items-center gap-2 text-xs text-white/60 mb-10"
+            className="flex items-center gap-2 text-base text-white/60 mb-10"
           >
             <Link href="/" className="inline-block py-2 hover:text-white transition-colors">
               Accueil
@@ -298,15 +298,15 @@ export default async function BlogArticlePage({ params }: PageProps) {
           {/* Article header */}
           <header className="mb-10">
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-[11px] font-medium tracking-widest text-white uppercase">
+              <span className="text-base font-medium tracking-widest text-white uppercase">
                 {article.category}
               </span>
-              <span className="text-xs text-white/60">&middot;</span>
-              <span className="text-xs text-white/60">
+              <span className="text-base text-white/60">&middot;</span>
+              <span className="text-base text-white/60">
                 {formatDate(article.date)}
               </span>
-              <span className="text-xs text-white/60">&middot;</span>
-              <span className="text-xs text-white/60">
+              <span className="text-base text-white/60">&middot;</span>
+              <span className="text-base text-white/60">
                 {article.readingTime}
               </span>
             </div>
@@ -337,14 +337,14 @@ export default async function BlogArticlePage({ params }: PageProps) {
           {/* TL;DR */}
           {article.tldr.length > 0 && (
             <div className="mb-10 rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5 sm:p-6">
-              <p className="text-[11px] font-semibold tracking-widest text-white/70 uppercase mb-4">
+              <p className="text-base font-semibold tracking-widest text-white/70 uppercase mb-4">
                 TL;DR
               </p>
               <ul className="space-y-3">
                 {article.tldr.map((point, i) => (
                   <li
                     key={i}
-                    className="flex items-start gap-3 text-sm sm:text-base text-white/90 leading-relaxed"
+                    className="flex items-start gap-3 text-base sm:text-lg text-white/90 leading-relaxed"
                   >
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-white/40" />
                     <span>{point}</span>
@@ -366,7 +366,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
               {article.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-full border border-white/[0.08] bg-white/[0.02] px-3 py-1 text-[11px] text-white/60 tracking-wide"
+                  className="rounded-full border border-white/[0.08] bg-white/[0.02] px-3 py-1 text-base text-white/60 tracking-wide"
                 >
                   {tag}
                 </span>
@@ -377,7 +377,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
           {/* Related articles */}
           {relatedArticles.length > 0 && (
             <div className="mt-14 border-t border-white/[0.06] pt-10">
-              <p className="text-[11px] font-semibold tracking-widest text-white/70 uppercase mb-6">
+              <p className="text-base font-semibold tracking-widest text-white/70 uppercase mb-6">
                 Articles li&eacute;s
               </p>
               <div className="grid gap-4 sm:grid-cols-2">
@@ -387,13 +387,13 @@ export default async function BlogArticlePage({ params }: PageProps) {
                     href={`/blog/${related.slug}`}
                     className="group rounded-xl border border-white/[0.06] bg-white/[0.02] p-5 hover:bg-white/[0.04] transition-colors"
                   >
-                    <span className="text-xs font-medium tracking-widest text-white/60 uppercase">
+                    <span className="text-base font-medium tracking-widest text-white/60 uppercase">
                       {related.category}
                     </span>
-                    <p className="text-sm font-medium text-white mt-2 leading-snug group-hover:text-white/90 transition-colors">
+                    <p className="text-base font-medium text-white mt-2 leading-snug group-hover:text-white/90 transition-colors">
                       {related.title}
                     </p>
-                    <span className="inline-flex items-center gap-1 text-xs text-white/60 mt-3 group-hover:text-white/80 transition-colors">
+                    <span className="inline-flex items-center gap-1 text-base text-white/60 mt-3 group-hover:text-white/80 transition-colors">
                       Lire
                       <ArrowRight
                         size={10}
@@ -415,10 +415,10 @@ export default async function BlogArticlePage({ params }: PageProps) {
                   href={`/blog/${prevArticle.slug}`}
                   className="group flex-1"
                 >
-                  <span className="text-[11px] font-medium tracking-widest text-white/60 uppercase">
+                  <span className="text-base font-medium tracking-widest text-white/60 uppercase">
                     Pr&eacute;c&eacute;dent
                   </span>
-                  <p className="text-sm font-medium text-white/80 mt-1.5 group-hover:text-white transition-colors">
+                  <p className="text-base font-medium text-white/80 mt-1.5 group-hover:text-white transition-colors">
                     {prevArticle.title}
                   </p>
                 </Link>
@@ -430,10 +430,10 @@ export default async function BlogArticlePage({ params }: PageProps) {
                   href={`/blog/${nextArticle.slug}`}
                   className="group flex-1 sm:text-right"
                 >
-                  <span className="text-[11px] font-medium tracking-widest text-white/60 uppercase">
+                  <span className="text-base font-medium tracking-widest text-white/60 uppercase">
                     Suivant
                   </span>
-                  <p className="text-sm font-medium text-white/80 mt-1.5 group-hover:text-white transition-colors">
+                  <p className="text-base font-medium text-white/80 mt-1.5 group-hover:text-white transition-colors">
                     {nextArticle.title}
                   </p>
                 </Link>
@@ -444,12 +444,12 @@ export default async function BlogArticlePage({ params }: PageProps) {
 
             {/* CTA */}
             <div className="text-center mt-14">
-              <p className="text-sm text-white/60 mb-4">
+              <p className="text-base text-white/60 mb-4">
                 Un projet digital en t&ecirc;te&nbsp;?
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center rounded-xl bg-white px-6 py-2.5 text-sm font-semibold text-[#050a1e] hover:bg-white/90 active:scale-[0.98] transition-all"
+                className="inline-flex items-center rounded-xl bg-white px-6 py-2.5 text-base font-semibold text-[#050a1e] hover:bg-white/90 active:scale-[0.98] transition-all"
               >
                 Discutons de votre projet
               </Link>

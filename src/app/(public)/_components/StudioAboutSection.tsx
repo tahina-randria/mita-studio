@@ -210,7 +210,7 @@ export function StudioAboutSection({ content }: { content: Record<string, string
                   <h3 className="text-lg font-bold text-white">
                     {content.founder_name || "Tahina Randrianandraina"}
                   </h3>
-                  <p className="text-sm text-white">
+                  <p className="text-base text-white">
                     {content.founder_title || "Fondateur, Mita Studio"}
                   </p>
                 </div>
@@ -225,7 +225,7 @@ export function StudioAboutSection({ content }: { content: Record<string, string
 
               <Link
                 href="/fondateur"
-                className="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-white transition-colors group"
+                className="inline-flex items-center gap-2 text-base font-medium text-white hover:text-white transition-colors group"
               >
                 En savoir plus
                 <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
@@ -242,14 +242,14 @@ export function StudioAboutSection({ content }: { content: Record<string, string
             ].map((value, i, arr) => (
               <div key={i} className="py-7 relative">
                 <div className="flex items-start gap-4">
-                  <span className="text-sm font-mono mt-0.5 shrink-0 accent-text opacity-70">
+                  <span className="text-base font-mono mt-0.5 shrink-0 accent-text opacity-70">
                     0{i + 1}
                   </span>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-1.5">
                       {value.label}
                     </h3>
-                    <p className="text-sm sm:text-base text-white leading-relaxed">
+                    <p className="text-base sm:text-lg text-white leading-relaxed">
                       {value.description}
                     </p>
                   </div>

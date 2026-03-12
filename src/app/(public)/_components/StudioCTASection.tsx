@@ -137,7 +137,7 @@ export function StudioCTASection({
         <Link
           ref={ctaRef}
           href="/contact"
-          className="inline-flex items-center justify-center bg-white text-[#0a0a0a] px-10 py-4 rounded-xl text-[15px] font-semibold hover:bg-white/90 hover:scale-[1.03] active:scale-[0.98] transition-all"
+          className="inline-flex items-center justify-center bg-white text-[#0a0a0a] px-10 py-4 rounded-xl text-base font-semibold hover:bg-white/90 hover:scale-[1.03] active:scale-[0.98] transition-all"
         >
           {content.cta_button || "Recevoir un devis gratuit"}
         </Link>
@@ -145,7 +145,7 @@ export function StudioCTASection({
         <a
           ref={emailRef}
           href={"mailto:" + (settings.email || "tahina@mita-studio.com")}
-          className="block mt-4 text-sm text-white hover:text-white transition-colors"
+          className="block mt-4 text-base text-white hover:text-white transition-colors"
         >
           {settings.email || "tahina@mita-studio.com"}
         </a>

@@ -72,7 +72,7 @@ export function LogoCloudSection() {
       ref={sectionRef}
       className="py-10 sm:py-14 border-t border-white/[0.06] overflow-hidden"
     >
-      <p className="text-center text-xs uppercase tracking-[0.2em] text-white mb-8">
+      <p className="text-center text-base uppercase tracking-[0.2em] text-white mb-8">
         Ils nous font confiance
       </p>
 

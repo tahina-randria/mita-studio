@@ -134,7 +134,7 @@ export function HomeFAQSection({ faqs }: { faqs: { id: string; question: string;
               key={faq.id}
               className="group rounded-xl border border-white/[0.06] bg-white/[0.02] transition-colors hover:border-white/[0.10] open:bg-white/[0.03]"
             >
-              <summary className="flex items-center justify-between cursor-pointer px-5 sm:px-6 py-4 sm:py-5 text-[15px] sm:text-base font-medium text-white select-none list-none [&::-webkit-details-marker]:hidden">
+              <summary className="flex items-center justify-between cursor-pointer px-5 sm:px-6 py-4 sm:py-5 text-base font-medium text-white select-none list-none [&::-webkit-details-marker]:hidden">
                 <span>{faq.question}</span>
                 <CaretDown
                   size={16}
@@ -142,7 +142,7 @@ export function HomeFAQSection({ faqs }: { faqs: { id: string; question: string;
                   className="shrink-0 ml-4 text-white/60 transition-transform duration-200 group-open:rotate-180"
                 />
               </summary>
-              <div className="px-5 sm:px-6 pb-5 sm:pb-6 text-[15px] sm:text-lg leading-relaxed text-white/90">
+              <div className="px-5 sm:px-6 pb-5 sm:pb-6 text-base sm:text-lg leading-relaxed text-white/90">
                 {faq.answer}
               </div>
             </details>

@@ -27,7 +27,7 @@ export function BlogPageClient({ articles, categories }: BlogPageClientProps) {
         {/* Breadcrumb */}
         <nav
           aria-label="Fil d'Ariane"
-          className="flex items-center gap-2 text-xs text-white/60 mb-10"
+          className="flex items-center gap-2 text-base text-white/60 mb-10"
         >
           <Link href="/" className="inline-block py-1 hover:text-white transition-colors">
             Accueil
@@ -69,10 +69,10 @@ export function BlogPageClient({ articles, categories }: BlogPageClientProps) {
           {/* Content */}
           <div className="flex flex-col justify-center p-6 sm:p-8 lg:py-10 lg:pr-10 lg:pl-0">
             <div className="flex items-center gap-3 mb-4">
-              <span className="inline-flex items-center rounded-full bg-white/[0.08] px-3 py-1 text-xs font-medium tracking-widest text-white/70 uppercase">
+              <span className="inline-flex items-center rounded-full bg-white/[0.08] px-3 py-1 text-base font-medium tracking-widest text-white/70 uppercase">
                 {featured.category}
               </span>
-              <span className="text-xs text-white/60">
+              <span className="text-base text-white/60">
                 {formatDate(featured.date)}
               </span>
             </div>
@@ -81,11 +81,11 @@ export function BlogPageClient({ articles, categories }: BlogPageClientProps) {
               {featured.title}
             </h2>
 
-            <p className="text-sm sm:text-base text-white/60 leading-relaxed mb-6 line-clamp-3">
+            <p className="text-base sm:text-lg text-white/60 leading-relaxed mb-6 line-clamp-3">
               {featured.description}
             </p>
 
-            <span className="inline-flex items-center gap-2 text-sm font-medium text-white/60 group-hover:text-white/80 transition-colors">
+            <span className="inline-flex items-center gap-2 text-base font-medium text-white/60 group-hover:text-white/80 transition-colors">
               Lire l&apos;article &middot; {featured.readingTime}
               <ArrowRight
                 size={14}
@@ -99,7 +99,7 @@ export function BlogPageClient({ articles, categories }: BlogPageClientProps) {
         <div className="flex items-center gap-2 mb-10 overflow-x-auto pb-2 scrollbar-hide">
           <button
             onClick={() => setActiveCategory(null)}
-            className={`shrink-0 rounded-full px-4 py-2.5 text-sm font-medium tracking-wide transition-all ${
+            className={`shrink-0 rounded-full px-4 py-2.5 text-base font-medium tracking-wide transition-all ${
               activeCategory === null
                 ? "bg-white text-[#050a1e]"
                 : "bg-white/[0.06] text-white/60 hover:bg-white/[0.1] hover:text-white/80"
@@ -113,7 +113,7 @@ export function BlogPageClient({ articles, categories }: BlogPageClientProps) {
               onClick={() =>
                 setActiveCategory(activeCategory === cat ? null : cat)
               }
-              className={`shrink-0 rounded-full px-4 py-2.5 text-sm font-medium tracking-wide transition-all ${
+              className={`shrink-0 rounded-full px-4 py-2.5 text-base font-medium tracking-wide transition-all ${
                 activeCategory === cat
                   ? "bg-white text-[#050a1e]"
                   : "bg-white/[0.06] text-white/60 hover:bg-white/[0.1] hover:text-white/80"
@@ -149,27 +149,27 @@ export function BlogPageClient({ articles, categories }: BlogPageClientProps) {
               <div className="flex flex-col flex-1 p-5 sm:p-6">
                 {/* Meta */}
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="text-xs font-medium tracking-widest text-white/60 uppercase">
+                  <span className="text-base font-medium tracking-widest text-white/60 uppercase">
                     {article.category}
                   </span>
-                  <span className="text-xs text-white/60">&middot;</span>
-                  <span className="text-xs text-white/60">
+                  <span className="text-base text-white/60">&middot;</span>
+                  <span className="text-base text-white/60">
                     {formatDate(article.date)}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h2 className="text-sm sm:text-base font-semibold text-white mb-2 leading-snug group-hover:text-white/90 transition-colors">
+                <h2 className="text-base sm:text-lg font-semibold text-white mb-2 leading-snug group-hover:text-white/90 transition-colors">
                   {article.title}
                 </h2>
 
                 {/* Description */}
-                <p className="text-xs sm:text-sm text-white/60 leading-relaxed mb-4 line-clamp-2">
+                <p className="text-base text-white/60 leading-relaxed mb-4 line-clamp-2">
                   {article.description}
                 </p>
 
                 {/* Read more */}
-                <span className="mt-auto inline-flex items-center gap-1.5 text-xs font-medium text-white/60 group-hover:text-white/80 transition-colors">
+                <span className="mt-auto inline-flex items-center gap-1.5 text-base font-medium text-white/60 group-hover:text-white/80 transition-colors">
                   Lire &middot; {article.readingTime}
                   <ArrowRight
                     size={11}
@@ -184,7 +184,7 @@ export function BlogPageClient({ articles, categories }: BlogPageClientProps) {
         {/* Empty state */}
         {filteredArticles.length === 0 && (
           <div className="text-center py-20">
-            <p className="text-white/60 text-sm">
+            <p className="text-white/60 text-base">
               Aucun article dans cette cat&eacute;gorie pour le moment.
             </p>
           </div>
@@ -199,7 +199,7 @@ export function BlogPageClient({ articles, categories }: BlogPageClientProps) {
             <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">
               Restez inform&eacute;
             </h3>
-            <p className="text-sm text-white/60 mb-6">
+            <p className="text-base text-white/60 mb-6">
               Un email par semaine. Pas de spam. Les meilleures ressources SEO,
               IA et web directement dans votre bo&icirc;te.
             </p>
@@ -210,16 +210,16 @@ export function BlogPageClient({ articles, categories }: BlogPageClientProps) {
               <input
                 type="email"
                 placeholder="votre@email.com"
-                className="flex-1 rounded-xl border border-white/[0.1] bg-white/[0.04] px-4 py-2.5 text-sm text-white placeholder:text-white/60 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/40 transition-colors"
+                className="flex-1 rounded-xl border border-white/[0.1] bg-white/[0.04] px-4 py-2.5 text-base text-white placeholder:text-white/60 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/40 transition-colors"
               />
               <button
                 type="submit"
-                className="shrink-0 rounded-xl bg-white px-6 py-2.5 text-sm font-semibold text-[#050a1e] hover:bg-white/90 active:scale-[0.98] transition-all"
+                className="shrink-0 rounded-xl bg-white px-6 py-2.5 text-base font-semibold text-[#050a1e] hover:bg-white/90 active:scale-[0.98] transition-all"
               >
                 S&apos;inscrire
               </button>
             </form>
-            <p className="text-xs text-white/60 mt-3">
+            <p className="text-base text-white/60 mt-3">
               En vous inscrivant, vous acceptez notre{" "}
               <Link
                 href="/confidentialite"

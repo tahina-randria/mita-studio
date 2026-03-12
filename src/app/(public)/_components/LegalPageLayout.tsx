@@ -122,7 +122,7 @@ export function LegalPageLayout({ article, breadcrumbLabel }: LegalPageLayoutPro
         {/* Breadcrumb */}
         <nav
           aria-label="Fil d'Ariane"
-          className="flex items-center gap-2 text-xs text-white/60 mb-10"
+          className="flex items-center gap-2 text-base text-white/60 mb-10"
         >
           <Link href="/" className="inline-block py-2 hover:text-white transition-colors">
             Accueil
@@ -134,15 +134,15 @@ export function LegalPageLayout({ article, breadcrumbLabel }: LegalPageLayoutPro
         {/* Header */}
         <header className="mb-10">
           <div className="flex items-center gap-3 mb-4">
-            <span className="text-[11px] font-medium tracking-widest text-white/70 uppercase">
+            <span className="text-base font-medium tracking-widest text-white/70 uppercase">
               Légal
             </span>
-            <span className="text-xs text-white/60">&middot;</span>
-            <span className="text-xs text-white/60">
+            <span className="text-base text-white/60">&middot;</span>
+            <span className="text-base text-white/60">
               {formatDate(article.date)}
             </span>
-            <span className="text-xs text-white/60">&middot;</span>
-            <span className="text-xs text-white/60">
+            <span className="text-base text-white/60">&middot;</span>
+            <span className="text-base text-white/60">
               {article.readingTime}
             </span>
           </div>
@@ -159,7 +159,7 @@ export function LegalPageLayout({ article, breadcrumbLabel }: LegalPageLayoutPro
         {/* TL;DR */}
         {article.tldr.length > 0 && (
           <div className="mb-10 rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5 sm:p-6">
-            <p className="text-[11px] font-semibold tracking-widest text-white/70 uppercase mb-4">
+            <p className="text-base font-semibold tracking-widest text-white/70 uppercase mb-4">
               En résumé
             </p>
             <ul className="space-y-3">
@@ -184,12 +184,12 @@ export function LegalPageLayout({ article, breadcrumbLabel }: LegalPageLayoutPro
 
         {/* CTA */}
         <div className="border-t border-white/[0.06] mt-14 pt-10 text-center">
-          <p className="text-sm text-white/60 mb-4">
+          <p className="text-base text-white/60 mb-4">
             Une question&nbsp;?
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center rounded-xl bg-white px-6 py-2.5 text-sm font-semibold text-[#050a1e] hover:bg-white/90 active:scale-[0.98] transition-all"
+            className="inline-flex items-center rounded-xl bg-white px-6 py-2.5 text-base font-semibold text-[#050a1e] hover:bg-white/90 active:scale-[0.98] transition-all"
           >
             Contactez-nous
           </Link>

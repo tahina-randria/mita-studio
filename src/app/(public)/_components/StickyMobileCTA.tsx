@@ -31,7 +31,7 @@ export function StickyMobileCTA() {
       <div className="bg-[#050a1e] border-t border-white/[0.08] px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
         <Link
           href="/contact"
-          className="block w-full rounded-xl bg-white py-3 text-center text-sm font-semibold text-[#0a0a0a] active:scale-[0.98] transition-transform"
+          className="block w-full rounded-xl bg-white py-3 text-center text-base font-semibold text-[#0a0a0a] active:scale-[0.98] transition-transform"
         >
           Recevoir un devis gratuit
         </Link>

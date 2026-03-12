@@ -132,7 +132,7 @@ export function BlogSection() {
               }`}
             >
               {/* Category label */}
-              <span className="text-[11px] font-medium tracking-widest text-foreground/60 uppercase">
+              <span className="text-base font-medium tracking-widest text-foreground/60 uppercase">
                 {article.label}
               </span>
 
@@ -142,12 +142,12 @@ export function BlogSection() {
               </h3>
 
               {/* Description */}
-              <p className="text-sm text-foreground/60 leading-relaxed mb-6">
+              <p className="text-base text-foreground/60 leading-relaxed mb-6">
                 {article.description}
               </p>
 
               {/* Read more */}
-              <span className="inline-flex items-center gap-1.5 text-xs font-medium text-foreground/60 group-hover:text-foreground/80 transition-colors">
+              <span className="inline-flex items-center gap-1.5 text-base font-medium text-foreground/60 group-hover:text-foreground/80 transition-colors">
                 Lire
                 <ArrowRight size={12} className="transition-transform group-hover:translate-x-0.5" />
               </span>
@@ -159,7 +159,7 @@ export function BlogSection() {
         <div ref={ctaRef} className="text-center mt-10">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-sm font-medium text-foreground/60 hover:text-foreground transition-colors"
+            className="inline-flex items-center gap-2 text-base font-medium text-foreground/60 hover:text-foreground transition-colors"
           >
             Tous les articles
             <ArrowRight size={14} />

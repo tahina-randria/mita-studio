@@ -119,7 +119,7 @@ export default function FondateurPage() {
       <main className="pt-28 sm:pt-36 pb-20 sm:pb-28">
         <div className="mx-auto max-w-4xl px-4 sm:px-6">
           {/* Breadcrumb */}
-          <nav aria-label="Fil d'Ariane" className="flex items-center gap-2 text-xs text-white/60 mb-10">
+          <nav aria-label="Fil d'Ariane" className="flex items-center gap-2 text-base text-white/60 mb-10">
             <Link href="/" className="inline-block py-2 hover:text-white transition-colors">Accueil</Link>
             <span aria-hidden="true">/</span>
             <span className="text-white/80">Fondateur</span>
@@ -141,7 +141,7 @@ export default function FondateurPage() {
 
             {/* Bio */}
             <div className="lg:col-span-2">
-              <p className="text-xs uppercase tracking-[0.25em] text-white/60 font-medium mb-3">
+              <p className="text-base uppercase tracking-[0.25em] text-white/60 font-medium mb-3">
                 Fondateur
               </p>
               <h1 className="text-3xl sm:text-4xl text-white tracking-tight mb-4">
@@ -161,7 +161,7 @@ export default function FondateurPage() {
 
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-white transition-colors group"
+                className="inline-flex items-center gap-2 text-base font-medium text-white hover:text-white transition-colors group"
               >
                 Me contacter
                 <ArrowRight
@@ -186,7 +186,7 @@ export default function FondateurPage() {
                   <h3 className="text-base font-medium text-white mb-1">
                     {skill.label}
                   </h3>
-                  <p className="text-sm text-white/60">{skill.description}</p>
+                  <p className="text-base text-white/60">{skill.description}</p>
                 </div>
               ))}
             </div>
@@ -200,14 +200,14 @@ export default function FondateurPage() {
             <div className="space-y-8">
               {MILESTONES.map((m, i) => (
                 <div key={i} className="flex gap-5 sm:gap-8">
-                  <span className="text-sm font-mono text-white/60 shrink-0 pt-0.5 tabular-nums">
+                  <span className="text-base font-mono text-white/60 shrink-0 pt-0.5 tabular-nums">
                     {m.year}
                   </span>
                   <div>
                     <h3 className="text-base font-medium text-white mb-1">
                       {m.title}
                     </h3>
-                    <p className="text-sm text-white/70 leading-relaxed max-w-lg">
+                    <p className="text-base text-white/70 leading-relaxed max-w-lg">
                       {m.description}
                     </p>
                   </div>
@@ -226,7 +226,7 @@ export default function FondateurPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center bg-white text-[#0a0a0a] px-8 py-3.5 rounded-xl text-sm font-semibold hover:bg-white/90 active:scale-[0.98] transition-all"
+              className="inline-flex items-center justify-center bg-white text-[#0a0a0a] px-8 py-3.5 rounded-xl text-base font-semibold hover:bg-white/90 active:scale-[0.98] transition-all"
             >
               Nous contacter
             </Link>

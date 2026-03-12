@@ -33,7 +33,7 @@ function CalendlyMockup() {
         </div>
         <div>
           <span className="text-sm font-medium text-white/80 block">Appel d&eacute;couverte</span>
-          <span className="text-[11px] text-white/60">20&nbsp;min &middot; Gratuit</span>
+          <span className="text-xs text-white/60">20&nbsp;min &middot; Gratuit</span>
         </div>
       </div>
 
@@ -57,7 +57,7 @@ function CalendlyMockup() {
       {/* Calendar grid */}
       <div className="grid grid-cols-5 gap-1.5 mb-4">
         {days.map((d) => (
-          <span key={d} className="text-[10px] text-white/60 text-center font-medium pb-1">{d}</span>
+          <span key={d} className="text-xs text-white/60 text-center font-medium pb-1">{d}</span>
         ))}
         {dates.map((d, i) => (
           <div
@@ -77,7 +77,7 @@ function CalendlyMockup() {
 
       {/* Time slots */}
       <div className="pt-3 border-t border-white/[0.06]">
-        <span className="text-[10px] text-white/60 uppercase tracking-wider block mb-2.5">Cr&eacute;neaux disponibles</span>
+        <span className="text-xs text-white/60 uppercase tracking-wider block mb-2.5">Cr&eacute;neaux disponibles</span>
         <div className="grid grid-cols-2 gap-2">
           {slots.map((t, i) => (
             <div
@@ -129,7 +129,7 @@ function SiteMockup() {
           <svg className="w-2.5 h-2.5 text-[#28c840] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
           </svg>
-          <span className="text-[10px] text-[#666]">votre-site.com</span>
+          <span className="text-[11px] text-[#666]">votre-site.com</span>
         </div>
       </div>
 
@@ -169,7 +169,7 @@ function SiteMockup() {
         ].map((m) => (
           <div key={m.label} className="flex flex-col items-center gap-0.5">
             <span className="text-xs font-bold text-emerald-500">{m.val}</span>
-            <span className="text-[8px] text-[#999] uppercase tracking-wider">{m.label}</span>
+            <span className="text-[11px] text-[#999] uppercase tracking-wider">{m.label}</span>
           </div>
         ))}
       </div>
@@ -317,17 +317,17 @@ export function ProcessSection() {
               <div className="flex flex-col md:flex-row md:items-start gap-8 md:gap-10">
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-3 mb-2">
-                    <span className="text-[11px] uppercase tracking-[0.2em] font-semibold text-white tabular-nums">01</span>
+                    <span className="text-base uppercase tracking-[0.2em] font-semibold text-white tabular-nums">01</span>
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-semibold text-white mb-3 tracking-tight">
                     On &eacute;change
                   </h3>
-                  <p className="text-[15px] sm:text-lg leading-relaxed text-white mb-6 max-w-lg">
+                  <p className="text-base sm:text-lg leading-relaxed text-white mb-6 max-w-lg">
                     Un appel de 20&nbsp;min pour comprendre votre projet, vos objectifs et votre budget. Gratuit, sans engagement.
                   </p>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-2.5 text-sm font-semibold text-[#0a0a0a] hover:bg-white/90 active:scale-[0.97] transition-all"
+                    className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-2.5 text-base font-semibold text-[#0a0a0a] hover:bg-white/90 active:scale-[0.97] transition-all"
                   >
                     R&eacute;server un cr&eacute;neau
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -353,12 +353,12 @@ export function ProcessSection() {
               <div className="flex flex-col md:flex-row md:items-start gap-8 md:gap-10">
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-3 mb-2">
-                    <span className="text-[11px] uppercase tracking-[0.2em] font-semibold text-white tabular-nums">02</span>
+                    <span className="text-base uppercase tracking-[0.2em] font-semibold text-white tabular-nums">02</span>
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-semibold text-white mb-3 tracking-tight">
                     On vous montre
                   </h3>
-                  <p className="text-[15px] sm:text-lg leading-relaxed text-white max-w-lg">
+                  <p className="text-base sm:text-lg leading-relaxed text-white max-w-lg">
                     En quelques jours, vous recevez une premi&egrave;re version. On vous la pr&eacute;sente en visio. Vous validez, on ajuste, jusqu&rsquo;&agrave; ce que &ccedil;a vous plaise.
                   </p>
                 </div>
@@ -380,12 +380,12 @@ export function ProcessSection() {
               <div className="flex flex-col md:flex-row md:items-start gap-8 md:gap-10">
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-3 mb-2">
-                    <span className="text-[11px] uppercase tracking-[0.2em] font-semibold text-white tabular-nums">03</span>
+                    <span className="text-base uppercase tracking-[0.2em] font-semibold text-white tabular-nums">03</span>
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-semibold text-white mb-3 tracking-tight">
                     C&rsquo;est en ligne
                   </h3>
-                  <p className="text-[15px] sm:text-lg leading-relaxed text-white max-w-lg">
+                  <p className="text-base sm:text-lg leading-relaxed text-white max-w-lg">
                     Votre site est live avec son contenu r&eacute;dig&eacute;, optimis&eacute; pour Google, pr&ecirc;t &agrave; recevoir vos clients. Formation prise en main incluse.
                   </p>
                 </div>

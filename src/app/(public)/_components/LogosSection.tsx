@@ -84,7 +84,7 @@ export function LogosSection() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <p
           ref={labelRef}
-          className="text-center text-xs sm:text-sm uppercase tracking-[0.2em] text-white mb-8 sm:mb-10 font-medium"
+          className="text-center text-base uppercase tracking-[0.2em] text-white mb-8 sm:mb-10 font-medium"
         >
           Ils nous font confiance
         </p>

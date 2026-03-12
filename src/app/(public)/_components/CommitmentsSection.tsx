@@ -126,7 +126,7 @@ export function CommitmentsSection({ commitments }: { commitments: { id: string;
                   {c.title}
                 </h3>
 
-                <p className="text-[15px] sm:text-base leading-relaxed text-white max-w-[80%]">
+                <p className="text-base leading-relaxed text-white max-w-[80%]">
                   {c.description}
                 </p>
               </div>

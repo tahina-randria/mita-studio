@@ -170,7 +170,7 @@ export function StudioHeader({ navLinks = DEFAULT_NAV_LINKS }: { navLinks?: { id
                 <Link
                   key={link.id}
                   href={link.href}
-                  className="px-3.5 py-1.5 text-sm text-white hover:text-white rounded-lg hover:bg-white/[0.04] transition-colors"
+                  className="px-3.5 py-1.5 text-base text-white hover:text-white rounded-lg hover:bg-white/[0.04] transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -179,7 +179,7 @@ export function StudioHeader({ navLinks = DEFAULT_NAV_LINKS }: { navLinks?: { id
                   key={link.id}
                   href={link.href}
                   onClick={(e) => handleAnchorClick(e, link.href)}
-                  className="px-3.5 py-1.5 text-sm text-white hover:text-white rounded-lg hover:bg-white/[0.04] transition-colors"
+                  className="px-3.5 py-1.5 text-base text-white hover:text-white rounded-lg hover:bg-white/[0.04] transition-colors"
                 >
                   {link.label}
                 </a>
@@ -190,7 +190,7 @@ export function StudioHeader({ navLinks = DEFAULT_NAV_LINKS }: { navLinks?: { id
           <div className="flex items-center gap-2">
             <Link
               href="/contact"
-              className="inline-flex items-center rounded-lg bg-white px-4 py-2 text-xs sm:text-sm font-semibold text-[#0a0a0a] hover:bg-white/90 active:scale-[0.98] transition-all shrink-0"
+              className="inline-flex items-center rounded-lg bg-white px-4 py-2 text-base font-semibold text-[#0a0a0a] hover:bg-white/90 active:scale-[0.98] transition-all shrink-0"
             >
               Nous contacter
             </Link>

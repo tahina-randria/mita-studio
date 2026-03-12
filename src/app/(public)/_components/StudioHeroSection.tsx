@@ -169,13 +169,13 @@ export function StudioHeroSection({
         >
           <Link
             href="/contact"
-            className="btn-accent cursor-pointer rounded-xl px-7 py-3 text-[13px] sm:px-8 sm:py-3.5 sm:text-[14px] inline-block active:scale-[0.97]"
+            className="btn-accent cursor-pointer rounded-xl px-7 py-3 text-base sm:px-8 sm:py-3.5 sm:text-base inline-block active:scale-[0.97]"
           >
             {content.hero_cta || "Démarrer mon projet"}
           </Link>
           <button
             onClick={handleScrollTo("#process")}
-            className="text-center rounded-xl border border-white/[0.15] px-7 py-3 text-[13px] sm:px-8 sm:py-3.5 sm:text-[14px] font-medium text-white cursor-pointer hover:border-white/30 hover:bg-white/[0.04] active:scale-[0.97] transition-all"
+            className="text-center rounded-xl border border-white/[0.15] px-7 py-3 text-base sm:px-8 sm:py-3.5 sm:text-base font-medium text-white cursor-pointer hover:border-white/30 hover:bg-white/[0.04] active:scale-[0.97] transition-all"
           >
             {content.hero_cta_secondary || "Voir comment ça marche"}
           </button>

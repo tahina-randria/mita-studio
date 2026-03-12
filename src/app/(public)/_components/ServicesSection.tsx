@@ -113,7 +113,7 @@ export function ServicesSection({ services }: { services: { id: string; title: s
                   {service.title}
                 </h3>
 
-                <p className="text-[15px] sm:text-base leading-relaxed text-white/90 flex-1 max-w-[75%]">
+                <p className="text-base leading-relaxed text-white/90 flex-1 max-w-[75%]">
                   {service.description}
                 </p>
               </div>

@@ -166,7 +166,7 @@ export function ClientTestimonialsSection({
               </div>
 
               {/* Quote */}
-              <blockquote className="text-sm sm:text-[15px] leading-relaxed text-white/90 mb-6">
+              <blockquote className="text-base leading-relaxed text-white/90 mb-6">
                 &laquo;&nbsp;{t.quote}&nbsp;&raquo;
               </blockquote>
 
@@ -174,14 +174,14 @@ export function ClientTestimonialsSection({
               <div className="flex items-center gap-3">
                 {/* Avatar with initials */}
                 <div
-                  className="flex items-center justify-center w-10 h-10 rounded-full text-xs font-bold text-white shrink-0"
+                  className="flex items-center justify-center w-10 h-10 rounded-full text-base font-bold text-white shrink-0"
                   style={{ backgroundColor: t.accentColor ?? undefined }}
                 >
                   {t.initials}
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-white">{t.name}</p>
-                  <p className="text-xs text-white/60">
+                  <p className="text-base font-medium text-white">{t.name}</p>
+                  <p className="text-base text-white/60">
                     {t.role}, {t.company}
                   </p>
                 </div>
@@ -203,7 +203,7 @@ export function ClientTestimonialsSection({
                 {teaserQuotes.map((q) => (
                   <p
                     key={q.id}
-                    className="text-sm text-white/60 italic"
+                    className="text-base text-white/60 italic"
                   >
                     {q.text}
                   </p>
@@ -214,7 +214,7 @@ export function ClientTestimonialsSection({
             <div className="flex flex-col gap-2">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-white py-3 px-5 text-sm font-semibold text-[#050a1e] hover:bg-white/90 transition-colors"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-white py-3 px-5 text-base font-semibold text-[#050a1e] hover:bg-white/90 transition-colors"
               >
                 Discuter de votre projet
                 <ArrowRight size={14} weight="bold" />

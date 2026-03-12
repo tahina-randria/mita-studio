@@ -77,7 +77,7 @@ export function StudioFooter({ studioLinks = DEFAULT_STUDIO_LINKS, legalLinks = 
                 className="h-7 w-auto mb-2"
               />
             </Link>
-            <p className="text-xs text-white leading-relaxed mb-3">
+            <p className="text-base text-white leading-relaxed mb-3">
               Sites web cl&eacute; en main
               <br />
               pour ind&eacute;pendants et&nbsp;PME.
@@ -95,7 +95,7 @@ export function StudioFooter({ studioLinks = DEFAULT_STUDIO_LINKS, legalLinks = 
 
           {/* Studio links */}
           <nav aria-label="Studio">
-            <p className="text-xs font-semibold uppercase tracking-wider text-white mb-3">
+            <p className="text-base font-semibold uppercase tracking-wider text-white mb-3">
               Studio
             </p>
             <ul className="space-y-2">
@@ -106,14 +106,14 @@ export function StudioFooter({ studioLinks = DEFAULT_STUDIO_LINKS, legalLinks = 
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block py-2 text-sm text-white hover:text-white transition-colors"
+                      className="inline-block py-2 text-base text-white hover:text-white transition-colors"
                     >
                       {link.label}
                     </a>
                   ) : (
                     <Link
                       href={link.href}
-                      className="inline-block py-2 text-sm text-white hover:text-white transition-colors"
+                      className="inline-block py-2 text-base text-white hover:text-white transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -125,7 +125,7 @@ export function StudioFooter({ studioLinks = DEFAULT_STUDIO_LINKS, legalLinks = 
 
           {/* Legal links */}
           <nav aria-label="Légal">
-            <p className="text-xs font-semibold uppercase tracking-wider text-white mb-3">
+            <p className="text-base font-semibold uppercase tracking-wider text-white mb-3">
               Légal
             </p>
             <ul className="space-y-2">
@@ -136,14 +136,14 @@ export function StudioFooter({ studioLinks = DEFAULT_STUDIO_LINKS, legalLinks = 
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block py-2 text-sm text-white hover:text-white transition-colors"
+                      className="inline-block py-2 text-base text-white hover:text-white transition-colors"
                     >
                       {link.label}
                     </a>
                   ) : (
                     <Link
                       href={link.href}
-                      className="inline-block py-2 text-sm text-white hover:text-white transition-colors"
+                      className="inline-block py-2 text-base text-white hover:text-white transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -156,12 +156,12 @@ export function StudioFooter({ studioLinks = DEFAULT_STUDIO_LINKS, legalLinks = 
 
         {/* Bottom bar */}
         <div className="mt-8 pt-6 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-white">
+          <p className="text-base text-white">
             &copy; {new Date().getFullYear()} {settings.company_name || "Mita Studio"}. Tous droits r&eacute;serv&eacute;s.
           </p>
           <a
             href={`mailto:${settings.contact_email || "tahina@mita-studio.com"}`}
-            className="inline-block py-1 text-xs text-white hover:text-white transition-colors"
+            className="inline-block py-1 text-base text-white hover:text-white transition-colors"
           >
             {settings.contact_email || "tahina@mita-studio.com"}
           </a>

@@ -153,7 +153,7 @@ export function ProblemSection({ problems }: { problems: { id: string; stat: str
                 </h3>
 
                 {/* Description */}
-                <p className="text-[15px] sm:text-base leading-relaxed text-white max-w-[80%]">
+                <p className="text-base leading-relaxed text-white max-w-[80%]">
                   {problem.description}
                 </p>
               </div>
