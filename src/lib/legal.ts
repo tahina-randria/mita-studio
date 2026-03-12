@@ -20,59 +20,102 @@ const LEGAL_ARTICLES: LegalArticle[] = [
     description:
       "Mentions légales du site mita-studio.com conformément à la loi LCEN du 21 juin 2004.",
     date: "2026-03-12",
-    readingTime: "3 min",
+    readingTime: "5 min",
     tldr: [],
-    content: `Conformément à la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique (LCEN), voici les informations légales relatives au site mita-studio.com.
+    content: `Dernière mise à jour : 12 mars 2026
+
+Conformément à la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique (LCEN), voici les informations légales relatives au site mita-studio.com.
 
 ## 1. Éditeur du site
 
 - **Nom** : Tahina Randrianandraina
 - **Nom commercial** : Mita Studio
 - **Statut** : Titulaire d'un Contrat d'Appui au Projet d'Entreprise (CAPE), conformément aux articles L127-1 à L127-7 du Code de commerce
+- **CAPE** : Contrat n°C1538, échéant le 28/02/2027
 - **Structure d'appui** : PCE, Société Coopérative Ouvrière de Production par Actions Simplifiée (SCOP AS) à Capital Variable
 - **Site PCE** : [pce-couveuse.fr](https://www.pce-couveuse.fr)
 - **Adresse** : 6 Rue d'Amboise, 75002 Paris
 - **SIRET** : 423 194 307 00090
-- **SIREN / RCS** : 423 194 307
+- **SIREN / RCS** : 423 194 307, RCS Paris
 - **Code APE / NAF** : 9499Z
 - **N° TVA intracommunautaire** : FR82423194307
-- **CAPE** : Contrat n°C1538, échéant le 28/02/2027
 - **TVA** : 20 % (taux normal)
-- **Directeur de la publication** : Tahina Randrianandraina
 - **Email** : tahina@mita-studio.com
 - **Site web** : [mita-studio.com](https://mita-studio.com)
 
-## 2. Assurance responsabilité civile professionnelle
+## 2. Directeur de la publication
+
+**Tahina Randrianandraina**, en qualité de responsable éditorial et titulaire du CAPE.
+
+Contact éditorial : **tahina@mita-studio.com**
+
+## 3. Assurance responsabilité civile professionnelle
 
 - **Assureur** : AXA, Contrat multiactivité professionnelle
 - **N° client** : 0693499104
 - **N° contrat** : 1353589504
 
-## 3. Hébergeur
+## 4. Hébergeur
 
 - **Raison sociale** : Vercel Inc.
 - **Adresse** : 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis
 - **Site web** : [vercel.com](https://vercel.com)
+- **Contact** : privacy@vercel.com
 
-## 4. Propriété intellectuelle
+Vercel est soumis au régime de responsabilité des hébergeurs prévu aux articles 6-I-2° à 6-I-7° de la LCEN.
 
-L'ensemble du contenu du site mita-studio.com (textes, images, graphismes, logo, icônes, code source) est la propriété exclusive de Mita Studio ou fait l'objet d'une autorisation d'utilisation. Toute reproduction, représentation, modification, publication ou adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite sauf autorisation écrite préalable.
+## 5. Propriété intellectuelle
 
-## 5. Protection des données personnelles
+L'ensemble du contenu du site mita-studio.com (textes, images, graphismes, logo, icônes, code source, architecture et design d'interface) est protégé par les dispositions du Code de la propriété intellectuelle (articles L.111-1, L.122-4, L.335-2 et suivants).
 
-Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez de droits sur vos données personnelles. Pour en savoir plus, consultez notre [Politique de Confidentialité](/confidentialite).
+Toute reproduction, représentation, modification, publication, distribution ou adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite sans autorisation écrite préalable de Mita Studio. Toute exploitation non autorisée constitue un acte de contrefaçon sanctionné par les articles L.335-2 et suivants du CPI (jusqu'à 3 ans d'emprisonnement et 300 000 € d'amende).
 
-## 6. Cookies
+**Crédits et licences tierces** : le site utilise des technologies open-source (Next.js, Tailwind CSS) sous licence MIT et des icônes Phosphor Icons sous licence MIT.
 
-Le site utilise uniquement des cookies strictement nécessaires au fonctionnement technique (aucun cookie publicitaire, de traçage ou d'analyse). Aucune donnée personnelle n'est collectée via les cookies.
+Pour signaler une atteinte à vos droits de propriété intellectuelle, contactez **tahina@mita-studio.com**.
 
-## 7. Limitation de responsabilité
+## 6. Protection des données personnelles
 
-Mita Studio s'efforce de fournir des informations précises et à jour sur ce site. Toutefois, les informations diffusées sur le site ne sauraient prétendre à l'exhaustivité. Mita Studio ne saurait être tenu responsable des dommages directs ou indirects résultant de l'utilisation du site ou de l'impossibilité d'y accéder.
+Conformément au Règlement Général sur la Protection des Données (RGPD, Règlement UE 2016/679) et à la loi n° 78-17 du 6 janvier 1978 modifiée (Informatique et Libertés), vous disposez de droits sur vos données personnelles. Pour en savoir plus, consultez notre [Politique de Confidentialité](/confidentialite).
 
-Les sites web et outils digitaux créés par Mita Studio pour ses clients sont livrés conformément au devis validé. La responsabilité de Mita Studio est limitée au montant de la prestation facturée.
+## 7. Cookies
 
-## 8. Contact
+Le site utilise uniquement des cookies strictement nécessaires au fonctionnement technique (protection DDoS, routage CDN), exemptés de consentement conformément à la directive ePrivacy 2002/58/CE et aux recommandations de la CNIL du 17 septembre 2020.
+
+Aucun cookie publicitaire, de traçage, d'analyse ou de mesure d'audience n'est déposé. Aucun bandeau cookies n'est nécessaire.
+
+## 8. Limitation de responsabilité
+
+Mita Studio s'efforce de fournir des informations précises et à jour. Toutefois, les informations diffusées sur le site ne sauraient prétendre à l'exhaustivité et ne constituent en aucun cas un conseil professionnel.
+
+Mita Studio ne saurait être tenu responsable des dommages directs ou indirects résultant de l'utilisation du site ou de l'impossibilité d'y accéder.
+
+**Liens hypertextes** : le site peut contenir des liens vers des sites tiers. Mita Studio n'exerce aucun contrôle sur le contenu de ces sites et décline toute responsabilité quant à leur contenu.
+
+La responsabilité de Mita Studio est limitée, dans toute la mesure permise par le droit français, aux dommages directs et prouvés.
+
+## 9. Droit applicable et juridiction
+
+Les présentes mentions légales sont régies par le droit français. La version française fait foi.
+
+En cas de litige :
+
+- **Clients professionnels (B2B)** : compétence du Tribunal de Commerce de Paris, sauf règle impérative contraire.
+- **Clients consommateurs (B2C)** : compétence du tribunal du domicile du consommateur conformément à l'article R.631-3 du Code de la consommation.
+
+Conformément aux articles L.612-1 et suivants du Code de la consommation, le client consommateur peut recourir gratuitement à un médiateur :
+
+- **Centre de la Médiation de la Consommation de Conciliateurs de Justice (CM2C)**
+- Site web : [cm2c.net](https://www.cm2c.net)
+- Adresse : 14 rue Saint-Jean-de-Beauregard, 91400 Orsay
+
+Plateforme européenne de règlement en ligne des litiges : [ec.europa.eu/consumers/odr](https://ec.europa.eu/consumers/odr).
+
+## 10. Mise à jour
+
+Les présentes mentions légales peuvent être modifiées à tout moment. La date de dernière mise à jour est indiquée en haut de cette page.
+
+## 11. Contact
 
 Pour toute question, contactez-nous à l'adresse **tahina@mita-studio.com**.`,
   },
@@ -112,7 +155,7 @@ Les présentes Conditions Générales de Vente (ci-après « CGV ») régissent 
 - **Site PCE** : [pce-couveuse.fr](https://www.pce-couveuse.fr)
 - **Adresse** : 6 Rue d'Amboise, 75002 Paris
 - **SIRET** : 423 194 307 00090
-- **SIREN/RCS** : 423 194 307
+- **SIREN/RCS** : 423 194 307, RCS Paris
 - **Code APE/NAF** : 9499Z
 - **N° TVA intracommunautaire** : FR82423194307
 - **Assurance RCP** : Contrat multiactivité professionnelle AXA, N° client 0693499104, N° contrat 1353589504
@@ -364,7 +407,7 @@ Pour toute question relative aux présentes CGV, contactez-nous à l'adresse **t
     description:
       "Politique de confidentialité et protection des données personnelles de Mita Studio, conforme au RGPD.",
     date: "2026-03-12",
-    readingTime: "6 min",
+    readingTime: "8 min",
     tldr: [
       "Responsable : Tahina Randrianandraina (Mita Studio), CAPE n°C1538 auprès de PCE. SIRET 423 194 307 00090.",
       "Seules les données du formulaire de contact sont collectées. Aucun cookie publicitaire, aucun tracking, aucune revente.",
@@ -388,6 +431,8 @@ Le responsable du traitement des données est :
 - **SIRET** : 423 194 307 00090
 - **Code APE / NAF** : 9499Z
 - **Email de contact** : tahina@mita-studio.com
+
+**Délégué à la Protection des Données (DPO)** : conformément à l'article 37 du RGPD, la désignation d'un DPO n'est pas obligatoire pour Mita Studio, les traitements réalisés ne relevant ni d'un suivi régulier et systématique à grande échelle, ni du traitement à grande échelle de catégories particulières de données. Pour toute question relative à vos données personnelles, contactez directement **tahina@mita-studio.com**.
 
 ## 2. Données collectées
 
@@ -416,6 +461,7 @@ Des données techniques minimales sont automatiquement collectées par l'héberg
 
 - **Répondre à vos demandes de contact** : intérêt légitime (art. 6.1.f RGPD)
 - **Établir et envoyer des devis** : exécution de mesures précontractuelles (art. 6.1.b RGPD)
+- **Facturation et gestion comptable** : obligation légale (art. 6.1.c RGPD)
 - **Assurer le fonctionnement technique du site** : intérêt légitime (art. 6.1.f RGPD)
 
 ## 4. Durée de conservation
@@ -430,12 +476,14 @@ Nous faisons appel aux sous-traitants suivants :
 
 - **Vercel** (hébergement et diffusion CDN), États-Unis, certifié EU-U.S. Data Privacy Framework
 - **Resend** (envoi d'emails transactionnels), États-Unis, Clauses Contractuelles Types
+- **Pennylane** (facturation et comptabilité), France
+- **Stripe** (paiement en ligne), États-Unis, certifié EU-U.S. Data Privacy Framework
 
 Aucune donnée n'est vendue, louée ou partagée avec des tiers à des fins commerciales.
 
 ## 6. Transferts internationaux de données
 
-Certaines données sont transférées vers les États-Unis (Vercel, Resend). Ces transferts sont encadrés par :
+Certaines données sont transférées vers les États-Unis (Vercel, Resend, Stripe). Ces transferts sont encadrés par :
 
 - Les **Clauses Contractuelles Types (CCT)** de la Commission européenne
 - Le cadre **EU-U.S. Data Privacy Framework** lorsque le sous-traitant est certifié
@@ -447,24 +495,39 @@ Le site mita-studio.com **n'utilise aucun cookie publicitaire, de traçage ou d'
 
 Seuls des cookies strictement techniques peuvent être déposés par l'hébergeur pour le fonctionnement du site (protection DDoS, routage). Ces cookies sont exemptés de consentement conformément à la directive ePrivacy.
 
-## 8. Vos droits
+## 8. Sécurité des données
+
+Conformément à l'article 32 du RGPD, Mita Studio met en œuvre les mesures techniques et organisationnelles appropriées pour garantir la sécurité de vos données :
+
+- Chiffrement des données en transit (HTTPS/TLS)
+- Accès restreint aux données personnelles (principe du moindre privilège)
+- Sauvegardes régulières
+- Choix de sous-traitants présentant des garanties suffisantes
+
+## 9. Notification de violation de données
+
+Conformément aux articles 33 et 34 du RGPD, en cas de violation de données à caractère personnel présentant un risque pour vos droits et libertés, la CNIL sera notifiée dans un délai de 72 heures. Si la violation présente un risque élevé, vous en serez informé dans les meilleurs délais.
+
+## 10. Vos droits
 
 Conformément au RGPD, vous disposez des droits suivants :
 
-- **Droit d'accès** : obtenir une copie de vos données personnelles
-- **Droit de rectification** : corriger des données inexactes ou incomplètes
-- **Droit à l'effacement** : demander la suppression de vos données
-- **Droit à la portabilité** : recevoir vos données dans un format structuré
-- **Droit d'opposition** : vous opposer au traitement de vos données
-- **Droit à la limitation** : demander la limitation du traitement
+- **Droit d'accès** (art. 15) : obtenir une copie de vos données personnelles
+- **Droit de rectification** (art. 16) : corriger des données inexactes ou incomplètes
+- **Droit à l'effacement** (art. 17) : demander la suppression de vos données, sous réserve des obligations légales de conservation
+- **Droit à la limitation** (art. 18) : demander la limitation du traitement
+- **Droit à la portabilité** (art. 20) : recevoir vos données dans un format structuré et lisible par machine
+- **Droit d'opposition** (art. 21) : vous opposer au traitement de vos données, y compris à des fins de prospection commerciale (droit absolu)
+- **Droit relatif aux décisions automatisées** (art. 22) : ne pas faire l'objet d'une décision fondée exclusivement sur un traitement automatisé. Mita Studio n'effectue aucune prise de décision automatisée ni profilage.
+- **Retrait du consentement** (art. 7.3) : lorsque le traitement est fondé sur votre consentement, vous pouvez le retirer à tout moment, sans que cela affecte la licéité du traitement antérieur.
 
-Pour exercer vos droits, contactez-nous à **tahina@mita-studio.com**. Nous répondrons dans un délai de 30 jours maximum.
+**Exercice de vos droits** : adressez votre demande à **tahina@mita-studio.com** en joignant un justificatif d'identité. Nous répondrons dans un délai de 30 jours (prolongeable à 90 jours pour les demandes complexes, conformément à l'art. 12.3 RGPD).
 
-## 9. Réclamation
+## 11. Réclamation
 
-Vous avez le droit d'introduire une réclamation auprès de la **CNIL** (Commission Nationale de l'Informatique et des Libertés) : [www.cnil.fr](https://www.cnil.fr).
+Vous avez le droit d'introduire une réclamation auprès de la **CNIL** (Commission Nationale de l'Informatique et des Libertés) : [www.cnil.fr](https://www.cnil.fr), ou auprès de l'autorité de contrôle de l'État membre de l'Union européenne dans lequel vous résidez.
 
-## 10. Mise à jour
+## 12. Mise à jour
 
 Nous nous réservons le droit de modifier la présente Politique de Confidentialité à tout moment. La date de dernière mise à jour est indiquée en haut de cette page.`,
   },
