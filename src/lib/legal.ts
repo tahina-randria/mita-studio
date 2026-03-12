@@ -34,6 +34,7 @@ const LEGAL_ARTICLES: LegalArticle[] = [
 - **Nom commercial** : Mita Studio
 - **Statut** : Titulaire d'un Contrat d'Appui au Projet d'Entreprise (CAPE), conformément aux articles L127-1 à L127-7 du Code de commerce
 - **Structure d'appui** : PCE, Société Coopérative Ouvrière de Production par Actions Simplifiée (SCOP AS) à Capital Variable
+- **Site PCE** : [pce-couveuse.fr](https://www.pce-couveuse.fr)
 - **Adresse** : 6 Rue d'Amboise, 75002 Paris
 - **SIRET** : 423 194 307 00090
 - **SIREN / RCS** : 423 194 307
@@ -110,7 +111,9 @@ Les présentes Conditions Générales de Vente (ci-après « CGV ») régissent 
 
 - **Prestataire** : Tahina Randrianandraina, exerçant sous le nom commercial Mita Studio
 - **Statut** : Titulaire d'un Contrat d'Appui au Projet d'Entreprise (CAPE)
+- **CAPE** : Contrat n°C1538, échéant le 28/02/2027
 - **Structure d'appui** : PCE, Société Coopérative Ouvrière de Production par Actions Simplifiée (SCOP AS) à Capital Variable
+- **Site PCE** : [pce-couveuse.fr](https://www.pce-couveuse.fr)
 - **Adresse** : 6 Rue d'Amboise, 75002 Paris
 - **SIRET** : 423 194 307 00090
 - **SIREN/RCS** : 423 194 307
