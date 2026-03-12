@@ -42,12 +42,12 @@ function CalendlyMockup() {
         <span className="text-xs font-medium text-white/60">Mars 2026</span>
         <div className="flex gap-1">
           <div className="w-6 h-6 rounded-md bg-white/[0.04] flex items-center justify-center">
-            <svg className="w-3 h-3 text-white/50" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg className="w-3 h-3 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
             </svg>
           </div>
           <div className="w-6 h-6 rounded-md bg-white/[0.04] flex items-center justify-center">
-            <svg className="w-3 h-3 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg className="w-3 h-3 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
             </svg>
           </div>
@@ -66,8 +66,8 @@ function CalendlyMockup() {
               i === 3
                 ? "bg-white text-[#0a0a0a] font-semibold shadow-lg shadow-white/10"
                 : d.avail
-                  ? "bg-white/[0.04] text-white/50"
-                  : "text-white/40"
+                  ? "bg-white/[0.04] text-white/60"
+                  : "text-white/60"
             }`}
           >
             {d.day}

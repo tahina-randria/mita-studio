@@ -293,7 +293,7 @@ export function StudioPricingSection({
                 <div>
                   <PriceDisplay tier={tier} priceRef={setPriceRef(i)} />
                   {tier.priceNumeric !== null && (
-                    <span className="text-xs text-white/50 ml-1">HT</span>
+                    <span className="text-xs text-white/60 ml-1">HT</span>
                   )}
                 </div>
               </div>
@@ -321,12 +321,12 @@ export function StudioPricingSection({
                       <X
                         size={14}
                         weight="regular"
-                        className="mt-0.5 shrink-0 text-white/50"
+                        className="mt-0.5 shrink-0 text-white/60"
                       />
                     )}
                     <span
                       className={`text-sm leading-relaxed ${
-                        f.included ? "text-white" : "text-white/50 line-through"
+                        f.included ? "text-white" : "text-white/60 line-through"
                       }`}
                     >
                       {f.text}
@@ -396,12 +396,12 @@ export function StudioPricingSection({
                         <X
                           size={14}
                           weight="regular"
-                          className="mt-0.5 shrink-0 text-white/50"
+                          className="mt-0.5 shrink-0 text-white/60"
                         />
                       )}
                       <span
                         className={`text-sm leading-relaxed ${
-                          f.included ? "text-white" : "text-white/50 line-through"
+                          f.included ? "text-white" : "text-white/60 line-through"
                         }`}
                       >
                         {f.text}

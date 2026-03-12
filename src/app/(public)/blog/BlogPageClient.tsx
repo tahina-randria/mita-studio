@@ -210,7 +210,7 @@ export function BlogPageClient({ articles, categories }: BlogPageClientProps) {
               <input
                 type="email"
                 placeholder="votre@email.com"
-                className="flex-1 rounded-xl border border-white/[0.1] bg-white/[0.04] px-4 py-2.5 text-sm text-white placeholder:text-white/50 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/40 transition-colors"
+                className="flex-1 rounded-xl border border-white/[0.1] bg-white/[0.04] px-4 py-2.5 text-sm text-white placeholder:text-white/60 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/40 transition-colors"
               />
               <button
                 type="submit"
@@ -219,7 +219,7 @@ export function BlogPageClient({ articles, categories }: BlogPageClientProps) {
                 S&apos;inscrire
               </button>
             </form>
-            <p className="text-xs text-white/50 mt-3">
+            <p className="text-xs text-white/60 mt-3">
               En vous inscrivant, vous acceptez notre{" "}
               <Link
                 href="/confidentialite"
