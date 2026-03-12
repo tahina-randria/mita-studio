@@ -89,7 +89,7 @@ Pour toute question, contactez-nous à l'adresse **tahina@mita-studio.com**.`,
     date: "2026-03-10",
     readingTime: "18 min",
     tldr: [],
-    content: `Dernière mise à jour : 10 mars 2026
+    content: `Dernière mise à jour : 12 mars 2026
 
 Les présentes Conditions Générales de Vente (ci-après « CGV ») régissent l'ensemble des prestations de services proposées par Mita Studio à ses clients. Toute commande implique l'acceptation sans réserve des présentes CGV.
 
@@ -371,7 +371,7 @@ Pour toute question relative aux présentes CGV, contactez-nous à l'adresse **t
       "Aucun cookie publicitaire, aucun outil de tracking, aucune revente de données.",
       "Vous pouvez exercer vos droits RGPD à tout moment par email.",
     ],
-    content: `Dernière mise à jour : 11 mars 2026
+    content: `Dernière mise à jour : 12 mars 2026
 
 La présente Politique de Confidentialité décrit comment **Mita Studio** collecte, utilise et protège vos données personnelles lorsque vous utilisez le site mita-studio.com.
 
