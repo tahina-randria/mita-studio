@@ -259,7 +259,7 @@ Le paiement s'effectue en trois échéances liées à l'avancement du projet :
 
 Les prix s'entendent hors taxes. La TVA au taux de 20 % est appliquée conformément à la législation en vigueur.
 
-Les factures sont émises via Tiime, logiciel de facturation agréé, conformément à la réglementation en vigueur.
+Les factures sont émises via Pennylane, logiciel de facturation agréé, conformément à la réglementation en vigueur.
 
 ## 7. Acompte
 
@@ -481,7 +481,7 @@ Nous faisons appel aux sous-traitants suivants :
 
 - **Vercel** (hébergement et diffusion CDN), États-Unis, certifié EU-U.S. Data Privacy Framework
 - **Resend** (envoi d'emails transactionnels), États-Unis, Clauses Contractuelles Types
-- **Tiime** (facturation et comptabilité), France
+- **Pennylane** (facturation et comptabilité), France
 - **Stripe** (paiement en ligne), États-Unis, certifié EU-U.S. Data Privacy Framework
 
 Aucune donnée n'est vendue, louée ou partagée avec des tiers à des fins commerciales.
