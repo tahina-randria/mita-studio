@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny-ps" viewBox="0 0 512 512" width="512" height="512">
+  <title>Mita Studio</title>
+  <rect width="512" height="512" rx="96" fill="#050a1e"/>
+  <g transform="translate(-2.8 -2.86) scale(0.345)">
+    <path fill="#ffffff" d="M 269.707 840.691 L 548.425 840.691 L 548.425 1111.992 L 269.707 1111.992 Z"/>
+    <path fill="#ffffff" d="M 366.43 530.324 L 606.21 388.004 L 951.457 969.668 L 711.68 1111.988 Z"/>
+    <path fill="#ffffff" d="M 951.457 388.008 L 1230.293 388.008 L 1230.293 1112.324 L 951.457 1112.324 Z"/>
+  </g>
+</svg>
