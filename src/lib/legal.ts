@@ -30,22 +30,13 @@ Conformément à la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'é
 
 - **Nom** : Tahina Randrianandraina
 - **Nom commercial** : Mita Studio
-- **Statut** : Titulaire d'un Contrat d'Appui au Projet d'Entreprise (CAPE), conformément aux articles L127-1 à L127-7 du Code de commerce
-- **CAPE** : Contrat n°C1538, échéant le 28/02/2027
-- **Structure d'appui** : PCE, Société Coopérative Ouvrière de Production par Actions Simplifiée (SCOP AS) à Capital Variable
-- **Site PCE** : [pce-couveuse.fr](https://www.pce-couveuse.fr)
-- **Adresse** : 6 Rue d'Amboise, 75002 Paris
-- **SIRET** : 423 194 307 00090
-- **SIREN / RCS** : 423 194 307, RCS Paris
-- **Code APE / NAF** : 9499Z
-- **N° TVA intracommunautaire** : FR82423194307
-- **TVA** : 20 % (taux normal)
+- **Statut** : Entrepreneur indépendant
 - **Email** : tahina@mita-studio.com
 - **Site web** : [mita-studio.com](https://mita-studio.com)
 
 ## 2. Directeur de la publication
 
-**Tahina Randrianandraina**, en qualité de responsable éditorial et titulaire du CAPE.
+**Tahina Randrianandraina**, en qualité de responsable éditorial.
 
 Contact éditorial : **tahina@mita-studio.com**
 
@@ -125,7 +116,7 @@ Pour toute question, contactez-nous à l'adresse **tahina@mita-studio.com**.`,
     slug: "conditions-generales-de-vente",
     title: "Conditions Générales de Vente",
     description:
-      "Conditions générales de vente des prestations de Mita Studio, entrepreneur accompagné par PCE dans le cadre d'un CAPE : création de sites web, référencement Google et outils digitaux.",
+      "Conditions générales de vente des prestations de Mita Studio, entrepreneur indépendant : création de sites web, référencement Google et outils digitaux.",
     date: "2026-03-12",
     readingTime: "18 min",
     tldr: [],
@@ -135,7 +126,7 @@ Les présentes Conditions Générales de Vente (ci-après « CGV ») régissent 
 
 ## 1. Définitions
 
-- **Prestataire** : Tahina Randrianandraina, exerçant sous le nom commercial Mita Studio, entrepreneur accompagné par PCE dans le cadre d'un CAPE.
+- **Prestataire** : Tahina Randrianandraina, exerçant sous le nom commercial Mita Studio, entrepreneur indépendant.
 - **Client** : Toute personne physique ou morale commandant une prestation auprès du Prestataire.
 - **Projet** : L'ensemble des prestations définies dans le devis signé.
 - **Livrables** : Les éléments produits par le Prestataire dans le cadre du Projet (site web, contenus, fichiers sources, etc.).
@@ -149,15 +140,7 @@ Les présentes Conditions Générales de Vente (ci-après « CGV ») régissent 
 ## 2. Identification du prestataire
 
 - **Prestataire** : Tahina Randrianandraina, exerçant sous le nom commercial Mita Studio
-- **Statut** : Titulaire d'un Contrat d'Appui au Projet d'Entreprise (CAPE)
-- **CAPE** : Contrat n°C1538, échéant le 28/02/2027
-- **Structure d'appui** : PCE, Société Coopérative Ouvrière de Production par Actions Simplifiée (SCOP AS) à Capital Variable
-- **Site PCE** : [pce-couveuse.fr](https://www.pce-couveuse.fr)
-- **Adresse** : 6 Rue d'Amboise, 75002 Paris
-- **SIRET** : 423 194 307 00090
-- **SIREN/RCS** : 423 194 307, RCS Paris
-- **Code APE/NAF** : 9499Z
-- **N° TVA intracommunautaire** : FR82423194307
+- **Statut** : Entrepreneur indépendant
 - **Assurance RCP** : Contrat multiactivité professionnelle AXA, N° client 0693499104, N° contrat 1353589504
 - **Email** : tahina@mita-studio.com
 - **Site web** : [mita-studio.com](https://mita-studio.com)
@@ -170,7 +153,7 @@ Les présentes CGV régissent les relations entre Mita Studio et ses clients pou
 
 Mita Studio propose des prestations de services digitaux organisées en trois formules :
 
-### Formule Vitrine Express : 890 € HT
+### Formule Vitrine Express : 890 €
 
 - 1 landing page responsive (design sur mesure, pas de template)
 - Contenu rédigé pour le client (inclus)
@@ -182,7 +165,7 @@ Mita Studio propose des prestations de services digitaux organisées en trois fo
 - 15 jours de support email post-livraison
 - Livraison en 1 semaine (sous réserve de réception des éléments nécessaires)
 
-### Formule Présence Pro : 2 290 € HT (Recommandé)
+### Formule Présence Pro : 2 290 € (Recommandé)
 
 - 3 à 5 pages responsive (design sur mesure)
 - CMS headless : le client modifie ses contenus en autonomie
@@ -194,7 +177,7 @@ Mita Studio propose des prestations de services digitaux organisées en trois fo
 - 30 jours de support email post-livraison
 - Livraison en 2 semaines (sous réserve de réception des éléments nécessaires)
 
-### Formule Croissance Digitale : 3 990 € HT
+### Formule Croissance Digitale : 3 990 €
 
 - 5 à 8 pages responsive (design sur mesure)
 - CMS avancé avec modèles de contenu adaptés au métier
@@ -210,37 +193,37 @@ Mita Studio propose des prestations de services digitaux organisées en trois fo
 
 ### Add-ons (optionnels)
 
-- Page supplémentaire : 290 € HT
-- Blog complet : 590 € HT
-- Système de réservation : 790 € HT
-- Espace client / portail : 990 € HT
-- E-commerce simple (jusqu'à 50 produits) : 1 490 € HT
-- Identité visuelle (logo + charte) : 490 € HT
-- Rédaction de contenu : 150 € HT / page
-- Rapport de performance 30 jours : 190 € HT (si non inclus dans le package)
+- Page supplémentaire : 290 €
+- Blog complet : 590 €
+- Système de réservation : 790 €
+- Espace client / portail : 990 €
+- E-commerce simple (jusqu'à 50 produits) : 1 490 €
+- Identité visuelle (logo + charte) : 490 €
+- Rédaction de contenu : 150 € / page
+- Rapport de performance 30 jours : 190 € (si non inclus dans le package)
 
 ### Abonnements de maintenance (optionnels)
 
-**Essentiel : 49 € HT/mois**
+**Essentiel : 49 €/mois**
 - Monitoring uptime + alertes
 - Backups hebdomadaires
 - Mises à jour de sécurité
 - 30 min de support email / mois
 - Temps de réponse : 48h ouvrées
 
-**Pro : 99 € HT/mois**
+**Pro : 99 €/mois**
 - Tout ce qui est inclus dans Essentiel
 - 1h de modifications / mois (textes, images, petits ajustements)
 - Rapport trimestriel (trafic, performance, recommandations)
 - Temps de réponse : 24h ouvrées
 
-Les abonnements de maintenance sont souscrits pour un engagement minimum de 3 mois, résiliables avec un préavis de 30 jours. Les heures non utilisées ne sont pas reportables. Au-delà du quota mensuel, facturation au tarif de 90 € HT/heure.
+Les abonnements de maintenance sont souscrits pour un engagement minimum de 3 mois, résiliables avec un préavis de 30 jours. Les heures non utilisées ne sont pas reportables. Au-delà du quota mensuel, facturation au tarif de 90 €/heure.
 
-Les tarifs indiqués sont en euros (EUR) hors taxes. TVA au taux de 20 % en sus.
+Les tarifs indiqués sont en euros (EUR), nets de taxes. TVA non applicable, article 293 B du CGI.
 
 ## 5. Devis et commande
 
-Chaque prestation fait l'objet d'un devis personnalisé, détaillant la nature et le périmètre de la prestation, le prix en euros HT, le délai de livraison estimé et le nombre de révisions incluses.
+Chaque prestation fait l'objet d'un devis personnalisé, détaillant la nature et le périmètre de la prestation, le prix en euros, le délai de livraison estimé et le nombre de révisions incluses.
 
 Le devis est valable 30 jours à compter de sa date d'émission. Le devis signé constitue un engagement ferme des deux parties. Tout projet démarre après réception de l'acompte.
 
@@ -257,7 +240,7 @@ Le paiement s'effectue en trois échéances liées à l'avancement du projet :
 - **Moyens de paiement** : virement bancaire ou Stripe
 - **Délai de paiement** : 14 jours à compter de la date de facturation
 
-Les prix s'entendent hors taxes. La TVA au taux de 20 % est appliquée conformément à la législation en vigueur.
+Les prix s'entendent nets de taxes. TVA non applicable, article 293 B du CGI (franchise en base de TVA).
 
 Les factures sont émises via Pennylane, logiciel de facturation agréé, conformément à la réglementation en vigueur.
 
@@ -300,7 +283,7 @@ Constituent une révision : les changements de couleur, de photo, de texte, ou l
 
 Ne constituent pas une révision : l'ajout d'une page, l'ajout d'une fonctionnalité, la refonte du design. Ces demandes feront l'objet d'un devis complémentaire.
 
-Au-delà des tours inclus, chaque tour supplémentaire est facturé selon la formule choisie (de 150 € à 250 € HT par tour).
+Au-delà des tours inclus, chaque tour supplémentaire est facturé selon la formule choisie (de 150 € à 250 € par tour).
 
 ## 12. Modification du périmètre
 
@@ -414,7 +397,7 @@ Pour toute question relative aux présentes CGV, contactez-nous à l'adresse **t
     date: "2026-03-12",
     readingTime: "8 min",
     tldr: [
-      "Responsable : Tahina Randrianandraina (Mita Studio), CAPE n°C1538 auprès de PCE. SIRET 423 194 307 00090.",
+      "Responsable : Tahina Randrianandraina (Mita Studio), entrepreneur indépendant.",
       "Seules les données du formulaire de contact sont collectées. Aucun cookie publicitaire, aucun tracking, aucune revente.",
       "Droits RGPD (accès, rectification, effacement, portabilité) : tahina@mita-studio.com.",
     ],
@@ -428,13 +411,7 @@ Le responsable du traitement des données est :
 
 - **Nom** : Tahina Randrianandraina
 - **Nom commercial** : Mita Studio
-- **Statut** : Titulaire d'un Contrat d'Appui au Projet d'Entreprise (CAPE)
-- **CAPE** : Contrat n°C1538, échéant le 28/02/2027
-- **Structure d'appui** : PCE, Société Coopérative Ouvrière de Production par Actions Simplifiée (SCOP AS) à Capital Variable
-- **Site PCE** : [pce-couveuse.fr](https://www.pce-couveuse.fr)
-- **Adresse** : 6 Rue d'Amboise, 75002 Paris
-- **SIRET** : 423 194 307 00090
-- **Code APE / NAF** : 9499Z
+- **Statut** : Entrepreneur indépendant
 - **Email de contact** : tahina@mita-studio.com
 
 **Délégué à la Protection des Données (DPO)** : conformément à l'article 37 du RGPD, la désignation d'un DPO n'est pas obligatoire pour Mita Studio, les traitements réalisés ne relevant ni d'un suivi régulier et systématique à grande échelle, ni du traitement à grande échelle de catégories particulières de données. Pour toute question relative à vos données personnelles, contactez directement **tahina@mita-studio.com**.

@@ -580,7 +580,7 @@ model Proposal {
   title       String
   items       Json     // [{ description, quantity, unitPrice, total }]
   subtotal    Int      // cents
-  taxRate     Int      @default(0) // TVA non applicable — art. 293 B du CGI (CAPE)
+  taxRate     Int      @default(0) // TVA non applicable — art. 293 B du CGI
   taxAmount   Int      @default(0) // cents
   total       Int      // cents
   validUntil  DateTime

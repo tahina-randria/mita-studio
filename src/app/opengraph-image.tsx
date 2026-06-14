@@ -99,7 +99,7 @@ export default function OGImage() {
         >
           <span>mita-studio.com</span>
           <span style={{ color: "rgba(255,255,255,0.2)" }}>•</span>
-          <span>À partir de 890 € HT</span>
+          <span>À partir de 890 €</span>
         </div>
       </div>
     ),

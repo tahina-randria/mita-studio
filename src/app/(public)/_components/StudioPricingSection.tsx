@@ -292,9 +292,6 @@ export function StudioPricingSection({
                 {/* Price */}
                 <div>
                   <PriceDisplay tier={tier} priceRef={setPriceRef(i)} />
-                  {tier.priceNumeric !== null && (
-                    <span className="text-base text-white/60 ml-1">HT</span>
-                  )}
                 </div>
               </div>
 
@@ -380,7 +377,6 @@ export function StudioPricingSection({
                       <span className="text-base font-normal text-white/60">{sub.priceSuffix}</span>
                     )}
                   </span>
-                  <span className="text-base text-white/60">HT</span>
                 </div>
                 <div className="border-t border-white/[0.06] mb-5" />
                 <ul className="flex-1 space-y-2.5 mb-5">
@@ -456,7 +452,7 @@ export function StudioPricingSection({
 
         {/* Compliance */}
         <p className="mt-8 text-center text-base text-white leading-relaxed max-w-lg mx-auto">
-          Prix HT, TVA 20&nbsp;% en sus. Le tarif final est &eacute;tabli sur devis apr&egrave;s &eacute;change.
+          TVA non applicable (art.&nbsp;293&nbsp;B du CGI). Le tarif final est &eacute;tabli sur devis apr&egrave;s &eacute;change.
           D&eacute;lais indicatifs, variables selon la complexit&eacute; du projet.
         </p>
       </div>

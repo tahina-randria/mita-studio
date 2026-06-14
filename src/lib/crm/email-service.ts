@@ -94,7 +94,7 @@ export function wrapInEmailLayout(bodyContent: string): string {
         </table>
         <!-- Unsubscribe -->
         <p style="margin:16px 0 0;font-size:11px;color:#a1a1aa;text-align:center;">
-          Cet email a été envoyé par Mita Studio. Statut CAPE — TVA 20 % applicable.
+          Cet email a été envoyé par Mita Studio.
         </p>
       </td>
     </tr>
