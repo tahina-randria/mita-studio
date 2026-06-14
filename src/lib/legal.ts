@@ -40,13 +40,7 @@ Conformément à la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'é
 
 Contact éditorial : **tahina@mita-studio.com**
 
-## 3. Assurance responsabilité civile professionnelle
-
-- **Assureur** : AXA, Contrat multiactivité professionnelle
-- **N° client** : 0693499104
-- **N° contrat** : 1353589504
-
-## 4. Hébergeur
+## 3. Hébergeur
 
 - **Raison sociale** : Vercel Inc.
 - **Adresse** : 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis
@@ -55,7 +49,7 @@ Contact éditorial : **tahina@mita-studio.com**
 
 Vercel est soumis au régime de responsabilité des hébergeurs prévu aux articles 6-I-2° à 6-I-7° de la LCEN.
 
-## 5. Propriété intellectuelle
+## 4. Propriété intellectuelle
 
 L'ensemble du contenu du site mita-studio.com (textes, images, graphismes, logo, icônes, code source, architecture et design d'interface) est protégé par les dispositions du Code de la propriété intellectuelle (articles L.111-1, L.122-4, L.335-2 et suivants).
 
@@ -65,17 +59,17 @@ Toute reproduction, représentation, modification, publication, distribution ou 
 
 Pour signaler une atteinte à vos droits de propriété intellectuelle, contactez **tahina@mita-studio.com**.
 
-## 6. Protection des données personnelles
+## 5. Protection des données personnelles
 
 Conformément au Règlement Général sur la Protection des Données (RGPD, Règlement UE 2016/679) et à la loi n° 78-17 du 6 janvier 1978 modifiée (Informatique et Libertés), vous disposez de droits sur vos données personnelles. Pour en savoir plus, consultez notre [Politique de Confidentialité](/confidentialite).
 
-## 7. Cookies
+## 6. Cookies
 
 Le site utilise uniquement des cookies strictement nécessaires au fonctionnement technique (protection DDoS, routage CDN), exemptés de consentement conformément à la directive ePrivacy 2002/58/CE et aux recommandations de la CNIL du 17 septembre 2020.
 
 Aucun cookie publicitaire, de traçage, d'analyse ou de mesure d'audience n'est déposé. Aucun bandeau cookies n'est nécessaire.
 
-## 8. Limitation de responsabilité
+## 7. Limitation de responsabilité
 
 Mita Studio s'efforce de fournir des informations précises et à jour. Toutefois, les informations diffusées sur le site ne sauraient prétendre à l'exhaustivité et ne constituent en aucun cas un conseil professionnel.
 
@@ -85,7 +79,7 @@ Mita Studio ne saurait être tenu responsable des dommages directs ou indirects 
 
 La responsabilité de Mita Studio est limitée, dans toute la mesure permise par le droit français, aux dommages directs et prouvés.
 
-## 9. Droit applicable et juridiction
+## 8. Droit applicable et juridiction
 
 Les présentes mentions légales sont régies par le droit français. La version française fait foi.
 
@@ -102,11 +96,11 @@ Conformément aux articles L.612-1 et suivants du Code de la consommation, le cl
 
 Plateforme européenne de règlement en ligne des litiges : [ec.europa.eu/consumers/odr](https://ec.europa.eu/consumers/odr).
 
-## 10. Mise à jour
+## 9. Mise à jour
 
 Les présentes mentions légales peuvent être modifiées à tout moment. La date de dernière mise à jour est indiquée en haut de cette page.
 
-## 11. Contact
+## 10. Contact
 
 Pour toute question, contactez-nous à l'adresse **tahina@mita-studio.com**.`,
   },
@@ -141,7 +135,6 @@ Les présentes Conditions Générales de Vente (ci-après « CGV ») régissent 
 
 - **Prestataire** : Tahina Randrianandraina, exerçant sous le nom commercial Mita Studio
 - **Statut** : Entrepreneur indépendant
-- **Assurance RCP** : Contrat multiactivité professionnelle AXA, N° client 0693499104, N° contrat 1353589504
 - **Email** : tahina@mita-studio.com
 - **Site web** : [mita-studio.com](https://mita-studio.com)
 
@@ -321,7 +314,7 @@ Pour plus de détails, consultez notre [Politique de Confidentialité](/confiden
 
 ## 17. Limitation de responsabilité
 
-Mita Studio s'engage à exécuter ses prestations avec diligence et professionnalisme (obligation de moyens). Mita Studio est couvert par une assurance Responsabilité Civile Professionnelle multiactivité auprès d'AXA (N° contrat 1353589504).
+Mita Studio s'engage à exécuter ses prestations avec diligence et professionnalisme (obligation de moyens).
 
 La responsabilité du Prestataire est plafonnée au montant total du devis. Sont exclus les dommages indirects : perte de chiffre d'affaires, perte de données, manque à gagner.
 
