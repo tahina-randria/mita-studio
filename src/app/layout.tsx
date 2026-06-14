@@ -26,14 +26,14 @@ export const metadata: Metadata = {
     template: "%s | Mita Studio",
   },
   description:
-    "Votre site pro en ligne en 1 à 3 semaines. Création de sites web sur mesure et référencement Google pour indépendants et PME. À partir de 890\u00a0€\u00a0HT.",
+    "Votre site pro en ligne en 1 à 3 semaines. Création de sites web sur mesure et référencement Google pour indépendants et PME. À partir de 890\u00a0€.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Mita Studio — Sites web & référencement",
     description:
-      "Votre site pro en ligne en 1 à 3 semaines. Sites web sur mesure et référencement Google. À partir de 890\u00a0€\u00a0HT.",
+      "Votre site pro en ligne en 1 à 3 semaines. Sites web sur mesure et référencement Google. À partir de 890\u00a0€.",
     type: "website",
     locale: "fr_FR",
     siteName: "Mita Studio",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     creator: "@mita_studio",
     title: "Mita Studio — Sites web & référencement",
     description:
-      "Votre site pro en ligne en 1 à 3 semaines. Sites web sur mesure et référencement Google. À partir de 890\u00a0€\u00a0HT.",
+      "Votre site pro en ligne en 1 à 3 semaines. Sites web sur mesure et référencement Google. À partir de 890\u00a0€.",
   },
 };
 

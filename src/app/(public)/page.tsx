@@ -32,7 +32,7 @@ import {
 export const metadata: Metadata = {
   title: "Mita Studio \u2014 Le digital pro, enfin accessible",
   description:
-    "Site web, r\u00e9f\u00e9rencement Google et outils digitaux sur mesure. Livr\u00e9s en 1 \u00e0 3\u00a0semaines. \u00c0 partir de 890\u00a0\u20ac\u00a0HT.",
+    "Site web, r\u00e9f\u00e9rencement Google et outils digitaux sur mesure. Livr\u00e9s en 1 \u00e0 3\u00a0semaines. \u00c0 partir de 890\u00a0\u20ac.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "Mita Studio \u2014 Le digital pro, enfin accessible",
