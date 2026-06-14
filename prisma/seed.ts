@@ -54,7 +54,7 @@ async function main() {
     { key: "hero_cta_secondary", value: "Voir comment ça marche", type: "text", section: "hero", label: "CTA secondaire" },
     { key: "hero_badge_1_value", value: "2 sem.", type: "text", section: "hero", label: "Badge 1 valeur" },
     { key: "hero_badge_1_label", value: "Délai moyen", type: "text", section: "hero", label: "Badge 1 label" },
-    { key: "hero_badge_2_value", value: "890 € HT", type: "text", section: "hero", label: "Badge 2 valeur" },
+    { key: "hero_badge_2_value", value: "890 €", type: "text", section: "hero", label: "Badge 2 valeur" },
     { key: "hero_badge_2_label", value: "À partir de", type: "text", section: "hero", label: "Badge 2 label" },
     { key: "hero_badge_3_value", value: "100%", type: "text", section: "hero", label: "Badge 3 valeur" },
     { key: "hero_badge_3_label", value: "Satisfait ou on corrige", type: "text", section: "hero", label: "Badge 3 label" },
@@ -393,7 +393,7 @@ async function main() {
     },
     {
       question: "Quels sont vos tarifs ?",
-      answer: "À partir de 890 € HT pour une landing page professionnelle (Vitrine Express). Le tarif dépend du nombre de pages, des fonctionnalités et du niveau de personnalisation. Prix HT, TVA 20 % en sus. Chaque devis est définitif, pas de frais cachés.",
+      answer: "À partir de 890 € pour une landing page professionnelle (Vitrine Express). Le tarif dépend du nombre de pages, des fonctionnalités et du niveau de personnalisation. TVA non applicable, art. 293 B du CGI. Chaque devis est définitif, pas de frais cachés.",
       category: "pricing",
       sortOrder: 1,
     },
