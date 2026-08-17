@@ -1,0 +1,14 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "mita-dev",
+      "runtimeExecutable": "/usr/local/bin/node",
+      "runtimeArgs": ["/Users/tahina/Downloads/mita-studio-deploy/node_modules/.bin/next", "dev"],
+      "port": 3000,
+      "env": {
+        "PWD": "/Users/tahina/Downloads/mita-studio-deploy"
+      }
+    }
+  ]
+}

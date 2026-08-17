@@ -1,0 +1,10 @@
+[
+  {
+    "timestamp": "2026-06-16T07:30:34.740449",
+    "request_id": 1,
+    "endpoint": "/consult/ping",
+    "payload": {},
+    "response_type": "coroutine",
+    "success": true
+  }
+]
