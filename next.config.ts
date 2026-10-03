@@ -4,6 +4,10 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        source: "/:dir(images|process|services|icons|blog)/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, noimageindex" }],
+      },
+      {
         source: "/(.*)",
         headers: [
           { key: "X-Frame-Options", value: "DENY" },
@@ -23,6 +27,11 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Coming-soon mode: old assets (founder photo, logo, visuals) must stop
+      // being served so search engines drop them. Files stay in the repo.
+      ...["/images/:path*", "/process/:path*", "/services/:path*", "/icons/:path*", "/blog/:path*", "/logo.webp"].map(
+        (source) => ({ source, destination: "/", permanent: true }),
+      ),
       // Pages service supprimées → /contact
       { source: "/web", destination: "/contact", permanent: true },
       { source: "/seo", destination: "/contact", permanent: true },
