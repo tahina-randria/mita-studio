@@ -27,13 +27,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://mita-studio.com"),
   title: "Something cooler is cooking.",
-  description: "Something new is being built here.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Something cooler is cooking.",
-    description: "Something new is being built here.",
     type: "website",
     locale: "en_US",
     url: "https://mita-studio.com",
@@ -41,7 +39,6 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Something cooler is cooking.",
-    description: "Something new is being built here.",
   },
 };
 
