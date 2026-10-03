@@ -1,13 +1,18 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Toaster } from "@/components/ui/sonner";
-import { CookieBanner } from "@/components/CookieBanner";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const geist = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
   subsets: ["latin"],
   display: "swap",
 });
@@ -16,36 +21,27 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: "#050a1e",
+  themeColor: "#000000",
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mita-studio.com"),
-  title: {
-    default: "Mita Studio — Sites web & référencement",
-    template: "%s | Mita Studio",
-  },
-  description:
-    "Votre site pro en ligne en 1 à 3 semaines. Création de sites web sur mesure et référencement Google pour indépendants et PME. À partir de 890\u00a0€.",
+  title: "Something cooler is cooking.",
+  description: "Something new is being built here.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Mita Studio — Sites web & référencement",
-    description:
-      "Votre site pro en ligne en 1 à 3 semaines. Sites web sur mesure et référencement Google. À partir de 890\u00a0€.",
+    title: "Something cooler is cooking.",
+    description: "Something new is being built here.",
     type: "website",
-    locale: "fr_FR",
-    siteName: "Mita Studio",
+    locale: "en_US",
     url: "https://mita-studio.com",
   },
   twitter: {
     card: "summary_large_image",
-    site: "@mita_studio",
-    creator: "@mita_studio",
-    title: "Mita Studio — Sites web & référencement",
-    description:
-      "Votre site pro en ligne en 1 à 3 semaines. Sites web sur mesure et référencement Google. À partir de 890\u00a0€.",
+    title: "Something cooler is cooking.",
+    description: "Something new is being built here.",
   },
 };
 
@@ -55,11 +51,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
-      <body className={`${inter.variable} antialiased`}>
+    <html lang="en">
+      <body className={`${geist.variable} ${geistMono.variable} antialiased`}>
         {children}
         <Toaster position="bottom-right" richColors />
-        <CookieBanner />
         <Analytics />
         <SpeedInsights />
       </body>

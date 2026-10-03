@@ -460,3 +460,5 @@ html.lenis body {
 .lenis.lenis-stopped {
   overflow: hidden;
 }
+
+body { --font-inter: var(--font-geist-sans); }
