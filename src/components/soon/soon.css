@@ -35,11 +35,17 @@
   font-size: clamp(22px, 3vw, 42px);
   line-height: 1.1;
   letter-spacing: -0.035em;
+  /* Mist-filter halation: tight white core, warm wide bloom, a hair of blur. */
+  text-shadow:
+    0 0 1px rgba(255, 246, 236, 0.7),
+    0 0 12px rgba(255, 217, 196, 0.3),
+    0 0 40px rgba(255, 74, 28, 0.12);
+  filter: blur(0.35px);
   animation: soon-in 600ms cubic-bezier(0.22, 1, 0.36, 1) 250ms both;
 }
 @keyframes soon-in {
   from { opacity: 0; transform: translateY(6px); filter: blur(6px); }
-  to { opacity: 1; transform: none; filter: none; }
+  to { opacity: 1; transform: none; filter: blur(0.35px); }
 }
 .soon-mail {
   position: absolute;
@@ -47,9 +53,9 @@
   bottom: max(28px, calc(env(safe-area-inset-bottom) + 16px));
   transform: translateX(-50%);
   font-family: var(--font-geist-mono), ui-monospace, monospace;
-  font-size: 12px;
-  letter-spacing: 0.06em;
-  color: rgba(242, 238, 232, 0.5);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: #8a8680;
   text-decoration: none;
   white-space: nowrap;
   transition: color 400ms ease;
